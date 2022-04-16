@@ -95,8 +95,6 @@ section #hero{
 .btn:hover{
     transform: translateY(-0.25em);
 }
-
-
 /*media queries medium and large screens*/
 @media screen and (min-width: 1205px) {
 
