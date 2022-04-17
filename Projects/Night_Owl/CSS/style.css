@@ -18,7 +18,7 @@
 body{
     min-height: 100vh;
     font-family: --ff-primary, sans-serif;
-    background: linear-gradient(#090314,#1d0347,#29095d);
+    background: #1c0750;
 }
 header{
     position: absolute;
@@ -95,6 +95,28 @@ section #hero{
 .btn:hover{
     transform: translateY(-0.25em);
 }
+
+/*location section*/
+#locations{
+    background: #1c0750;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 740px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#f0f8ff;
+    letter-spacing:1px;
+    font-size: 1em;
+}
+.cards{
+    margin: 0 20px;
+}
+.cards img{
+    position: relative;
+    width: 100%;
+
+}
 /*media queries medium and large screens*/
 @media screen and (min-width: 1205px) {
 
@@ -123,5 +145,13 @@ section #hero{
     .navigation li a.active{
         background: #e1d9ed;
         color: #29095d;
+    }
+
+    #locations{
+
+        margin-top: 940px;
+    }
+    .cards{
+        margin: 0 20px;
     }
 }
