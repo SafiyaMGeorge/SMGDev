@@ -1,0 +1,34 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #2c3a62;
+}
+header{
+    margin: 15px 3px;
+    padding: 2px 4px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo img{
+   width: 12%; 
+}
+#nav_items{
+    width: 25%;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    
+}
+#nav_items a{
+    text-decoration: none;
+    color:#b2b1b1 ;
+}
