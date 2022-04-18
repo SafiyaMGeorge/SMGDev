@@ -20,6 +20,15 @@ nav{
 #logo img{
    width: 12%; 
 }
+
+#nav_items{
+    display: none;
+}
+@media screen and (min-width: 1205px)
+{
+ #collapsed_nav{
+     display: none;
+ }
 #nav_items{
     width: 25%;
     text-decoration: none;
@@ -31,4 +40,5 @@ nav{
 #nav_items a{
     text-decoration: none;
     color:#b2b1b1 ;
+}
 }
