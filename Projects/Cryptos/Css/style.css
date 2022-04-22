@@ -39,6 +39,38 @@ nav{
 #nav_items a:hover{
     color: #d467f2e7
 }
+/*body content section*/
+
+#banner{
+    width: 65%;
+    height: 70%;
+    top: 25%;
+    left: 130px;
+    position: absolute;
+    color: #fff;
+}
+#banner h1{
+    margin-left: 40px;
+    line-height: 1.3em;
+    font-size: 2.3em;
+    position: relative;
+}
+#banner p{
+    margin: 30px 0 30px 40px;
+    line-height: 1.5em;
+    font-size:1.2em;
+    color: #919191;
+    
+}
+#app-image{
+    width: 50%;
+    float: right;
+}
+#app-image img{
+    width: 100%;
+    margin-top: 380px;
+    padding-left: 50px;
+}
 @media screen and (min-width: 1260px)
 {
 nav{
@@ -73,5 +105,12 @@ nav{
 }
 .btn:hover{
     transform: translateY(-0.25em);
+}
+#banner h1{
+    font-size: 3.0em;
+}
+#banner p{
+    font-size:1.5em;
+    width: 550px;    
 }
 }
