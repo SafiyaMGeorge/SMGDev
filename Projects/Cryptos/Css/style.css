@@ -70,9 +70,23 @@ nav{
     color: #919191;
     
 }
+#play-btn a{
+    width: 60%;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+#play-btn a h2{
+    color: #fff;
+}
+#play-btn-inner{
+    width: 10%;
+}
 #app-image{
     width: 75%;
-    top: 75%;
+    top: 85%;
     left: 100px;
     position: absolute;
 }
