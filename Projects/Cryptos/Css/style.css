@@ -40,12 +40,20 @@ nav{
     color: #d467f2e7
 }
 /*body content section*/
-
+#content{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 0 10px;
+}
 #banner{
     width: 65%;
     height: 70%;
     top: 25%;
-    left: 130px;
+    left: 100px;
     position: absolute;
     color: #fff;
 }
@@ -63,13 +71,14 @@ nav{
     
 }
 #app-image{
-    width: 50%;
-    float: right;
+    width: 75%;
+    top: 75%;
+    left: 100px;
+    position: absolute;
 }
 #app-image img{
     width: 100%;
-    margin-top: 380px;
-    padding-left: 50px;
+   
 }
 @media screen and (min-width: 1260px)
 {
@@ -112,5 +121,14 @@ nav{
 #banner p{
     font-size:1.5em;
     width: 550px;    
+}
+#app-image{
+    width: 50%;
+    float: right;
+}
+#app-image img{
+    width: 100%;
+    margin-top: 380px;
+    padding-left: 50px;
 }
 }
