@@ -1,0 +1,24 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+h1{
+    position: relative;
+    color: #FFF;
+    font-size: 4em;
+    font-weight: 900;
+    z-index: 1;
+    overflow: hidden;
+}
+
