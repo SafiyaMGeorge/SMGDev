@@ -1,0 +1,38 @@
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /*This line of code creates a color gradient effect in t the background*/
+    background: linear-gradient(45deg, #d81b60 0%, #f9d669 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-family: arial;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    padding: 15px 40px;
+    outline: 1px solid rgba(255, 255, 255, .7);
+    transition: all .9s;
+}
+.button:hover{
+    /*this line causes a glow over the text*/
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    /*this line causes a glow over the button outline*/
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .2),
+    0 0 20px rgba(255, 255, 255, 0.3);
+    /*this line gives the button depth when the cursor hovers over it.*/
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    
+
+}
