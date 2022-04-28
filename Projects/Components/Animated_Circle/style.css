@@ -18,6 +18,7 @@ body{
     height: 60vh;
     background: linear-gradient(#33ccff,#ff0066);
     border-radius: 50%;
+    animation: animate 2s linear infinite;
 }
 .circle:after{
     content: '';
@@ -47,4 +48,12 @@ body{
 }
 .circle span:nth-child(4){
     filter:blur(55px)
+}
+@keyframes animate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
