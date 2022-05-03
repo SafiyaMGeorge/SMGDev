@@ -22,5 +22,13 @@ a{
     font-size: 1.3em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    
+    margin: 0 40px;
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+#btn1{
+    background: linear-gradient(to right, #03effe,#026be2);
+}
+#btn2{
+    background: linear-gradient(to right, #fe03b4,#ee0202);
 }
