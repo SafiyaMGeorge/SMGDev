@@ -13,6 +13,14 @@ body{
     align-items: center;
 }
 a{
+    cursor: pointer;
     text-decoration: none;
     color: #FFF;
+    position: relative;
+    font-family:sans-serif;
+    font-weight: bold; 
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
 }
