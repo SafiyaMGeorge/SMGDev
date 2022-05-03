@@ -25,10 +25,29 @@ a{
     margin: 0 40px;
     padding: 15px 30px;
     border-radius: 50px;
+    overflow: hidden;
 }
 #btn1{
     background: linear-gradient(to right, #03effe,#026be2);
 }
 #btn2{
     background: linear-gradient(to right, #fe03b4,#ee0202);
+}
+/*shine effect*/
+a::before{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 20px;
+    background-color: #f3f3f3;
+    box-shadow: 0 0 10px #fff;
+    filter: blur(1px);
+    opacity: 0.9;
+    top: -30px;
+    transition: 0.7s;
+    transform:rotate(-20deg) translateX(-60px);
+}
+/*this causes the shine to slide over the button when hovered.*/
+a:hover::before{
+    transform: rotate(-20deg) translate(140px, 70px);
 }
