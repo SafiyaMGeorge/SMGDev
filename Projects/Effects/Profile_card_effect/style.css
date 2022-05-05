@@ -13,3 +13,11 @@ body{
     justify-content: center;
     align-items: center;
 }
+#wrapper{
+    background:url('./media/Portfolio-img2\ copy.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+    width: 350px;
+    box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+}
