@@ -21,3 +21,13 @@ body{
     width: 350px;
     box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
 }
+#box{
+    background: #262626;
+    width: 330px;
+    padding: 10px;
+    /*This place the html data in a circle shape and positioned it in the upper left hand section of the wrapper.*/
+    clip-path: circle(5% at 91% 7%);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    height: 500px;
+}
