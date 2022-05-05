@@ -23,20 +23,21 @@ body{
 }
 #box{
     background: #262626;
-    width: 330px;
+    width: 350px;
     padding: 10px;
     /*This place the html data in a circle shape and positioned it in the upper left hand section of the wrapper.*/
     clip-path: circle(5% at 91% 7%);
     transition: all .5s ease-in-out;
     cursor: pointer;
-    height: 500px;
+    height: 650px;
 }#content{
-    height: 500px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     text-align: center;
-    padding: 100px 15px;
+    padding: 50px 15px;
 }
 #box:hover{
     clip-path: circle(75%);
@@ -53,5 +54,24 @@ body{
     transition: color .5s;
     position: relative;
     margin-right: 4%;
-    margin-top: 5%;
+    margin-top: 8%;
+}
+#box h1{
+    color: #fff;
+}
+#box p{
+    color: #fff;
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.5;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 40px;
+}
+.social span i{
+    color: #fff;
+   margin: 0 5px;
 }
