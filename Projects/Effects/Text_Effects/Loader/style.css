@@ -1,0 +1,29 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #262626;
+    height: 100vh;
+    font-family: arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    position: absolute;
+    color: rgba(255, 255, 255, .1);
+    font-size: 3em;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    background-image: url('./background-scene-with-blue-waves/4142.jpg');
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    animation: animate 15s linear infinite;
+}
+@keyframes animate{
+
+}
