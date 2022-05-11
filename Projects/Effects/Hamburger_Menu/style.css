@@ -48,3 +48,16 @@ body{
 #menu_btn::after{
     transform: translateY(16px);
 }
+/*animation*/
+/*this animation is triggerd when the user clicks due to the JS page eventlistener*/
+#menu.open #menu_btn{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}/*The two code lines below triggers the menu to create an exit sign when clicked and then restored to the original sign after it has been clicked again.*/
+#menu.open #menu_btn::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+#menu.open #menu_btn::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
