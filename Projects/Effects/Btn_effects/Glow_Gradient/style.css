@@ -26,3 +26,15 @@
     padding: 15px 23px;
     border-radius: 30px;
 }
+#btn:hover{
+    animation: animate 8s linear infinite;
+    transform: translateY(-3px);
+}
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
