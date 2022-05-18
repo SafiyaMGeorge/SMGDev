@@ -5,3 +5,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+main{
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #17c0eb 0%, #32ff7e 100%);
+}
+.content{
+    z-index: 2;
+}
+h1{
+    color: aliceblue;
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
