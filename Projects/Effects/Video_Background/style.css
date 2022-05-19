@@ -1,0 +1,15 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content{
+    height: 100vh;
+}
+.vid{
+    position:absolute;
+    height: 100%;
+    z-index: -1;
+}
