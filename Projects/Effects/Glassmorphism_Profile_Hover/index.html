@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Glassmorphism Card Hover</title>
+</head>
+<body>
+    <main>
+       <section class="cards">
+           <div class="card">
+                <div class="content">
+                    <img src="./Media/User1.png" alt="female user image">
+                    <h1>Jane Doe</h1>
+                    <h2>Frontend Developer</h2>
+                    <div class="socials"></div>
+                </div>
+           </div>
+            <div class="card">
+                <div class="content">
+                    <img src="./Media/user2.png" alt="Male user image">
+                    <h1>John Doe</h1>
+                    <h2>Frontend Designer</h2>
+                    <div class="socials"></div>
+                </div>
+                
+            </div>
+            <div class="card">
+                <div class="content">
+                    <img src="./Media/User3.png" alt="female user image">
+                    <h1>Angel Doe</h1>
+                    <h2>UX/UI Developer</h2>
+                    <div class="socials"></div>
+                </div>
+            </div>
+       </section>
+    </main>
+    <script type="text/javascript" src="./vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare:true,
+            "max-glare":1,
+        });
+    </script>
+</body>
+</html>
