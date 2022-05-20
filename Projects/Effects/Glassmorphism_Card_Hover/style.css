@@ -64,11 +64,13 @@ main{
     font-size: 1.5em;
     margin-bottom: 10px;
     z-index: 1;
+    pointer-events: none;
 }
 .content p{
     font-size: 1em;
     line-height: 26px;
     font-weight: 300;
+    pointer-events: none;
 }
 .content a{
     position: relative;
