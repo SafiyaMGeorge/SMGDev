@@ -106,3 +106,31 @@ body::after{
     background: linear-gradient(#2196f3,#e91e63);
     clip-path: circle(16% at left 10%);
 }
+@media screen and (max-width:900px) {
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    /*This main before section displays the cool circle element in the page.*/
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00,#f0f);
+    clip-path: circle(35% at right 60%);
+}
+/*This main after section displays the cool circle element at the top of page.*/
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3,#e91e63);
+    clip-path: circle(30% at left 10%);
+}
+}
