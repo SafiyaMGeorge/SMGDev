@@ -7,6 +7,7 @@
 }
 body{
     height: 100vh;
+    font-family: Arial;
 }
 video{
     position: absolute;
@@ -19,27 +20,47 @@ video{
 header{
     position: absolute;
     width: 100vw;
+    margin-top: 3px;
     display: flex;
     justify-content: center;
-    height: 10%;
+    
 }
 nav{
-    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #nav_list{
-    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 }
 .nav_item{
-    list-style: none;
-    font-size: 1.2em;
+    margin-right: 2px;
 }
-.nav_item a{
-    color: black;
+.nav_item,
+ .menu_item {
+     width: 180px;
+     height: 40px;
+    background: black;
+    opacity: .8;
+    list-style: none;
+    font-size: 1em;
+    line-height: 40px;
+    text-align: center;
+}
+ul li a{
+    color: white;
+    margin-right: 10px;
     text-decoration: none;
+    display: block;
+}
+ul li a:hover{
+    background-color: green;
+}
+/*the block belows hides the nested list*/
+ul li ul li{
+    display: none;
+}
+/*the block below makes the nested list visible once the user hover over the initial list*/
+ul li:hover ul li{
+    display: block;
 }
