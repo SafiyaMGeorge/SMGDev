@@ -44,3 +44,14 @@ body{
 .panel.active h3{
     opacity: 1;
 }
+
+@media (max-width: 480px){
+    #content{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}
