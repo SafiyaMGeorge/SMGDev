@@ -45,7 +45,7 @@ body{
     opacity: 1;
 }
 
-@media (max-width: 480px){
+@media (max-width: 580px){
     #content{
         width: 100vw;
     }
