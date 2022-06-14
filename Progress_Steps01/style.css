@@ -48,3 +48,14 @@ body{
     z-index: -1;
     transition: .4s ease;
 }
+/*the next code block styles the circle around the numbers*/
+.circle{
+    background-color: #fff;
+    color: #999;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
