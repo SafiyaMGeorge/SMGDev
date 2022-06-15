@@ -71,3 +71,20 @@ body{
 .circle.active{
     border-color: var(--line-active);
 }
+.btn{
+    background-color: var(--line-active);
+    color: aliceblue;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+.btn:active{
+    transform: scale(0.98);
+}
+.btn:disabled{
+    background-color: var(--line-empty);
+    cursor: not-allowed;
+}
