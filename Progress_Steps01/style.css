@@ -53,9 +53,12 @@ body{
     background-color: #fff;
     color: #999;
     border-radius: 50%;
+    border: 3px solid #e0e0e0;
     height: 30px;
     width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    /*The transition here matches up with the progress element because once the user moves to the specific step it will turn active.*/
+    transition: .4s ease;
 }
