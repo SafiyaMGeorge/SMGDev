@@ -1,6 +1,11 @@
 *{
     box-sizing: border-box;
 }
+/*custom properties below*/
+:root{
+    --line-active:#3498db;
+    --line-empty:#e0e0e0;
+}
 body{
     font-family: sans-serif;
     display: flex;
@@ -24,7 +29,7 @@ body{
 /*This code block is a copy of the progress code block. This one shows the gray line */
 #progress-container::before{
     content:'';
-        background-color: #e0e0e0;
+        background-color: var(--line-empty);
         position: absolute;
         /*the below line puts the line in the in the middle of the page*/
         top: 50%;
@@ -36,7 +41,7 @@ body{
         z-index: -1;
 }
 #progress{
-    background-color: #3498db;
+    background-color: var(--line-active);
     position: absolute;
     /*the below line puts the line in the in the middle of the page*/
     top: 50%;
@@ -53,7 +58,7 @@ body{
     background-color: #fff;
     color: #999;
     border-radius: 50%;
-    border: 3px solid #e0e0e0;
+    border: 3px solid var(--line-empty);
     height: 30px;
     width: 30px;
     display: flex;
@@ -61,4 +66,8 @@ body{
     justify-content: center;
     /*The transition here matches up with the progress element because once the user moves to the specific step it will turn active.*/
     transition: .4s ease;
+}
+/*the code block styles the element with the active class on it.*/
+.circle.active{
+    border-color: var(--line-active);
 }
