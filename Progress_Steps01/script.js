@@ -30,3 +30,21 @@ prev.addEventListener('click', () =>{
     //once this function is called it will then call another function to update the DOM
     update()
 })
+
+function update(){
+    circles.forEach((circle, index) => {
+        //This if statement adds the active class to any circle, if the index of that circle is less than the current active circle element.
+        if(index < activeStep){
+            circle.classList.add('active');
+        }
+        else{
+            circle.classList.remove('active');
+        }
+    });
+
+    const active = document.querySelectorAll('.active');
+    //The line below targets the width property of the progress line with the id of progress in the css page and updates the width percentage. This moves the line to the next step that is active once the user clicks the next button.
+    //I subtracted one to achieve the correct percentage so that the line reaches the correct step.
+    progress.style.width = (active.length -1)/(circles.length - 1)* 100 +'%'
+
+}
