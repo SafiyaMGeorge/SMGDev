@@ -12,7 +12,7 @@ next.addEventListener('click', () =>{
     activeStep++
     //The if statement ensures that the function does not go past the lenth of the cirlce class. There are only four elements with the circle class. Therefore the length is four.
     if(activeStep > circles.length){
-        activeStep = circles.length
+        activeStep = circles.length;
     }
     //once this function is called it will then call another function to update the DOM
     update()
@@ -24,9 +24,8 @@ prev.addEventListener('click', () =>{
     activeStep--
     //The if statement sets the current active step to one if the current active is less than or equal to one. As one is there first step
     if(activeStep <= 1){
-        activeStep = 1
+        activeStep = 1;
     }
-    console.log(activeStep)
     //once this function is called it will then call another function to update the DOM
     update()
 })
@@ -46,5 +45,15 @@ function update(){
     //The line below targets the width property of the progress line with the id of progress in the css page and updates the width percentage. This moves the line to the next step that is active once the user clicks the next button.
     //I subtracted one to achieve the correct percentage so that the line reaches the correct step.
     progress.style.width = (active.length -1)/(circles.length - 1)* 100 +'%'
-
+    //the if statement block below handles the buttons disable function.
+    if(activeStep === 1){
+        prev.disabled = true;
+    }
+    else if(activeStep === circles.length){
+        next.disabled = true;
+    }
+    else{
+        prev.disabled = false;
+        next.disabled = false;
+    }
 }
