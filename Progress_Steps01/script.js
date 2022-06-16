@@ -14,6 +14,8 @@ next.addEventListener('click', () =>{
     if(activeStep > circles.length){
         activeStep = circles.length
     }
+    //once this function is called it will then call another function to update the DOM
+    update()
 })
 
 //this is the reverse effect of the previous block
@@ -25,4 +27,6 @@ prev.addEventListener('click', () =>{
         activeStep = 1
     }
     console.log(activeStep)
+    //once this function is called it will then call another function to update the DOM
+    update()
 })
