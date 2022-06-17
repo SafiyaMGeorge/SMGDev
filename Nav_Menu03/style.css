@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+}
+/*custom properties. This makes it easier to change colors in project if client wants.*/
+:root{
+    --text-clr: #edf0f1;
+    --nlink-clr:#0088a9;
+    --btn-clr:rgba(0, 136, 169, 1);
+    --btnHover-clr:rgba(0, 136, 169, .8);
+
+}
+body{
+    height: 100vh;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+}
+li, a{
+    text-decoration: none;
+    list-style: none;
+    color: var(--text-clr);
+}
+header{
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    cursor: pointer;
+}
+#navList li{
+    display: inline-block;
+    padding: 0 20px;
+}
+#navList li a{
+    transition: all .3s ease 0s;
+}
+#navList li a:hover{
+    color: var(--nlink-clr);
+}
+.cta_btn{
+    padding: 9px 25px;
+    background-color:var(--btn-clr);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+}
+.cta_btn:hover{
+    background-color:var(--btnHover-clr);
+    transform: translateY(4px);
+}
