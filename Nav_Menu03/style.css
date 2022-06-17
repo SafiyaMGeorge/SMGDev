@@ -7,9 +7,9 @@
 /*custom properties. This makes it easier to change colors in project if client wants.*/
 :root{
     --text-clr: #edf0f1;
-    --nlink-clr:#0088a9;
-    --btn-clr:rgba(0, 136, 169, 1);
-    --btnHover-clr:rgba(0, 136, 169, .8);
+    --nlink-clr:#aa48ab;
+    --btn-clr:rgb(167, 57, 163);
+    --btnHover-clr:rgba(167, 57, 163, .8);
 
 }
 body{
@@ -26,11 +26,12 @@ li, a{
 header{
     padding: 30px 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 #logo{
     cursor: pointer;
+    margin-right: auto;
 }
 #navList li{
     display: inline-block;
@@ -43,6 +44,7 @@ header{
     color: var(--nlink-clr);
 }
 .cta_btn{
+    margin-left: 25px;
     padding: 9px 25px;
     background-color:var(--btn-clr);
     border: none;
