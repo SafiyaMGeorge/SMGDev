@@ -31,11 +31,19 @@ header{
 }
 #logo{
     cursor: pointer;
-    margin-right: auto;
+    order: 3;
+    margin-left: auto;
+}
+nav{
+    order:1;
+
 }
 #navList li{
     display: inline-block;
     padding: 0 20px;
+}
+#navList li:nth-child(1){
+    padding: 0 20px 0 0;
 }
 #navList li a{
     transition: all .3s ease 0s;
@@ -44,6 +52,7 @@ header{
     color: var(--nlink-clr);
 }
 .cta_btn{
+    order: 2;
     margin-left: 25px;
     padding: 9px 25px;
     background-color:var(--btn-clr);
