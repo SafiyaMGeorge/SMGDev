@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000200;
+}
+h1{
+    color: transparent;
+    font-weight: 900;
+    font-size: 14em;
+    /*the line below creates an outline of each letter in the h1 so the word is visible while transparent.*/
+    -webkit-text-stroke:2px #fff
+}
+.stars .star{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: animate 8s ease-in-out infinite,
+                backgroundmove 16s linear infinite;
+}
+#star1{
+    animation-delay: 0s;
+    background: url('./media/star1.png');
+}
+#star2{
+    animation-delay: -1s;
+    background: url('./media/star2.png');
+}
+#star3{
+    animation-delay: -2s;
+    background: url('./media/star3.png');
+}
+#star4{
+    animation-delay: -3s;
+    background: url('./media/star4.png');
+}
+#star5{
+    animation-delay: -4s;
+    background: url('./media/star5.png');
+}
+#star6{
+    animation-delay: -5s;
+    background: url('./media/star6.png');
+}
+#star7{
+    animation-delay: -6s;
+    background: url('./media/star7.png');
+}
+#star8{
+    animation-delay: -7s;
+    background: url('./media/star8.png');
+}
+/*This animation control the glittering effect of the stars on the screen*/
+@keyframes animate{
+    0%,20%,40%,60%,80%,100%{
+        opacity: 0;
+    }
+    10%,30%,50%,70%,90%{
+        opacity: 1;
+    }
+}
+/*this animation controls the forward movement of the stars on the screen*/
+@keyframes backgroundmove{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(2);
+    }
+}
