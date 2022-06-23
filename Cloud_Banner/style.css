@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#banner{
+    height: 55vh;
+    background-image: url('./media/Images/paul-pastourmatzis-OZdKEwDXXJU-unsplash.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#banner h1{
+   background: linear-gradient(90deg, #f44ef4,#d64ef4,#d64ef4,#bd4ef4,#af4ef4,#8b4ef4,#7a4ef4,#5f4ef4,#4e5cf4,#4e61f4,#4e83f4);
+   font-size: 1.5em;
+   font-family: sans-serif;
+   letter-spacing: 1.5px;
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+}
