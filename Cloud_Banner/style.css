@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 #banner{
-    height: 55vh;
+    height: 75vh;
     background-image: url('./media/Images/paul-pastourmatzis-OZdKEwDXXJU-unsplash.jpg');
     background-size: cover;
     display: flex;
@@ -18,4 +18,21 @@
    letter-spacing: 1.5px;
    -webkit-text-fill-color: transparent;
    -webkit-background-clip: text;
+}
+/*this is the id for the section where the cloud images are placed*/
+#clouds{
+    opacity: .6;
+    max-width: 100%;
+    position: absolute;
+    bottom: 0px;
+    animation: cloud calc(10s * var(--i)) linear infinite;
+}
+
+@keyframes cloud{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
 }
