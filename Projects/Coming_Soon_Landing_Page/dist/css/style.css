@@ -24,19 +24,20 @@ using a 0.02 point difference avoids overlap issues
 }
 
 h1 {
-  font-size: 4.375em;
+  font-size: 5.625em;
   margin-bottom: 1.5rem;
   color: var(--primary-clr);
 }
 
 h2 {
-  font-size: 3.4375em;
+  font-size: 4.0625em;
   margin-bottom: 0.8125rem;
 }
 
 p {
-  font-size: 1em;
-  margin-bottom: 2rem;
+  font-size: 1.5625em;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
 a,

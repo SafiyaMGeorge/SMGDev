@@ -9,17 +9,19 @@
 }
 
 h1{
-    font-size: u.em(70);
+    font-size: u.em(90);
     margin-bottom: u.rem(24);
     color:var(--primary-clr);
 }
 h2{
-    font-size: u.em(55);
+    font-size: u.em(65);
     margin-bottom: u.rem(13);
 }
 p{
-    font-size: 1em;
-    margin-bottom: 2rem;
+    font-size: u.em(25);
+    font-weight: 700;
+    margin-bottom: u.rem(24);
+
 }
 a,
 a:visited{
