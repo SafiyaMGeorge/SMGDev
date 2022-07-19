@@ -9,12 +9,12 @@
 }
 
 h1{
-    font-size: 2.5em;
-    margin-bottom: 1.5rem;
+    font-size: u.em(70);
+    margin-bottom: u.rem(24);
 }
 h2{
-    font-size: 1.5em;
-    margin-bottom: .5rem;
+    font-size: u.em(55);
+    margin-bottom: u.rem(13);
 }
 p{
     font-size: 1em;
