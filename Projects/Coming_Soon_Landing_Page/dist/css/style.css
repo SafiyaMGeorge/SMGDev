@@ -53,11 +53,6 @@ a:active {
   font-family: sans-serif;
 }
 
-body {
-  height: 100vh;
-  width: 100vw;
-}
-
 .header__logo {
   font-size: 2.5rem;
 }
@@ -103,12 +98,45 @@ img {
   --light-clr:#f2f7f1;
 }
 
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .header {
   width: 100vw;
   display: flex;
+  margin-bottom: 3.75rem;
 }
 .header__logo {
   width: 90%;
+}
+
+.content,
+.hero__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content--left,
+.hero__container--left {
+  height: 50%;
+}
+.content--pitch,
+.hero__container--pitch {
+  height: 100%;
+}
+.content--right,
+.hero__container--right {
+  height: 50%;
+}
+
+ul {
+  display: none;
 }
 
 /*This media query is generated everytime the mixin is used
