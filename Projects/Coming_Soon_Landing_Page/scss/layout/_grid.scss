@@ -1,12 +1,39 @@
 @use '../utils/' as u;
 
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .header{
     width: 100vw;
     display: flex;
+    margin-bottom: u.rem(60);
 
     &__logo{
         width: 90%;
     }
+}
+.content,
+.hero__container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    &--left{
+        height: 50%;     
+    }
+    &--pitch{
+       height: 100%;
+    }
+    &--right{
+        height: 50%;
+    }
+}
+ul{
+    display: none;
 }
 @include u.breakpoint-up(medium){
 
