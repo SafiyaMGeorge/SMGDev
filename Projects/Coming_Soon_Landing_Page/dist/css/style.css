@@ -26,6 +26,7 @@ using a 0.02 point difference avoids overlap issues
 h1 {
   font-size: 4.375em;
   margin-bottom: 1.5rem;
+  color: var(--primary-clr);
 }
 
 h2 {
