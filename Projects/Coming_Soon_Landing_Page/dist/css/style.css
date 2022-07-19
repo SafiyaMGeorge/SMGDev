@@ -24,13 +24,13 @@ using a 0.02 point difference avoids overlap issues
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 4.375em;
   margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: 1.5em;
-  margin-bottom: 0.5rem;
+  font-size: 3.4375em;
+  margin-bottom: 0.8125rem;
 }
 
 p {
@@ -96,6 +96,7 @@ img {
 
 :root {
   --light-clr:#f2f7f1;
+  --primary-clr:#04de49;
 }
 
 body {
