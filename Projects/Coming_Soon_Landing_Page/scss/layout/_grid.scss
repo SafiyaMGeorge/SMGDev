@@ -1,0 +1,65 @@
+@use '../utils/' as u;
+
+.header{
+    width: 100vw;
+    display: flex;
+
+    &__logo{
+        width: 90%;
+    }
+}
+@include u.breakpoint-up(medium){
+
+}
+
+@include u.breakpoint-up(large){
+    .header{
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        margin-top: u.rem(16);
+        margin-bottom: u.rem(64);
+        padding:  0 u.rem(24);
+
+        &__logo{
+            width: 70%;
+        }
+        &__navbar{
+            width: 30%;
+        }
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .hero__container{
+        display: flex;
+        height: 100%;
+        align-self: center;
+    
+        &--left{
+            width: 500%;
+            margin: 0 u.rem(16);
+        }
+        .pitch{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top:u.rem(200);
+            left: u.rem(30);
+          
+        }
+    
+        &--right{
+            width: 800%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+
+}
