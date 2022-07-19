@@ -1,6 +1,13 @@
 /*This partial control the style rules of the page.*/
 @use '../utils/' as u;
 
+.header__logo{
+    font-size: u.rem(40);
+}
+.fa-bars{
+    font-size: u.em(30);
+}
+
 h1{
     font-size: 2.5em;
     margin-bottom: 1.5rem;

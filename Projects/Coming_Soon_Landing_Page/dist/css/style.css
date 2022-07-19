@@ -15,6 +15,14 @@ using a 0.02 point difference avoids overlap issues
 /*The block below is a mixin for width-min*/
 /*max-width mixin*/
 /*This partial control the style rules of the page.*/
+.header__logo {
+  font-size: 2.5rem;
+}
+
+.fa-bars {
+  font-size: 1.875em;
+}
+
 h1 {
   font-size: 2.5em;
   margin-bottom: 1.5rem;
@@ -51,14 +59,6 @@ a:active {
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-}
-
-.header__logo {
-  font-size: 2.5rem;
-}
-
-.fa-bars {
-  font-size: 1.875em;
 }
 
 img {
