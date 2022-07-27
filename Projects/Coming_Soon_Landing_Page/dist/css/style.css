@@ -24,13 +24,13 @@ using a 0.02 point difference avoids overlap issues
 }
 
 h1 {
-  font-size: 5.625em;
+  font-size: 5em;
   margin-bottom: 1.5rem;
   color: var(--primary-clr);
 }
 
 h2 {
-  font-size: 4.0625em;
+  font-size: 3.4375em;
   margin-bottom: 0.8125rem;
 }
 
@@ -40,8 +40,7 @@ p {
   margin-bottom: 3.375rem;
 }
 
-a,
-a:visited {
+a {
   text-decoration: none;
   color: #000;
 }
@@ -50,12 +49,79 @@ a:active {
   color: rgb(224, 225, 225);
 }
 
+#cta {
+  color: var(--light-clr);
+}
+
+#cta:active {
+  color: #000;
+}
+
 #btn {
   color: var(--light-clr);
   letter-spacing: 0.125em;
   line-height: 1em;
 }
 
+/*This media query is generated everytime the mixin is used
+    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
+    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
+    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
+    mixin named $size which we will use as the second map-up function parameter 
+    When creating meida queries it is best to use ems.*/
+@media (min-width: 43.75em) {
+  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
+  h1 {
+    font-size: 5em;
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-size: 4.0625em;
+    margin-bottom: 0.8125rem;
+  }
+  p {
+    font-size: 1.5625em;
+    font-weight: 700;
+    margin-bottom: 3.375rem;
+  }
+  #btn {
+    font-size: 1.875em;
+    color: var(--light-clr);
+    letter-spacing: 0.125em;
+    line-height: 1em;
+  }
+}
+/*This media query is generated everytime the mixin is used
+    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
+    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
+    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
+    mixin named $size which we will use as the second map-up function parameter 
+    When creating meida queries it is best to use ems.*/
+@media (min-width: 56.25em) {
+  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
+  .navbar__item {
+    font-size: 1.5625em;
+  }
+  h1 {
+    font-size: 5em;
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-size: 4.0625em;
+    margin-bottom: 0.8125rem;
+  }
+  p {
+    font-size: 1.5625em;
+    font-weight: 700;
+    margin-bottom: 3.375rem;
+  }
+  #btn {
+    font-size: 1.875em;
+    color: var(--light-clr);
+    letter-spacing: 0.125em;
+    line-height: 1em;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -64,14 +130,13 @@ a:active {
 }
 
 img {
-  width: 60%;
-  transform: rotate(10deg);
+  width: 100%;
 }
 
 #btn {
   background: linear-gradient(90deg, #04de49, #ffeb3b, #f5973f, #04de49);
   background-size: 400%;
-  padding: 0.375rem 1.875rem;
+  padding: 0.5rem 2.5rem;
   border-radius: 0.9375rem;
 }
 #btn:hover {
@@ -96,6 +161,64 @@ img {
   }
 }
 
+/*This media query is generated everytime the mixin is used
+    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
+    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
+    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
+    mixin named $size which we will use as the second map-up function parameter 
+    When creating meida queries it is best to use ems.*/
+@media (min-width: 43.75em) {
+  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
+  #btn {
+    background: linear-gradient(90deg, #04de49, #ffeb3b, #f5973f, #04de49);
+    background-size: 400%;
+    padding: 0.9375rem 2.8125rem;
+    border-radius: 2.1875rem;
+  }
+  #btn:hover {
+    -webkit-animation: animate 8s linear infinite;
+            animation: animate 8s linear infinite;
+    transform: translateY(-0.1875rem);
+  }
+  @-webkit-keyframes animate {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
+  @keyframes animate {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
+}
+/*This media query is generated everytime the mixin is used
+    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
+    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
+    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
+    mixin named $size which we will use as the second map-up function parameter 
+    When creating meida queries it is best to use ems.*/
+@media (min-width: 56.25em) {
+  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
+  .header {
+    height: 10%;
+    margin: 1.625rem 1.875rem 4rem 0;
+    padding: 0 1.5rem;
+  }
+  .navbar__menu li:nth-child(4) {
+    background-color: var(--primary-clr);
+    padding: 0.25rem 0.8125rem;
+    border-radius: 0.9375em;
+  }
+  .navbar__bars {
+    display: none;
+  }
+}
 :root {
   --light-clr:#f2f7f1;
   --primary-clr:#04de49;
@@ -103,15 +226,17 @@ img {
 
 body {
   height: 100vh;
+  margin-left: 1.875rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: scroll;
 }
 
 .header {
   width: 100vw;
   display: flex;
-  margin-bottom: 3.75rem;
+  margin: 1.25rem 0 12.5rem 0;
 }
 .header__logo {
   width: 90%;
@@ -127,7 +252,8 @@ body {
 }
 .content--left,
 .hero__container--left {
-  height: 50%;
+  height: 90%;
+  margin-bottom: 5rem;
 }
 .content--pitch,
 .hero__container--pitch {
@@ -148,30 +274,18 @@ ul {
     In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
     mixin named $size which we will use as the second map-up function parameter 
     When creating meida queries it is best to use ems.*/
-@media (min-width: 43.75em) {
-  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
-}
-/*This media query is generated everytime the mixin is used
-    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
-    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
-    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
-    mixin named $size which we will use as the second map-up function parameter 
-    When creating meida queries it is best to use ems.*/
 @media (min-width: 56.25em) {
   /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
   .header {
     width: 100vw;
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
-    margin-bottom: 4rem;
-    padding: 0 1.5rem;
   }
   .header__logo {
-    width: 70%;
+    width: 40%;
   }
   .header__navbar {
-    width: 30%;
+    width: 37.5rem;
   }
   ul {
     list-style: none;
@@ -180,25 +294,12 @@ ul {
   }
   .hero__container {
     display: flex;
-    height: 100%;
-    align-self: center;
+    flex-direction: row;
   }
   .hero__container--left {
-    width: 500%;
-    margin: 0 1rem;
-  }
-  .hero__container .pitch {
     width: 100%;
-    height: 100%;
-    position: relative;
-    top: 12.5rem;
-    left: 1.875rem;
   }
   .hero__container--right {
-    width: 800%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 85%;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -2,14 +2,16 @@
 
 body{
     height: 100vh;
+    margin-left: u.rem(30);
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: scroll;
 }
 .header{
     width: 100vw;
     display: flex;
-    margin-bottom: u.rem(60);
+    margin: u.rem(20) 0 u.rem(200) 0;
 
     &__logo{
         width: 90%;
@@ -23,7 +25,8 @@ body{
     justify-content:center;
     align-items: center;
     &--left{
-        height: 50%;     
+        height: 90%;
+        margin-bottom: u.rem(80);
     }
     &--pitch{
        height: 100%;
@@ -35,24 +38,18 @@ body{
 ul{
     display: none;
 }
-@include u.breakpoint-up(medium){
-
-}
 
 @include u.breakpoint-up(large){
     .header{
         width: 100vw;
         display: flex;
         justify-content: space-between;
-        margin-top: u.rem(16);
-        margin-bottom: u.rem(64);
-        padding:  0 u.rem(24);
 
         &__logo{
-            width: 70%;
+            width: 40%;
         }
         &__navbar{
-            width: 30%;
+            width: u.rem(600);
         }
     }
     ul{
@@ -60,33 +57,15 @@ ul{
         display: flex;
         justify-content: space-around;
     }
-    
     .hero__container{
         display: flex;
-        height: 100%;
-        align-self: center;
-    
+        flex-direction: row;
+        
         &--left{
-            width: 500%;
-            margin: 0 u.rem(16);
-        }
-        .pitch{
             width: 100%;
-            height: 100%;
-            position: relative;
-            top:u.rem(200);
-            left: u.rem(30);
-          
         }
-    
         &--right{
-            width: 800%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 85%;
         }
     }
-    
-
 }
