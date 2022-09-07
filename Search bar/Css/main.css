@@ -20,3 +20,14 @@
     width: 2em;
     color: black;
 }
+/*This section styles the look of what the user will think is the search bar.*/
+#search__bar{
+    background: rgba(255, 255,255, .2);
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 60px;
+}
