@@ -47,6 +47,7 @@ h1{
     flex: 1;
     border: none;
     outline: none;
+    color: aliceblue;
 }
 ::placeholder{
     color: aliceblue;
