@@ -31,3 +31,13 @@
     padding: 10px 20px;
     border-radius: 60px;
 }
+/*Style the input of the search section so that it seems that the overall section and the input are one item.*/
+#search__bar input{
+    background: transparent;
+    flex: 1;
+    border: none;
+    outline: none;
+}
+::placeholder{
+    color: aliceblue;
+}
