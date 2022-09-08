@@ -31,12 +31,13 @@ h1{
 /*This section styles the look of what the user will think is the search bar.*/
 #search__bar{
     background: rgba(255, 255,255, .2);
-    width: 100%;
+    width: 90%;
     max-width: 700px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px 10px 15px;
     border-radius: 60px;
 }
 /*Style the input of the search section so that it seems that the overall section and the input are one item.*/
@@ -48,4 +49,19 @@ h1{
 }
 ::placeholder{
     color: aliceblue;
+}
+
+.search__btn{
+   border: 0;
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+   background: #a6a1a1;
+   opacity: .7;
+}
+i{
+   color: aliceblue;
+}
+.search__btn:hover{
+    cursor: pointer;
 }
