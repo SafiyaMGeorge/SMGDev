@@ -39,6 +39,7 @@ h1{
     align-items: center;
     padding: 10px 10px 10px 15px;
     border-radius: 60px;
+    backdrop-filter: blur(4px) saturate(100%);
 }
 /*Style the input of the search section so that it seems that the overall section and the input are one item.*/
 #search__bar input{
