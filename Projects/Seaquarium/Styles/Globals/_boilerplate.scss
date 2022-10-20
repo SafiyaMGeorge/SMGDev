@@ -8,3 +8,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    position: relative;
+    overflow: hidden;
+}
+video{
+    //The three lines below allow the video to take up the whole page width so that it can be placed in the background. The posion absolute paired with the body's position relative allows for the elements to be stacked ontop each other and not just below in a column like manner.
+    position:absolute;
+    top: 0;
+    left: 0;
+    //The min width and height paired with the body overflow element makes sure that the video will allways be the same size as the window.
+    min-width: 100vw;
+    min-height: 100vh;
+}
