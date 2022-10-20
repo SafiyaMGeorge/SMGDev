@@ -21,4 +21,6 @@ video{
     //The min width and height paired with the body overflow element makes sure that the video will allways be the same size as the window.
     min-width: 100%;
     min-height: 100%;
+    //The line below places the video behind the rest of the layers visually.
+    z-index: -1;
 }
