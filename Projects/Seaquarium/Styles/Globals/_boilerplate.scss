@@ -1,0 +1,10 @@
+//This is the partial that the general components will be held and functions will be utilized.
+//below allows the functions in the utils file to be used in this file.
+@use '../utils/' as u;
+
+//resetting the page withe the line below.
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
