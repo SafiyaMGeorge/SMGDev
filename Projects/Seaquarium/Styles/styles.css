@@ -21,6 +21,10 @@ video {
   z-index: -1;
 }
 
+.logo img {
+  width: 60%;
+}
+
 .hero button {
   width: 15rem;
   height: 2.6rem;

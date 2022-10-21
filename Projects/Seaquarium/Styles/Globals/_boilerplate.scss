@@ -25,6 +25,9 @@ video{
     //The line below places the video behind the rest of the layers visually.
     z-index: -1;
 }
+.logo img{
+    width: 60%;
+}
 .hero button{
     width: 15rem;
     height: 2.6rem;
