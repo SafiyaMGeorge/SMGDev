@@ -24,7 +24,7 @@ video {
 .hero button {
   width: 15rem;
   height: 2.6rem;
-  padding: 1rem 1rem 2.8rem 1rem;
+  padding: 0.6rem 1rem 2.8rem 1rem;
   border: solid aqua 1.5px;
   border-radius: 35px;
 }
@@ -44,6 +44,10 @@ main, header {
   border: 1px solid rgb(188, 201, 207);
 }
 
+.cta_btn a {
+  color: aliceblue;
+}
+
 .content {
   font-family: "Kalam";
 }
@@ -52,9 +56,17 @@ main, header {
   font-size: 2.5em;
 }
 
-.content button {
+.content button, .cta_btn a {
   font-family: "Kalam";
-  font-size: 1.5em;
+  font-size: 1.7em;
+}
+
+.cta_btn a {
+  text-decoration: none;
+}
+
+.cta_btn a:hover {
+  cursor: pointer;
 }
 
 .content {
@@ -66,7 +78,7 @@ main, header {
 }
 
 .hero {
-  width: 90%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,4 +87,11 @@ main, header {
 
 .hero h1, h2 {
   margin-bottom: 0.5em;
+}
+
+.cta {
+  width: 15%;
+  height: 5%;
+  text-align: center;
+  margin-top: 1rem;
 }/*# sourceMappingURL=styles.css.map */

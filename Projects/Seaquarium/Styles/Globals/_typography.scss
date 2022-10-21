@@ -10,7 +10,13 @@ $primary:'Kalam';
 .content h1, h2{
     font-size: 2.5em;
 }
-.content button{
+.content button, .cta_btn a{
     font-family: $primary;
-    font-size: 1.5em;
+    font-size: 1.7em;
+}
+.cta_btn a{
+    text-decoration: none;
+}
+.cta_btn a:hover{
+    cursor: pointer;
 }
