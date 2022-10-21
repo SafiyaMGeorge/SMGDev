@@ -40,7 +40,7 @@ main, header {
 }
 
 .content h1, h2 {
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .content button {
@@ -61,6 +61,7 @@ main, header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 10rem 0 0 12rem;
 }
 
 .hero h1, h2 {
