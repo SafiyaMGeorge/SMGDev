@@ -12,6 +12,7 @@ body{
     position: relative;
     overflow: hidden;
     height: 100vh;
+    width: 100vw;
 }
 video{
     //The three lines below allow the video to take up the whole page width so that it can be placed in the background. The posion absolute paired with the body's position relative allows for the elements to be stacked ontop each other and not just below in a column like manner.
@@ -23,4 +24,7 @@ video{
     min-height: 100%;
     //The line below places the video behind the rest of the layers visually.
     z-index: -1;
+}
+.hero button{
+    max-width: 100px;
 }
