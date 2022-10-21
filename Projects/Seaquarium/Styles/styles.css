@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -21,11 +22,30 @@ video {
 }
 
 .hero button {
-  max-width: 100px;
+  width: 15rem;
+  height: 2.6rem;
+  padding: 1rem 1rem 2.8rem 1rem;
+  border: solid aqua 1.5px;
+  border-radius: 35px;
+  background: none;
+  color: aliceblue;
 }
 
 main, header {
   color: azure;
+}
+
+.content {
+  font-family: "Kalam";
+}
+
+.content h1, h2 {
+  font-size: 2em;
+}
+
+.content button {
+  font-family: "Kalam";
+  font-size: 1.5em;
 }
 
 .content {

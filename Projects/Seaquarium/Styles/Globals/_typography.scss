@@ -1,0 +1,16 @@
+//google font that will be used
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
+
+//typography variable
+$primary:'Kalam';
+
+.content{
+    font-family: $primary;
+}
+.content h1, h2{
+    font-size: 2em;
+}
+.content button{
+    font-family: $primary;
+    font-size: 1.5em;
+}
