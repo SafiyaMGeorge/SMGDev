@@ -4,9 +4,10 @@ body {
 }
 
 #component {
-  background-color: palevioletred;
   height: 50%;
   width: 90%;
+  background-color: whitesmoke;
+  box-shadow: 2px 3px 4px 3px rgba(62, 61, 61, 0.702);
 }
 
 #img_section {
@@ -24,11 +25,11 @@ img {
 #form_section {
   width: 50%;
   height: 100%;
-  background-color: bisque;
 }
 
 h1 {
   font-size: 2em;
+  margin-top: 2.5rem;
 }
 
 form {
