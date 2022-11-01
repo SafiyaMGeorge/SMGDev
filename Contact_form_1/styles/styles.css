@@ -27,9 +27,15 @@ img {
   height: 100%;
 }
 
-h1 {
-  font-size: 2em;
-  margin-top: 2.5rem;
+header {
+  height: 13%;
+}
+
+#bottom_line {
+  width: 15%;
+  height: 4%;
+  border-radius: 15px;
+  background-color: aqua;
 }
 
 form {
@@ -79,6 +85,13 @@ body {
 
 #form_section {
   text-align: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form {

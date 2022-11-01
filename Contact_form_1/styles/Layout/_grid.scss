@@ -8,6 +8,12 @@ body{
 }
 #form_section{
     text-align: center;
+    align-items: center;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 form{
     position: relative;
