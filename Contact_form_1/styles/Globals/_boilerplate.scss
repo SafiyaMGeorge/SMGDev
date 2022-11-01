@@ -1,6 +1,38 @@
 body{
+    width: 100vw;
+    height: 100vh;
+}
+#component{
     background-color: palevioletred;
+    height: 45%;
+    width: 90%;
+
+}
+#img_section{
+    width: 50%;
+    height: 100%;
+    background-color: blue;
 }
 img{
     width: 100%;
+}
+#form_section{
+    width: 50%;
+    height: 100%;
+    background-color: bisque;
+}
+h1{
+    font-size: 2em;
+}
+form{
+    height: 100%;
+}
+input, textarea{
+    display: block;
+    border-radius: 10px;
+}
+input{
+    margin-bottom: 2rem;
+    width: 70%;
+    height: 5%;
 }

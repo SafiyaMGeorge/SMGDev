@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#component{
+    display: flex;
+}
+#form_section{
+    text-align: center;
+}
+form{
+    position: relative;
+    top:10%;
+    left: 15%;
+    width: 100%;
+}
