@@ -5,7 +5,7 @@ body {
 }
 
 #component {
-  height: 50%;
+  height: 55%;
   width: 90%;
   box-shadow: 2px 3px 4px 3px rgba(62, 61, 61, 0.702);
 }
@@ -39,6 +39,7 @@ form {
 input, textarea {
   display: block;
   border-radius: 5px;
+  border: none;
 }
 
 input {
