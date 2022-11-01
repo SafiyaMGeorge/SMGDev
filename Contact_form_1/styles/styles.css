@@ -47,6 +47,12 @@ input {
   height: 5%;
 }
 
+button {
+  width: 60%;
+  height: 6%;
+  margin-top: 0.9rem;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -66,4 +72,10 @@ form {
   top: 10%;
   left: 15%;
   width: 100%;
+}
+
+button {
+  position: relative;
+  top: 0%;
+  left: -15%;
 }/*# sourceMappingURL=styles.css.map */
