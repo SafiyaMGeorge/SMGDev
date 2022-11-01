@@ -1,12 +1,12 @@
 body {
   width: 100vw;
   height: 100vh;
+  background-image: url("/Contact_form_1/Media/guille-pozzi-sbcIAn4Mn14-unsplash.jpg");
 }
 
 #component {
   height: 50%;
   width: 90%;
-  background-color: whitesmoke;
   box-shadow: 2px 3px 4px 3px rgba(62, 61, 61, 0.702);
 }
 
