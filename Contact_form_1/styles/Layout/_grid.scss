@@ -5,6 +5,8 @@ body{
 }
 #component{
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #form_section{
     text-align: center;
