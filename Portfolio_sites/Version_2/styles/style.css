@@ -27,8 +27,22 @@ main {
   background-color: aquamarine;
 }
 
+#Intro {
+  height: 30vh;
+}
+
 .nav_item {
   font-size: 1.5em;
+}
+
+#Intro p {
+  font-size: 1.5em;
+}
+#Intro h1 {
+  font-size: 3em;
+}
+#Intro h2 {
+  font-size: 2.5em;
 }
 
 Header {
@@ -41,4 +55,20 @@ Header {
 #nav_list {
   display: flex;
   justify-content: end;
+}
+
+#Intro p {
+  position: relative;
+  top: 15%;
+  left: 25%;
+}
+#Intro h1 {
+  position: relative;
+  top: 5%;
+  left: 30%;
+}
+#Intro h2 {
+  position: relative;
+  top: 0;
+  left: 33%;
 }/*# sourceMappingURL=style.css.map */
