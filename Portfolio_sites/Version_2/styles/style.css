@@ -9,21 +9,17 @@ body {
 Header {
   margin-top: 1rem;
 }
-
-#logo img {
+Header #logo img {
   width: 5.5rem;
 }
-
-nav {
+Header nav {
   width: 50%;
 }
-
-#nav_list {
+Header #nav_list {
   list-style: none;
   width: 90%;
 }
-
-.nav_item {
+Header .nav_item {
   margin: 0 0.5rem;
 }
 

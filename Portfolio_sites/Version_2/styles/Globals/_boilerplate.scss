@@ -7,19 +7,20 @@ body{
 }
 Header{
     margin-top: 1rem;
-}
-#logo img{
-    width: 5.5rem;
-}
-nav{
-    width: 50%;
-}
-#nav_list{
-    list-style: none;
-    width: 90%;
-}
-.nav_item{
-    margin: 0 .5rem;
+
+    #logo img{
+        width: 5.5rem;
+    }
+    nav{
+        width: 50%;
+    }
+    #nav_list{
+        list-style: none;
+        width: 90%;
+    }
+    .nav_item{
+        margin: 0 .5rem;
+    }
 }
 main{
     background-color: aquamarine;
