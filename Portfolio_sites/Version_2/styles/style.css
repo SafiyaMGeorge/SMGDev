@@ -4,6 +4,8 @@ body {
   box-sizing: border-box;
   max-width: 100vw;
   max-height: 100vh;
+  background-color: #10182d;
+  color: #EE7BD9;
 }
 
 Header {
@@ -21,10 +23,6 @@ Header #nav_list {
 }
 Header .nav_item {
   margin: 0 0.5rem;
-}
-
-main {
-  background-color: aquamarine;
 }
 
 #Intro {
