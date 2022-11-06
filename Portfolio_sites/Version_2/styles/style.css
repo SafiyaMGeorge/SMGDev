@@ -25,8 +25,21 @@ Header .nav_item {
   margin: 0 0.5rem;
 }
 
+main {
+  margin: 0 2.5rem;
+}
+
 #Intro {
   height: 30vh;
+}
+
+#intro_bio {
+  background-color: rgb(13, 31, 197);
+  height: 45vh;
+}
+
+p {
+  font-size: 1.6em;
 }
 
 .nav_item {
