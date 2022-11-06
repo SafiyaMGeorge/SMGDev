@@ -31,6 +31,17 @@ main{
     height: 30vh;
 }
 #intro_bio{
-    background-color: rgb(13, 31, 197);
     height: 45vh;
+    #portfolio_img{
+        background-image: url('/Portfolio_sites/Version_2/Media/Portfolio6.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60%;
+    }
+    img{
+        width: 40%;
+        position: relative;
+        top: 13%;
+        left: 30%;
+    }
 }
