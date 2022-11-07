@@ -35,11 +35,12 @@ Header{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-    }
 
-    .tech_item:after {
-        content: '';
-        display: block;
-        position: absolute;
-      }
+        .tech_item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }

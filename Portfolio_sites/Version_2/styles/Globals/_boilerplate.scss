@@ -45,25 +45,24 @@ main{
         left: 30%;
     }
 }
-#tech_list{
-    width: 20rem;
-    height: 10rem;
+#tech{
+    height: 23rem;
+    margin-bottom: 5rem;
 
-    .tech_item {
-        margin: 0;
-        margin-bottom: 1em;
-        margin-right: 1em;
-        padding-left: .9em;
-        position: relative;
+    #tech_list{
+        width: 100%;
+    
+        .list_items {
+            font-size: 2em;
+            margin: 0 4rem;
+            padding: 0 1rem;
+    
+            .tech_item{
+                p{
+                   font-size: .4em;
+                }
+            }
+        }
+        
     }
-
-    .tech_item:after {
-        content: '';
-        height: .4em;
-        width: .4em;
-        background: #EE7BD9;
-        transform: rotate(45deg);
-        top: .80em;
-        left: 0;
-      }
 }
