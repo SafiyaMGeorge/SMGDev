@@ -1,11 +1,11 @@
+$accent:#EE7BD9;
+$active:#FFF;
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     max-width: 100vw;
     max-height: 100vh;
-    background-color: #10182d;
-    color: #EE7BD9;
 }
 Header{
     margin-top: 1rem;
@@ -75,14 +75,14 @@ main{
             border-radius: 25px;
         }
         .cta_btn{
-           border: 1.5px solid #EE7BD9;
+           border: 1.5px solid $accent;
            border-radius: 50px;
            padding: .3rem 3rem;
            margin-top: 1.5rem;
         }
         .cta_btn:hover{
-            background-color: #EE7BD9;
-            color: white;
+            background-color: $accent;
+            color: $active;
             cursor: pointer;
         }
     }

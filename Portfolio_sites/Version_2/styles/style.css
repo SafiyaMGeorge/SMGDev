@@ -4,8 +4,6 @@ body {
   box-sizing: border-box;
   max-width: 100vw;
   max-height: 100vh;
-  background-color: #10182d;
-  color: #EE7BD9;
 }
 
 Header {
@@ -85,6 +83,11 @@ main {
   background-color: #EE7BD9;
   color: white;
   cursor: pointer;
+}
+
+body {
+  background-color: #10182d;
+  color: #EE7BD9;
 }
 
 body {
