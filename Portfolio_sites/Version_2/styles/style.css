@@ -65,6 +65,28 @@ main {
   font-size: 0.4em;
 }
 
+#work {
+  margin-bottom: 10rem;
+}
+#work .projects {
+  margin: 2rem 0;
+}
+#work .projects img {
+  width: 75%;
+  border-radius: 25px;
+}
+#work .projects .cta_btn {
+  border: 1.5px solid #EE7BD9;
+  border-radius: 50px;
+  padding: 0.3rem 3rem;
+  margin-top: 1.5rem;
+}
+#work .projects .cta_btn:hover {
+  background-color: #EE7BD9;
+  color: white;
+  cursor: pointer;
+}
+
 body {
   font-family: sans-serif;
   line-height: 3em;
@@ -83,7 +105,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 .nav_item {
@@ -138,4 +160,10 @@ Header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#work .projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
