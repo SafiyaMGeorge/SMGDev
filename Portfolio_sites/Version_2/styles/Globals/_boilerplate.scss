@@ -66,3 +66,24 @@ main{
         
     }
 }
+#work{
+    margin-bottom: 10rem;
+    .projects{
+        margin: 2rem 0;
+        img{
+            width: 75%;
+            border-radius: 25px;
+        }
+        .cta_btn{
+           border: 1.5px solid #EE7BD9;
+           border-radius: 50px;
+           padding: .3rem 3rem;
+           margin-top: 1.5rem;
+        }
+        .cta_btn:hover{
+            background-color: #EE7BD9;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
