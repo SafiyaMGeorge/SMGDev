@@ -43,14 +43,18 @@ main {
   height: 60%;
 }
 #intro_bio img {
-  width: 40%;
+  width: 35%;
   position: relative;
-  top: 13%;
+  top: 10%;
   left: 30%;
 }
 
+body {
+  font-family: sans-serif;
+}
+
 p {
-  font-size: 1.6em;
+  font-size: 1.8em;
 }
 
 .nav_item {
