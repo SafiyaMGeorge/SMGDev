@@ -49,6 +49,27 @@ main {
   left: 30%;
 }
 
+#tech_list {
+  width: 20rem;
+  height: 10rem;
+}
+#tech_list .tech_item {
+  margin: 0;
+  margin-bottom: 1em;
+  margin-right: 1em;
+  padding-left: 0.9em;
+  position: relative;
+}
+#tech_list .tech_item:after {
+  content: "";
+  height: 0.4em;
+  width: 0.4em;
+  background: #EE7BD9;
+  transform: rotate(45deg);
+  top: 0.8em;
+  left: 0;
+}
+
 body {
   font-family: sans-serif;
   line-height: 3em;
@@ -71,6 +92,11 @@ h3 {
 }
 
 .nav_item {
+  font-size: 1.5em;
+}
+
+#tech_list {
+  list-style: none;
   font-size: 1.5em;
 }
 
@@ -100,4 +126,20 @@ Header {
   position: relative;
   top: 0;
   left: 30%;
+}
+
+#tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#tech #tech_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#tech .tech_item:after {
+  content: "";
+  display: block;
+  position: absolute;
 }/*# sourceMappingURL=style.css.map */

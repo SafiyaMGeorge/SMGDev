@@ -45,3 +45,25 @@ main{
         left: 30%;
     }
 }
+#tech_list{
+    width: 20rem;
+    height: 10rem;
+
+    .tech_item {
+        margin: 0;
+        margin-bottom: 1em;
+        margin-right: 1em;
+        padding-left: .9em;
+        position: relative;
+    }
+
+    .tech_item:after {
+        content: '';
+        height: .4em;
+        width: .4em;
+        background: #EE7BD9;
+        transform: rotate(45deg);
+        top: .80em;
+        left: 0;
+      }
+}
