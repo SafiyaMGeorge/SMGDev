@@ -1,0 +1,47 @@
+/*This page will control the responsive sizing of the page.*/
+@use 'functions' as func;
+
+/*breakpoint sizes map
+mobile = 700px
+tablet = 900px
+desktop = 1440px
+*/
+$breakpoint-sizeup:(
+    'medium': func.em(700),
+    'large': func.em(900),
+    'X-large': func.em(1440)
+);
+
+/*breakpoint sizes map for max width
+small(699.98px)
+medium(899.89px)
+large(1439.98px)
+using a 0.02 point difference avoids overlap issues
+*/
+$breakpoint-sizedown:(
+    'small':func.em(699.98),
+    'medium':func.em(899.89),
+    'large':func.em(1439.98)
+);
+
+/*The block below is a mixin for width-min*/
+@mixin breakpoint-up($size) {
+    /*This media query is generated everytime the mixin is used
+        The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
+        the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
+        In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
+        mixin named $size which we will use as the second map-up function parameter 
+        When creating meida queries it is best to use ems.*/
+    @media (min-width: map-get($breakpoint-sizeup,$size)){
+        /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
+        @content;
+    }
+}
+
+/*max-width mixin*/
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoint-sizedown,$size)) {
+        @content;
+    }
+    
+}
