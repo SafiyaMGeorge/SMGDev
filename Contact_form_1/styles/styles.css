@@ -80,6 +80,15 @@ button {
   margin-top: 0.9rem;
 }
 
+/*This media query is generated everytime the mixin is used
+    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
+    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
+    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
+    mixin named $size which we will use as the second map-up function parameter 
+    When creating meida queries it is best to use ems.*/
+@media (min-width: 43.75em) {
+  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
+}
 #component {
   background-color: #FFF;
 }
@@ -162,4 +171,14 @@ button {
   position: relative;
   top: 0%;
   left: -15%;
+}
+
+/*This media query is generated everytime the mixin is used
+    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
+    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
+    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
+    mixin named $size which we will use as the second map-up function parameter 
+    When creating meida queries it is best to use ems.*/
+@media (min-width: 43.75em) {
+  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
 }/*# sourceMappingURL=styles.css.map */
