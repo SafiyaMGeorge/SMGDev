@@ -7,9 +7,11 @@
 }
 
 #game_screen {
-  width: 90vw;
-  height: 30vh;
+  width: 960px;
+  height: 540px;
   border: 1px solid black;
+  background-image: url("/Projects/BunnyHop_Game/media/bunny_game_field.png");
+  background-repeat: no-repeat;
 }
 
 #character {
@@ -17,4 +19,11 @@
   background-repeat: no-repeat;
   width: 200px;
   height: 100px;
+}
+
+#obstacle {
+  background-image: url("/Projects/BunnyHop_Game/media/bunny_game_snake_sm.png");
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 300px;
 }/*# sourceMappingURL=main.css.map */
