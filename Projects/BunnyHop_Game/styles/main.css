@@ -10,4 +10,11 @@
   width: 90vw;
   height: 30vh;
   border: 1px solid black;
+}
+
+#character {
+  background-image: url("/Projects/BunnyHop_Game/media/bunny1.png");
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
 }/*# sourceMappingURL=main.css.map */
