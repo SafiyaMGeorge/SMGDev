@@ -19,8 +19,10 @@
   background-repeat: no-repeat;
   width: 200px;
   height: 100px;
-  -webkit-animation: escape 900ms infinite;
-          animation: escape 900ms infinite;
+}
+#character .animate {
+  -webkit-animation: escape 900ms;
+          animation: escape 900ms;
 }
 
 #obstacle {
