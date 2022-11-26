@@ -26,8 +26,27 @@
   background-repeat: no-repeat;
   width: 200px;
   height: 300px;
+  -webkit-animation: hunting 7s infinite;
+          animation: hunting 7s infinite;
 }
 
+@-webkit-keyframes hunting {
+  0% {
+    left: 960px;
+  }
+  100% {
+    left: -100px;
+  }
+}
+
+@keyframes hunting {
+  0% {
+    left: 960px;
+  }
+  100% {
+    left: -100px;
+  }
+}
 #character {
   position: relative;
   top: 450px;

@@ -24,4 +24,9 @@
     background-repeat: no-repeat;
     width: 200px;
     height: 300px;
+    animation: hunting 7s infinite;
+}
+@keyframes hunting {
+    0%{left:960px;}
+    100%{left:-100px;}
 }
