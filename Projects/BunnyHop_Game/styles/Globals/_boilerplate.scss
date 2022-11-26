@@ -18,22 +18,23 @@
     background-repeat: no-repeat;
     width: 200px;
     height: 100px;
-    .animate{
-        animation: escape 900ms;
-    }
+    
+}
+.animate{
+    animation: jump 990ms;
 }
 #obstacle{
     background-image: url("/Projects/BunnyHop_Game/media/bunny_game_snake_sm.png");
     background-repeat: no-repeat;
     width: 200px;
     height: 300px;
-    animation: hunting 7s infinite;
+    animation: hunting 6s infinite;
 }
 @keyframes hunting {
     0%{left:960px;}
-    100%{left:-100px;}
+    100%{left:-370px;}
 }
-@keyframes escape {
+@keyframes jump {
     0%{top: 460px;}
     30%{top: 290px;}
     50%{top: 300px;}

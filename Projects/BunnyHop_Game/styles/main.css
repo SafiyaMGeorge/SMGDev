@@ -20,9 +20,10 @@
   width: 200px;
   height: 100px;
 }
-#character .animate {
-  -webkit-animation: escape 900ms;
-          animation: escape 900ms;
+
+.animate {
+  -webkit-animation: jump 990ms;
+          animation: jump 990ms;
 }
 
 #obstacle {
@@ -30,8 +31,8 @@
   background-repeat: no-repeat;
   width: 200px;
   height: 300px;
-  -webkit-animation: hunting 7s infinite;
-          animation: hunting 7s infinite;
+  -webkit-animation: hunting 6s infinite;
+          animation: hunting 6s infinite;
 }
 
 @-webkit-keyframes hunting {
@@ -39,7 +40,7 @@
     left: 960px;
   }
   100% {
-    left: -100px;
+    left: -370px;
   }
 }
 
@@ -48,10 +49,10 @@
     left: 960px;
   }
   100% {
-    left: -100px;
+    left: -370px;
   }
 }
-@-webkit-keyframes escape {
+@-webkit-keyframes jump {
   0% {
     top: 460px;
   }
@@ -65,7 +66,7 @@
     top: 460px;
   }
 }
-@keyframes escape {
+@keyframes jump {
   0% {
     top: 460px;
   }
