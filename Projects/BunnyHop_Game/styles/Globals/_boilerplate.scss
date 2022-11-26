@@ -18,6 +18,7 @@
     background-repeat: no-repeat;
     width: 200px;
     height: 100px;
+    animation: escape 900ms infinite;
 }
 #obstacle{
     background-image: url("/Projects/BunnyHop_Game/media/bunny_game_snake_sm.png");
@@ -29,4 +30,10 @@
 @keyframes hunting {
     0%{left:960px;}
     100%{left:-100px;}
+}
+@keyframes escape {
+    0%{top: 460px;}
+    30%{top: 290px;}
+    50%{top: 300px;}
+    100%{top: 460px;}
 }
