@@ -22,8 +22,8 @@
 }
 
 .animate {
-  -webkit-animation: jump 990ms;
-          animation: jump 990ms;
+  -webkit-animation: jump 1200ms;
+          animation: jump 1200ms;
 }
 
 #obstacle {
@@ -40,7 +40,7 @@
     left: 960px;
   }
   100% {
-    left: -370px;
+    left: -30px;
   }
 }
 
@@ -49,7 +49,7 @@
     left: 960px;
   }
   100% {
-    left: -370px;
+    left: -30px;
   }
 }
 @-webkit-keyframes jump {
@@ -57,10 +57,10 @@
     top: 460px;
   }
   30% {
-    top: 290px;
+    top: 330px;
   }
   50% {
-    top: 300px;
+    top: 350px;
   }
   100% {
     top: 460px;
@@ -71,10 +71,10 @@
     top: 460px;
   }
   30% {
-    top: 290px;
+    top: 330px;
   }
   50% {
-    top: 300px;
+    top: 350px;
   }
   100% {
     top: 460px;

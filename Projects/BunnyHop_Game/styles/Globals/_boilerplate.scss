@@ -21,7 +21,7 @@
     
 }
 .animate{
-    animation: jump 990ms;
+    animation: jump 1200ms;
 }
 #obstacle{
     background-image: url("/Projects/BunnyHop_Game/media/bunny_game_snake_sm.png");
@@ -32,11 +32,11 @@
 }
 @keyframes hunting {
     0%{left:960px;}
-    100%{left:-370px;}
+    100%{left:-30px;}
 }
 @keyframes jump {
     0%{top: 460px;}
-    30%{top: 290px;}
-    50%{top: 300px;}
+    30%{top: 330px;}
+    50%{top: 350px;}
     100%{top: 460px;}
 }

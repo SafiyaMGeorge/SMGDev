@@ -11,3 +11,18 @@ function jump(){
         character.classList.remove("animate");
     },900);
 };
+let eaten =setInterval (function(){
+    //this will allow us to get the numerical value of the top and left of the characters. this will allow us to figure out if the two are colliding ontop of each other.
+   let characterTop = parseInt( window.getComputedStyle(character).getPropertyValue("top"));
+
+   let snakeLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue('left'));
+
+   if(snakeLeft < 250 && snakeLeft > 162 && characterTop >= 450){
+    obstacle.style.animation ="none";
+    obstacle.style.display = "none";
+    alert("You have been eaten!")
+    //the lines below are to check where the characters overlap.
+    console.log(characterTop);
+    console.log(snakeLeft);
+   }
+}, 10);
