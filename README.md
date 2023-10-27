@@ -1,1 +1,2 @@
-This repo contains my professional portfolio. This portfolio displays projects that I have done both in school and independently
+This is a simple rock-paper-scissors game with a cute anime theme. Choose your character and give them a name and let the games begin!
+This Project was created to demonstrate my knowledge of manipulation of the DOM and CSSOM using JavaScript.
