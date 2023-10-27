@@ -2,86 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Clipboard landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-  A history of everything you copy
-
-  Clipboard allows you to track and organize everything you 
-  copy. Instantly access your clipboard on all your devices.
-
-  Download for iOS
-  Download for Mac
-
-  Keep track of your snippets
-
-  Clipboard instantly stores any item you copy in the cloud, 
-  meaning you can access your snippets immediately on all your 
-  devices. Our Mac and iOS apps will help you organize everything.
-
-  Quick Search
-
-  Easily search your snippets by content, category, web address, application, and more.
-
-  iCloud Sync
-
-  Instantly saves and syncs snippets across all your devices.
-
-  Complete History
-
-  Retrieve any snippets from the first moment you started using the app.
-
-  Access Clipboard anywhere
-
-  Whether you’re on the go, or at your computer, you can access all your Clipboard 
-  snippets in a few simple clicks.
-
-  Supercharge your workflow
-
-  We’ve got the tools to boost your productivity.
-
-  Create blacklists
-
-  Ensure sensitive information never makes its way to your clipboard by excluding certain sources.
-
-  Plain text snippets
-
-  Remove unwanted formatting from copied text for a consistent look.
-
-  Sneak preview
-
-  Quick preview of all snippets on your Clipboard for easy access.
-
-  Clipboard for iOS and Mac OS
-
-  Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
-  and you’re ready to start adding to your clipboard.
-
-  Download for iOS
-  Download for Mac
-
-  FAQs
-  Contact Us
-  Privacy Policy
-  Press Kit
-  Install Guide
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  <header>
+    <section id="avatar_cir"></section>
+  </header>
+  <main>
+    <section id ="user_info" class ="pop-up">
+      <form id="user_info_form">
+        <input type="text" id="user_name" name="user_name" placeholder="Alpaca123" required/> 
+        <section id="avatars">
+          <h1>Choose your avatar!</h1>
+          <section id="avatar_choice">
+            <div class="avatar_selection">
+              <label for = "avatar_1">
+                <img src="https://cdn-icons-png.flaticon.com/512/10006/10006125.png">
+              </label>
+              <input type = "radio" id="avatar_1" name="u_avatar" class="u_avatar" value = "https://cdn-icons-png.flaticon.com/512/10006/10006122.png">
+            </div>
+            <div class="avatar_selection">
+              <label for = "avatar_2">
+                <img src="https://cdn-icons-png.flaticon.com/512/8669/8669801.png">
+              </label>
+              <input type = "radio" id="avatar_2" name="u_avatar" class="u_avatar" value ="https://cdn-icons-png.flaticon.com/512/8669/8669814.png">
+            </div>
+          </section>
+        </section>
+        <button id="submit">Submit</button>
+      </form>
+      <!--The section below will recieve new info from the user via the JavaScript.-->
+      <section id="player_name"></section>
+    </section>
+    
+      <section id="btns">
+      <button class="btn" id=" Rock">Rock</button>
+      <button class="btn" id=" Paper">Paper</button>
+      <button class="btn" id=" Scissors">Scissors</button>
+        <p>Make your Move!</p>
+    </section>
+    <section id="choices">
+      <h1>User Choice:<span id="user_choice"></span><h1>
+      <h1>Computer Choice:<span id="comp_choice"></span><h1>
+    </section>
+        <div id="results_loader"></div>
+    <section id="results">
+      <div id="reaction"></div>
+      <h1>Results:<span id="result"></span><h1>
+    </section>
+    <section id="score_board">
+      <p class="scores">Your Wins:<div id="u_score">0</div></p>
+      <p class="scores">Draws:<div id="d_score">0</div></p>
+      <p class="scores">Computer Wins:<div id="ai_score">0</div></p>
+    </section>
+  </main>
+      <footer></footer>
+      <script src="./index.js"></script>
 </body>
 </html>

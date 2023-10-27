@@ -1,0 +1,85 @@
+body{
+    margin:auto;
+    height:100vh;
+    background-image:url('https://img.freepik.com/free-photo/amazing-beautiful-sky-with-clouds_58702-5620.jpg?w=996&t=st=1683343566~exp=1683344166~hmac=bb7e99f179cfdff423c6816f45d7e160dd2fa6efbe198f6a0dc242ecdd777643');
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  header{
+    width:100vw;
+    height:10vh;
+    z-index:1;
+    position:relative;
+  }
+  main{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  }
+  #user_info_form{
+    z-index:3;
+    position:absolute;
+    top:0%;
+    left:0%;
+    height:100vh;
+    width:100vw;
+    background-color:rgba(255, 250, 240,0.85);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  #avatar_choice{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    margin:2rem 0; 
+  }
+  .avatar_selection{
+    display: flex;
+    flex-direction:column
+  }
+  #btns p{
+    text-align:center;
+    font-weight:540;
+  }
+  .btn{
+    width:80px;
+    height:30px;
+    border:2px solid #BBA0CA;
+    border-radius:25px;
+    background-color:rgba(240, 248, 255,0.2)
+  }
+  .btn:hover{
+    background-color:#BBA0CA;
+    color:#FFF;
+    cursor:pointer;
+  }
+  img{
+    width:4rem;
+  }
+  label{
+    font-weight:600;
+  }
+  #user_name{
+    width:35%;
+    margin:.3rem;
+  }
+  #score_board{
+    width:90%;
+    border:solid 3px #BBA0CA; 
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+  }
+  #submit{
+    padding:5px 10px;
+    border-radius:15px;
+  }
+  #choices{
+    width:90%;
+    display:flex;
+    justify-content:space-around;
+    margin-left:15%;
+  }
+  
