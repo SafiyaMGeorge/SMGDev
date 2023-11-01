@@ -1,1 +1,1 @@
-This repo contains my professional portfolio. This portfolio displays projects that I have done both in school and independently
+This branch hold the code and media for the version of the portfolio page that I am deploying .
