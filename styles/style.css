@@ -94,9 +94,6 @@ header #nav_list {
   margin: 2rem 0;
 }
 
-#introHeader {
-  padding: 1rem 1.5rem;
-}
 #introHeader h1 {
   font-size: 2.5em;
   margin-bottom: 1rem;
@@ -109,9 +106,25 @@ header #nav_list {
   margin-bottom: 3rem;
 }
 
-#introParagraph {
+#introParagraph, .about_bio, #contact_info {
   padding: 1rem 1, 5rem;
   margin: 0.5rem 2rem;
+  text-align: justify;
+}
+
+#about {
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+}
+
+#about h2, h3 {
+  margin: 0.5rem 2rem;
+}
+
+.about_bio {
+  font-size: x-large;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
 }
 
 #portfolioImg {
