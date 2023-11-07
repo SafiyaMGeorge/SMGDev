@@ -9,47 +9,69 @@
     <title>Safiya George SMG.DEV</title>
 </head>
 <body>
-    <header>
-        <section id="logo">
-            <img src="./Media/SMG_logo.png"/>
-        </section>
-        <nav id="navbar">
-            <ul id="nav_list">
-                <li class="nav_item"><a>Home</a></li>
-                <li class="nav_item"><a>About</a></li>
-                <li class="nav_item"><a>Work</a></li>
-                <li class="nav_item"><a>Contact</a></li>
-                <li class="nav_item"><a>Resume</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="Intro">
-            <p>Hi, my name is</p>
-            <h1>Safiya George</h1>
-            <h2>Title: Frontend Developer</h2>
-        </section>
-        <section id="intro_bio">
-            <p>
-                I am a FullSail graduate from the Web
-                Design and development program.
-                I enjoy developing beautiful sites 
-                and apps that make life easier.
-            </p>
-            <div id="portfolio_img">
-                <img src="./Media/Portfolio-img4.png" alt="A picture of Safiya withe a beach landscape in the background">
-            </div>
-            
+    <div id="top">
+        <header>
+            <section id="logo">
+                <h1> < SMG > </h1>
+            </section>
+              <nav>
+                <section>
+                  <!--There was an onclick event on this button earlier but I removed it for an eventListener because there will be mutliple clicks on this button.-->
+                  <button id="hamburger" aria-controls="nav_list" aria-expanded="false">
+                    <span class="sr-only">Menu</span>
+                    <div aria-hidden = "true" class="hamburger_line"></div>
+                    <div aria-hidden = "true" class="hamburger_line"></div>
+                    <div aria-hidden = "true" class="hamburger_line"></div>
+                  </button>
+                </section>
+                <section id="nav_bar" data-visible="false">
+                  <ul id="nav_list">
+                    <li id="Home">
+                      <a href="#" class="nav_item">Home</a>
+                    </li>
+                    <li id="About">
+                       <a href="#about" class="nav_item">About</a>
+                    </li>
+                    <li id="Services">
+                       <a href="#services" class="nav_item">Services</a>
+                    </li>
+                    <li id="Products">
+                       <a href="#products" class="nav_item">Products</a>
+                    </li>
+                  </ul>
+                </section>
+              </nav>
+          </header>
+        <main id="mainContent">
+            <section id="intro">
+                <section id="introHeader">
+                    <p>Hi, my name is . . .</p>
+                    <h1>Safiya George</h1>
+                    <h2>Title: Frontend Developer</h2>
+                </section>
+                <div id="portfolioImg">
+                    <img src="./Media/Portfolio-img4.png" alt="A picture of Safiya withe a beach landscape in the background">
+                </div>
+                <section id="introParagraph">
+                    <p>
+                        I am a FullSail graduate from the Web
+                        Design and development program.
+                        I enjoy developing beautiful sites 
+                        and apps that make life easier.
+                    </p>
+                </section>
 
-        </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p class="about_bio">
-                I am a budding front-end developer who is excited to join this amazing industry. 
-                Web development is something I am passionate about not only because it 
-                has the potential of being a lucrative line of work but also because I enjoy the feeling of accomplishment when I build something that was just a concept into
-                reality. I also love the feeling of exhilaration of solving an issue in the code. 
-            </p>
+            </section>
+    </div>
+    <div id="bottom">
+            <section id="about">
+                <h2>About Me</h2>
+                <p class="about_bio">
+                    I am a budding front-end developer who is excited to join this amazing industry. 
+                    Web development is something I am passionate about not only because it 
+                    has the potential of being a lucrative line of work but also because I enjoy the feeling of accomplishment when I build something that was just a concept into
+                    reality. I also love the feeling of exhilaration of solving an issue in the code. 
+                </p>
             <p class="about_bio">
                 Some background information on me. I was from St.Thomas located in the US Virgin Islands. I started my journey on the self-taught road through an online
                 tutorial with code academy and an online boot camp. While on that journey I decided that I could learn valuable information from an institution such as Fullsail University.
@@ -132,5 +154,7 @@
                 </ul>
         </section>
     </main>
+</div>
+<script src="./script.js"></script>
 </body>
 </html>

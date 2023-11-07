@@ -1,90 +1,209 @@
 @use '../Utils/' as u;
 $accent:#EE7BD9;
 $active:#FFF;
-body{
-    margin: 0;
+
+*,
+::before,
+::after{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    max-width: 100vw;
-    max-height: 100vh;
 }
-Header{
-    margin-top: 1rem;
+span{
+    display: none;
+}
+/*The line below stops the navbar animation when the window is being resized.*/
+.resize-animation-stopper * {
+    transition: none !important;
+    animation: none !important;
+}
 
-    #logo img{
-        width: 5.5rem;
-    }
-    nav{
-        width: 50%;
-    }
-    #nav_list{
-        list-style: none;
-        width: 90%;
-    }
-    .nav_item{
-        margin: 0 .5rem;
-    }
+ul{
+    list-style-type:none;
 }
-main{
-    margin: 0 2.5rem;
+a{
+    text-decoration:none;
 }
-#Intro{
-    height: 30vh;
+span{
+    display:none;
 }
-#intro_bio{
-    height: 45vh;
-    #portfolio_img{
-        background-image: url('/Portfolio_sites/Version_2/Media/Portfolio6.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 60%;
-    }
-    img{
-        width: 35%;
-        position: relative;
-        top: 10%;
-        left: 30%;
-    }
-}
-#tech{
-    height: 23rem;
-    margin-bottom: 5rem;
+  
+header{
+    height:5rem;
+    padding:1rem .5rem;
+ 
 
-    #tech_list{
-        width: 100%;
+    #logo h1{
+        color: #FFF;
+        font-size: 1.5rem;
+        position: fixed;
+        top: 1%;
+    }
+
+     /*nav*/
+  #hamburger{
+    position:fixed;
+    left:90%;
+    top: 3%;
+    height:1rem;
+    z-index:9999;
+    width:1.8rem;
+    background:none;
+    border:none;
+  }
+
+  .hamburger_line{
+    width:1.5rem;
+    height:.6rem;
+    border-top:solid white 1.6px;
+  }
+  .hamburger_line:hover{
+    cursor:pointer;
+  }
+  #nav_bar{
+      position:fixed;
+      inset:0 0 0 50%;
+      background:#091f4970;
+      backdrop-filter: blur(1rem);
+      /* the min function will choose the smallest size parameter based on the screen dimension and apply that to the padding.*/
+      padding: min(15vh, 5rem) 2rem;
+      z-index:1000;
+      transform: translateX(100%);
+      transition: transform 350ms ease-out;
+    }
+  #nav_bar[data-visible="true"]{
+    transform: translateX(0%);
+  }
+  
+  #nav_list{
+      margin-top: 2.5em;
+      height:45%;
+      width:100%;
+      flex-direction:column;
+      align-items:center;
+  }
+
+  .nav_item{
+    color: #FFF;
+  }
+}
+
+#intro{
+    margin: 2rem 0 ;
+}
+#introHeader{
+    padding: 1rem 1.5rem;
+
+    h1{
+        font-size: 2.5em;
+        margin-bottom: 1rem;
+    }
+    h2{
+        font-size: 2em;
+        margin-bottom: 1rem;
+    }
+    p{
+        margin-bottom: 3rem;
+    }
+}
+#introParagraph{
+    padding: 1rem 1,5rem;
+    margin: .5rem 2rem;
+}
+#portfolioImg{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+@include u.breakpoint-up(large){
+    main{
+        margin: 0 2.5rem;
+    }
+
+    #hamburger{
+        display:none;
+      }
+      
+      #nav_bar{
+        position:absolute;
+        padding:0;
+        background:none;
+        backdrop-filter:none;
+        transform: translateX(0%);
+      }
+      
+      #nav_list{
+        height:.5rem;
+        width:100%;
+        flex-direction:row;
+        align-items:center;
+    }
+      .nav_item{
+        color:var(--primary-color);
+      }
+      .nav_item:hover{
+        color:var(--secondary-color);
+      }
+
+    #Intro{
+        height: 30vh;
+    }
+    #intro_bio{
+        height: 45vh;
+        #portfolio_img{
+            background-image: url('/Portfolio_sites/Version_2/Media/Portfolio6.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 30%;
+        }
+        img{
+            width: 35%;
+            position: relative;
+            top: 10%;
+            left: 30%;
+        }
+    }
+    #tech{
+        height: 23rem;
+        margin-bottom: 5rem;
     
-        .list_items {
-            font-size: 2em;
-            margin: 0 4rem;
-            padding: 0 1rem;
-    
-            .tech_item{
-                p{
-                   font-size: .4em;
+        #tech_list{
+            width: 100%;
+        
+            .list_items {
+                font-size: 2em;
+                margin: 0 4rem;
+                padding: 0 1rem;
+        
+                .tech_item{
+                    p{
+                       font-size: .4em;
+                    }
                 }
             }
-        }
-        
-    }
-}
-#work{
-    margin-bottom: 10rem;
-    .projects{
-        margin: 2rem 0;
-        img{
-            width: 75%;
-            border-radius: 25px;
-        }
-        .cta_btn{
-           border: 1.5px solid $accent;
-           border-radius: 50px;
-           padding: .3rem 3rem;
-           margin-top: 1.5rem;
-        }
-        .cta_btn:hover{
-            background-color: $accent;
-            color: $active;
-            cursor: pointer;
+            
         }
     }
+    #work{
+        margin-bottom: 10rem;
+        .projects{
+            margin: 2rem 0;
+            img{
+                width: 75%;
+                border-radius: 25px;
+            }
+            .cta_btn{
+               border: 1.5px solid $accent;
+               border-radius: 50px;
+               padding: .3rem 3rem;
+               margin-top: 1.5rem;
+            }
+            .cta_btn:hover{
+                background-color: $accent;
+                color: $active;
+                cursor: pointer;
+            }
+        }
+    }
+    
 }
