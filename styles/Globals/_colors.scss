@@ -1,7 +1,24 @@
-$accent:#EE7BD9;
-$active:#FFF;
-$primary:#10182d;
+$accentColor:#EE7BD9;
+$primaryOne:#5170FF;
+$primaryTwo:#FF66C4;
+$headerColor:#ffd900;
+$textColor:#FFFFFF;
 body{
-    background-color: $primary;
-    color: $accent;
+    background-image: linear-gradient($primaryOne,$primaryTwo);
+    color:$textColor;
 }
+#top{
+   background-image: linear-gradient($primaryOne,$primaryTwo);
+   background-repeat: no-repeat;
+}
+#bottom{
+   background-image: linear-gradient($primaryTwo, $primaryOne);
+   background-repeat: no-repeat;
+}
+ h1, h2,h3{
+    color: $headerColor;
+ }
+ .nav_item:hover{
+    color: $primaryTwo;
+    cursor: pointer;
+ }

@@ -1,93 +1,245 @@
-body {
-  margin: 0;
+/*This page will hold the functions used in the page.*/
+/*This function is similar to the one above but it converts px to em.*/
+/*This page will control the responsive sizing of the page.*/
+/*breakpoint sizes map
+mobile = 700px
+tablet = 900px
+desktop = 1440px
+*/
+/*breakpoint sizes map for max width
+small(699.98px)
+medium(899.89px)
+large(1439.98px)
+using a 0.02 point difference avoids overlap issues
+*/
+/*The block below is a mixin for width-min*/
+/*max-width mixin*/
+*,
+::before,
+::after {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  max-width: 100vw;
-  max-height: 100vh;
 }
 
-Header {
-  margin-top: 1rem;
-}
-Header #logo img {
-  width: 5.5rem;
-}
-Header nav {
-  width: 50%;
-}
-Header #nav_list {
-  list-style: none;
-  width: 90%;
-}
-Header .nav_item {
-  margin: 0 0.5rem;
+span {
+  display: none;
 }
 
-main {
-  margin: 0 2.5rem;
+/*The line below stops the navbar animation when the window is being resized.*/
+.resize-animation-stopper * {
+  transition: none !important;
+  animation: none !important;
 }
 
-#Intro {
-  height: 30vh;
+ul {
+  list-style-type: none;
 }
 
-#intro_bio {
-  height: 45vh;
-}
-#intro_bio #portfolio_img {
-  background-image: url("/Portfolio_sites/Version_2/Media/Portfolio6.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60%;
-}
-#intro_bio img {
-  width: 35%;
-  position: relative;
-  top: 10%;
-  left: 30%;
+a {
+  text-decoration: none;
 }
 
-#tech {
-  height: 23rem;
-  margin-bottom: 5rem;
-}
-#tech #tech_list {
-  width: 100%;
-}
-#tech #tech_list .list_items {
-  font-size: 2em;
-  margin: 0 4rem;
-  padding: 0 1rem;
-}
-#tech #tech_list .list_items .tech_item p {
-  font-size: 0.4em;
+span {
+  display: none;
 }
 
-#work {
-  margin-bottom: 10rem;
+header {
+  height: 5rem;
+  padding: 1rem 0.5rem;
+  /*nav*/
 }
-#work .projects {
-  margin: 2rem 0;
+header #logo h1 {
+  color: #FFF;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 1%;
 }
-#work .projects img {
-  width: 75%;
-  border-radius: 25px;
+header #hamburger {
+  position: fixed;
+  left: 90%;
+  top: 3%;
+  height: 1rem;
+  z-index: 9999;
+  width: 1.8rem;
+  background: none;
+  border: none;
 }
-#work .projects .cta_btn {
-  border: 1.5px solid #EE7BD9;
-  border-radius: 50px;
-  padding: 0.3rem 3rem;
-  margin-top: 1.5rem;
+header .hamburger_line {
+  width: 1.5rem;
+  height: 0.6rem;
+  border-top: solid white 1.6px;
 }
-#work .projects .cta_btn:hover {
-  background-color: #EE7BD9;
-  color: white;
+header .hamburger_line:hover {
   cursor: pointer;
 }
+header #nav_bar {
+  position: fixed;
+  inset: 0 0 0 50%;
+  background: rgba(9, 31, 73, 0.4392156863);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  /* the min function will choose the smallest size parameter based on the screen dimension and apply that to the padding.*/
+  padding: min(15vh, 5rem) 2rem;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 350ms ease-out;
+}
+header #nav_bar[data-visible=true] {
+  transform: translateX(0%);
+}
+header #nav_list {
+  margin-top: 2.5em;
+  height: 45%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+header .nav_item {
+  color: #FFF;
+}
 
+#intro {
+  margin: 2rem 0;
+}
+
+#introHeader {
+  padding: 1rem 1.5rem;
+}
+#introHeader h1 {
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+}
+#introHeader h2 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+#introHeader p {
+  margin-bottom: 3rem;
+}
+
+#introParagraph {
+  padding: 1rem 1, 5rem;
+  margin: 0.5rem 2rem;
+}
+
+#portfolioImg {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/*This media query is generated everytime the mixin is used
+    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
+    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
+    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
+    mixin named $size which we will use as the second map-up function parameter 
+    When creating meida queries it is best to use ems.*/
+@media (min-width: 56.25em) {
+  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
+  main {
+    margin: 0 2.5rem;
+  }
+  #hamburger {
+    display: none;
+  }
+  #nav_bar {
+    position: absolute;
+    padding: 0;
+    background: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    transform: translateX(0%);
+  }
+  #nav_list {
+    height: 0.5rem;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+  .nav_item {
+    color: var(--primary-color);
+  }
+  .nav_item:hover {
+    color: var(--secondary-color);
+  }
+  #Intro {
+    height: 30vh;
+  }
+  #intro_bio {
+    height: 45vh;
+  }
+  #intro_bio #portfolio_img {
+    background-image: url("/Portfolio_sites/Version_2/Media/Portfolio6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30%;
+  }
+  #intro_bio img {
+    width: 35%;
+    position: relative;
+    top: 10%;
+    left: 30%;
+  }
+  #tech {
+    height: 23rem;
+    margin-bottom: 5rem;
+  }
+  #tech #tech_list {
+    width: 100%;
+  }
+  #tech #tech_list .list_items {
+    font-size: 2em;
+    margin: 0 4rem;
+    padding: 0 1rem;
+  }
+  #tech #tech_list .list_items .tech_item p {
+    font-size: 0.4em;
+  }
+  #work {
+    margin-bottom: 10rem;
+  }
+  #work .projects {
+    margin: 2rem 0;
+  }
+  #work .projects img {
+    width: 75%;
+    border-radius: 25px;
+  }
+  #work .projects .cta_btn {
+    border: 1.5px solid #EE7BD9;
+    border-radius: 50px;
+    padding: 0.3rem 3rem;
+    margin-top: 1.5rem;
+  }
+  #work .projects .cta_btn:hover {
+    background-color: #EE7BD9;
+    color: #FFF;
+    cursor: pointer;
+  }
+}
 body {
-  background-color: #10182d;
-  color: #EE7BD9;
+  background-image: linear-gradient(#5170FF, #FF66C4);
+  color: #FFFFFF;
+}
+
+#top {
+  background-image: linear-gradient(#5170FF, #FF66C4);
+  background-repeat: no-repeat;
+}
+
+#bottom {
+  background-image: linear-gradient(#FF66C4, #5170FF);
+  background-repeat: no-repeat;
+}
+
+h1, h2, h3 {
+  color: #ffd900;
+}
+
+.nav_item:hover {
+  color: #FF66C4;
+  cursor: pointer;
 }
 
 body {
@@ -120,53 +272,84 @@ h3 {
   font-size: 1.5em;
 }
 
-Header {
-  padding: 0 0.5rem;
+body {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-#nav_list {
+header .hamburger_line {
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+}
+header #nav_bar, header #nav_list {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-#Intro p {
-  position: relative;
-  top: 15%;
-  left: 10%;
-}
-#Intro h1 {
-  position: relative;
-  top: 5%;
-  left: 20%;
-}
-#Intro h2 {
-  position: relative;
-  top: 0;
-  left: 30%;
-}
-
-#tech {
+#intro {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#tech #tech_list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-#tech #tech_list .tech_item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-#work .projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/*This media query is generated everytime the mixin is used
+    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
+    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
+    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
+    mixin named $size which we will use as the second map-up function parameter 
+    When creating meida queries it is best to use ems.*/
+@media (min-width: 56.25em) {
+  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
+  Header {
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #nav_list {
+    display: flex;
+    justify-content: end;
+  }
+  #Intro p {
+    position: relative;
+    top: 15%;
+    left: 10%;
+  }
+  #Intro h1 {
+    position: relative;
+    top: 5%;
+    left: 20%;
+  }
+  #Intro h2 {
+    position: relative;
+    top: 0;
+    left: 30%;
+  }
+  #tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #tech #tech_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #tech #tech_list .tech_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #work .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=style.css.map */
