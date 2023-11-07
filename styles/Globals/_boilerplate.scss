@@ -77,10 +77,8 @@ header{
       align-items:center;
   }
 }
- 
 
-
-
+/*Intro Section*/
 #intro{
     margin: 2rem 0 ;
 }
@@ -99,11 +97,17 @@ header{
         margin-bottom: 3rem;
     }
 }
+#portfolioImg{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
 #introParagraph, .about_bio, #contact_info{
     padding: 1rem 1,5rem;
     margin: .5rem 2rem;
     text-align: justify;
 }
+/*About Section*/
 #about{
     margin: 2rem 0;
     padding-bottom: 1rem;
@@ -117,11 +121,6 @@ header{
     padding-left: 1.5rem;
 
     }
-#portfolioImg{
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
-}
 @include u.breakpoint-up(large){
     main{
         margin: 0 2.5rem;
