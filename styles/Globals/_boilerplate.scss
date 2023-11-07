@@ -108,12 +108,12 @@ header{
     text-align: justify;
 }
 /*About Section*/
-#about{
+#about, #tech{
     margin: 2rem 0;
     padding-bottom: 1rem;
 }
 #about h2, h3{
-    margin: .5rem 2rem;
+    margin: 2rem 0;
 }
 .about_bio{
     font-size: x-large;
@@ -121,6 +121,26 @@ header{
     padding-left: 1.5rem;
 
     }
+
+/*Tech Section*/
+#tech h2{
+    text-align: center;
+}
+#tech_list{
+    margin-top: 1.5rem;
+}
+.tech_item i{
+    font-size: 3em;
+    margin: 1rem 0;
+}
+.tech_item h4{
+    font-size: 1em;
+}
+
+/*Works Section*/
+.projects img{
+    width: 100%;
+}
 @include u.breakpoint-up(large){
     main{
         margin: 0 2.5rem;
