@@ -20,6 +20,11 @@ header{
         display:flex;
         justify-content:space-evenly;
       }
+
+      #nav_bar{
+        position:fixed;
+        inset:0 0 0 50%;
+      }
     
 }
 
