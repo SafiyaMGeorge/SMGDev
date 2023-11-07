@@ -34,7 +34,6 @@ header{
  
 
     #logo h1{
-        color: #FFF;
         font-size: 1.5rem;
         position: fixed;
         top: 1%;
@@ -63,8 +62,6 @@ header{
   #nav_bar{
       position:fixed;
       inset:0 0 0 50%;
-      background:#091f4970;
-      backdrop-filter: blur(1rem);
       /* the min function will choose the smallest size parameter based on the screen dimension and apply that to the padding.*/
       padding: min(15vh, 5rem) 2rem;
       z-index:1000;
@@ -81,10 +78,6 @@ header{
       width:100%;
       flex-direction:column;
       align-items:center;
-  }
-
-  .nav_item{
-    color: #FFF;
   }
 }
 

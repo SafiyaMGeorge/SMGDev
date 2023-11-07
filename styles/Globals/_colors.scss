@@ -10,6 +10,19 @@ body{
 #top{
    background-image: linear-gradient($primaryOne,$primaryTwo);
    background-repeat: no-repeat;
+   header{
+      #logo{
+         color: $textColor;
+      }
+      #nav_bar{
+         background:#091f4970;
+         backdrop-filter: blur(1rem);
+      }
+      .nav_item{
+         color: #FFF;
+       }
+   }
+
 }
 #bottom{
    background-image: linear-gradient($primaryTwo, $primaryOne);

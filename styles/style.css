@@ -50,7 +50,6 @@ header {
   /*nav*/
 }
 header #logo h1 {
-  color: #FFF;
   font-size: 1.5rem;
   position: fixed;
   top: 1%;
@@ -76,9 +75,6 @@ header .hamburger_line:hover {
 header #nav_bar {
   position: fixed;
   inset: 0 0 0 50%;
-  background: rgba(9, 31, 73, 0.4392156863);
-  -webkit-backdrop-filter: blur(1rem);
-          backdrop-filter: blur(1rem);
   /* the min function will choose the smallest size parameter based on the screen dimension and apply that to the padding.*/
   padding: min(15vh, 5rem) 2rem;
   z-index: 1000;
@@ -94,9 +90,6 @@ header #nav_list {
   width: 100%;
   flex-direction: column;
   align-items: center;
-}
-header .nav_item {
-  color: #FFF;
 }
 
 #intro {
@@ -226,6 +219,17 @@ body {
 #top {
   background-image: linear-gradient(#5170FF, #FF66C4);
   background-repeat: no-repeat;
+}
+#top header #logo {
+  color: #FFFFFF;
+}
+#top header #nav_bar {
+  background: rgba(9, 31, 73, 0.4392156863);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+}
+#top header .nav_item {
+  color: #FFF;
 }
 
 #bottom {
