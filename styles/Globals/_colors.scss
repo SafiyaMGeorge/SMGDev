@@ -7,6 +7,9 @@ body{
     background-image: linear-gradient($primaryOne,$primaryTwo);
     color:$textColor;
 }
+h1, h2,h3,h4{
+   color: $headerColor;
+}
 #top{
    background-image: linear-gradient($primaryOne,$primaryTwo);
    background-repeat: no-repeat;
@@ -20,21 +23,20 @@ body{
       }
       .nav_item{
          color: #FFF;
-       }
+      }
        .nav_item:hover{
          color: $accentColor;
-       }
+         cursor: pointer;
+      }
    }
 
 }
 #bottom{
    background-image: linear-gradient($primaryTwo, $primaryOne);
    background-repeat: no-repeat;
+
+   .projects button{
+      color: $textColor;
+   }
 }
- h1, h2,h3,h4{
-    color: $headerColor;
- }
- .nav_item:hover{
-    color: $primaryTwo;
-    cursor: pointer;
- }
+

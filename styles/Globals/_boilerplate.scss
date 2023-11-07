@@ -141,6 +141,25 @@ header{
 .projects img{
     width: 100%;
 }
+.cta button{
+    border: 1.5px solid $accent;
+    border-radius: 50px;
+    padding: .7rem 3rem;
+    margin-top: 1.5rem;
+    background: none;
+}
+.cta button:hover{
+     background-color: $accent;
+     color: $active;
+     cursor: pointer;
+}
+
+.cta{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    padding: 1.5rem 1rem;
+}
 @include u.breakpoint-up(large){
     main{
         margin: 0 2.5rem;
@@ -218,17 +237,7 @@ header{
                 width: 75%;
                 border-radius: 25px;
             }
-            .cta_btn{
-               border: 1.5px solid $accent;
-               border-radius: 50px;
-               padding: .3rem 3rem;
-               margin-top: 1.5rem;
-            }
-            .cta_btn:hover{
-                background-color: $accent;
-                color: $active;
-                cursor: pointer;
-            }
+
         }
     }
     

@@ -158,6 +158,27 @@ header #nav_list {
   width: 100%;
 }
 
+.cta button {
+  border: 1.5px solid #EE7BD9;
+  border-radius: 50px;
+  padding: 0.7rem 3rem;
+  margin-top: 1.5rem;
+  background: none;
+}
+
+.cta button:hover {
+  background-color: #EE7BD9;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.cta {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+  padding: 1.5rem 1rem;
+}
+
 /*This media query is generated everytime the mixin is used
     The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
     the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
@@ -235,21 +256,14 @@ header #nav_list {
     width: 75%;
     border-radius: 25px;
   }
-  #work .projects .cta_btn {
-    border: 1.5px solid #EE7BD9;
-    border-radius: 50px;
-    padding: 0.3rem 3rem;
-    margin-top: 1.5rem;
-  }
-  #work .projects .cta_btn:hover {
-    background-color: #EE7BD9;
-    color: #FFF;
-    cursor: pointer;
-  }
 }
 body {
   background-image: linear-gradient(#5170FF, #FF66C4);
   color: #FFFFFF;
+}
+
+h1, h2, h3, h4 {
+  color: #ffd900;
 }
 
 #top {
@@ -269,20 +283,15 @@ body {
 }
 #top header .nav_item:hover {
   color: #EE7BD9;
+  cursor: pointer;
 }
 
 #bottom {
   background-image: linear-gradient(#FF66C4, #5170FF);
   background-repeat: no-repeat;
 }
-
-h1, h2, h3, h4 {
-  color: #ffd900;
-}
-
-.nav_item:hover {
-  color: #FF66C4;
-  cursor: pointer;
+#bottom .projects button {
+  color: #FFFFFF;
 }
 
 body {
@@ -350,6 +359,11 @@ header #nav_bar {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.cta {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /*This media query is generated everytime the mixin is used

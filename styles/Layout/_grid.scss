@@ -40,6 +40,11 @@ header{
     justify-content: center;
 }
 
+.cta{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 @include U.breakpoint-up(large){
     Header{
         padding: 0 .5rem;
