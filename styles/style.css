@@ -179,6 +179,65 @@ header #nav_list {
   padding: 1.5rem 1rem;
 }
 
+#contact_form {
+  width: 25rem;
+  height: 35rem;
+  margin: 3rem 0;
+  padding: 1.5rem 2.5rem;
+  border: 2px solid #EE7BD9;
+  border-radius: 15px;
+}
+
+#collected_info {
+  height: 85%;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+#user_info {
+  height: 100%;
+  width: 100%;
+}
+
+.user_data, #contact_message textarea {
+  border-radius: 20px;
+  border: solid 2px #EE7BD9;
+}
+
+.user_data {
+  width: 17rem;
+  height: 2.3rem;
+  padding: 6px;
+}
+
+#contact_message {
+  width: 100%;
+}
+#contact_message textarea {
+  width: 100%;
+  height: 100%;
+  padding: 6px 0 0 6px;
+}
+
+#sub_btn {
+  text-align: center;
+}
+
+#submit {
+  padding: 5px 25px;
+  width: 10rem;
+  background: none;
+  color: #FFF;
+  background: #EE7BD9;
+  border: solid 2px none;
+  border-radius: 20px;
+}
+
+#submit:hover {
+  cursor: pointer;
+}
+
 /*This media query is generated everytime the mixin is used
     The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
     the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
@@ -354,7 +413,7 @@ header #nav_bar {
   align-items: center;
 }
 
-#about, #tech, .tech_item, .projects {
+#about, #tech, .tech_item, .projects, #contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -363,6 +422,16 @@ header #nav_bar {
 
 .cta {
   display: flex;
+  justify-content: space-evenly;
+}
+
+#contact_form, #collected_info, #user_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user_info {
   justify-content: space-evenly;
 }
 

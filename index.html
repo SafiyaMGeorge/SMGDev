@@ -146,15 +146,26 @@
                     </div>
                 </section>
                 <section id="contact">
-                    <p id="contact_info">
+                    <p id="contact_paragraph">
                         <strong>I</strong>am looking for any and all opportunities! Freelance, Contract work, or Job openings are welcomed. 
                     </p>
-                    <form>
-                        <input type="text" name="name" placeholder="Name">
-                        <input type="text" name="subject" placeholder="Subject">
-                        <input type="email" name="email" placeholder="Email">
-                        <textarea cols="50" rows="10" placeholder="Message"></textarea>
-                        <a>Submit</a>
+                    <form id="contact_form">
+                        <header id="contact_header">
+                            <h1>Contact Me</h1>
+                        </header>
+                        <section id="collected_info">
+                            <section id="user_info">
+                                <input id="user_name" class="user_data" type="text" name="name" placeholder="Name"/>
+                                <input id="user_email" class="user_data" type="email" name="email" placeholder="Email"/>
+                                <input id="message_subject" class="user_data" type="text" name="subject" placeholder="Subject"/>
+                            </section>
+                            <section id="contact_message">
+                                <textarea cols="8" rows="10" name="message" form="contact_form" placeholder="Message"></textarea>
+                            </section>
+                        </section>
+                        <section id="sub_btn">
+                            <input type="submit" value="Submit" id="submit"/>
+                        </section>
                     </form>
                     <ul id="socials">
                         <li class="list_item"></li>

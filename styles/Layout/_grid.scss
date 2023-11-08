@@ -33,7 +33,7 @@ header{
     flex-direction: column;
     align-items: center;
 }
-#about, #tech, .tech_item, .projects{
+#about, #tech, .tech_item, .projects, #contact{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,6 +42,15 @@ header{
 
 .cta{
     display: flex;
+    justify-content: space-evenly;
+}
+
+#contact_form, #collected_info, #user_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#user_info{
     justify-content: space-evenly;
 }
 
