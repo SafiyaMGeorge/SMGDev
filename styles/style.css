@@ -161,7 +161,7 @@ header #nav_list {
 .cta button {
   border: 1.5px solid #EE7BD9;
   border-radius: 50px;
-  padding: 0.7rem 3rem;
+  padding: 0.5rem 1rem;
   margin-top: 1.5rem;
   background: none;
 }
@@ -174,8 +174,8 @@ header #nav_list {
 
 .cta {
   display: flex;
-  justify-content: space-evenly;
-  width: 70%;
+  justify-content: space-between;
+  width: 90%;
   padding: 1.5rem 1rem;
 }
 
