@@ -78,7 +78,9 @@ header{
       align-items:center;
   }
 }
-
+#top{
+    width: 100%;
+}
 /*Intro Section*/
 #intro{
     margin: 2rem 0 ;
@@ -139,36 +141,45 @@ header{
 }
 
 /*Works Section*/
-.projects img{
-    width: 100%;
+.projects{
+    width:90%;
+    align-items: center;
+    img{
+        width: 100%;
+    }
 }
-.cta button{
-    border: 1.5px solid $accent;
-    border-radius: 50px;
-    padding: .5rem 1rem;
-    margin-top: 1.5rem;
-    background: none;
-}
-.cta button:hover{
-     background-color: $accent;
-     color: $active;
-     cursor: pointer;
-}
-
 .cta{
     display: flex;
     justify-content: space-between;
     width: 90%;
     padding: 1.5rem 1rem;
+
+    button{
+        border: 1.5px solid $accent;
+        border-radius: 50px;
+        padding: .5rem 1rem;
+        margin-top: 1.5rem;
+        background: none;
+    }
+    button:hover{
+        background-color: $accent;
+        color: $active;
+        cursor: pointer;
+   }
 }
 
+
 #contact_form{
-    width: 25rem;
+    width: 22rem;
     height:35rem;
     margin: 3rem 0;
     padding: 1.5rem 2.5rem;
     border: 2px solid $accent;
     border-radius: 15px;
+
+    h1{
+        font-size: 2em;
+    }
 }
 
 #collected_info{
@@ -267,10 +278,11 @@ header{
         margin-bottom: 5rem;
     
         #tech_list{
-            width: 100%;
+            width: 55%;
+            flex-wrap: wrap;
         
             .list_items {
-                font-size: 2em;
+                font-size: 1em;
                 margin: 0 4rem;
                 padding: 0 1rem;
         
@@ -288,11 +300,20 @@ header{
         .projects{
             margin: 2rem 0;
             img{
-                width: 75%;
+                width: 65%;
                 border-radius: 25px;
             }
+            .cta{
 
+                width: 35%;
+
+                 button{
+                    padding: .8rem 3rem;
+                }
+            }
         }
     }
-    
+    #contact_form{
+        width: 27rem;
+    }
 }

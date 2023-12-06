@@ -4,6 +4,7 @@ body{
     max-width: 100vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 header{
@@ -27,31 +28,37 @@ header{
       }
     
 }
-
 #intro{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#about, #tech, .tech_item, .projects, #contact{
+#bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#about, #tech, .tech_item, #work, .projects, #contact, #contact_form, #collected_info, #user_info{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
+.projects h3{
+    text-align: center;
+}
 .cta{
     display: flex;
     justify-content: space-evenly;
 }
-
-#contact_form, #collected_info, #user_info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 #user_info{
     justify-content: space-evenly;
+}
+#contact_paragraph{
+    width: 70%;
+    margin:5.5rem 0 2rem 0;
+    padding: 3rem 0 1rem 0;
+    text-align: center;
 }
 
 @include U.breakpoint-up(large){
@@ -101,6 +108,10 @@ header{
             }
         }
     }
+    #about{
+            width: 70%;
+            text-align: center
+    }
     #work{
         .projects{
             display: flex;
@@ -108,7 +119,9 @@ header{
             align-items: center;
         }
     }
-  }
-
-  @include U.breakpoint-down(small){
+    #contact_paragraph{
+        margin:.5rem 0 2rem 0;
+        padding: 2rem 0 1rem 0;
+        text-align: center;
+    }
   }
