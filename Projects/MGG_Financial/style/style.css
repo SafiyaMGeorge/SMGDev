@@ -78,10 +78,21 @@ header{
   border-radius:50%;
   width:35px;
   height:35px;
-  margin:2px 0;
+  margin:.3rem 1rem 1.2rem 1rem;
   display:flex;
   justify-content:center;
   align-items:center;
+}
+
+#agent_img img{
+
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+}
+
+#logo{
+  margin-left: 1rem;
 }
 
 /*nav*/
