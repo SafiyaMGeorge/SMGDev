@@ -1,19 +1,159 @@
+@use '../Utils/' as u;
+
 $accentColor:#EE7BD9;
-$primaryOne:#5170FF;
-$primaryTwo:#FF66C4;
+$primaryOne:#bc00a2;
+$primaryTwo:#001152;
 $headerColor:#ffd900;
 $textColor:#FFFFFF;
+
+//gradient circle rules
+$color1: rgb(18, 113, 255);
+$color2:rgb(221, 74, 255);
+$color3:rgb(100, 220, 255);
+$color4:rgb(200, 50, 50);
+$color5:rgb(188, 180, 50);
+$colorInteractive:rgb(148, 100, 255);
+$circleSize:80rem;
+$blending:hard-light;
+
+@keyframes movingCircles{
+   0%{
+      transform: rotate(0deg)
+   }
+   50%{
+      transform: rotate(180deg);
+   }
+   100%{
+      transform: rotate(360deg);
+   }
+}
+@keyframes verticalMove{
+   0%{
+      transform: translateY(-50%);
+   }
+   50%{
+      transform: translateY(50%);
+   }
+   100%{
+      transform: rtranslateY(-50%);
+   }
+}
+@keyframes horizontalMove{
+   0%{
+      transform: translateX(-50%) translateY(-10%);
+   }
+   50%{
+      transform: translateX(-50%) translateY(10%);
+   }
+   100%{
+      transform: translateX(-50%) rtranslateY(10%);
+   }
+}
+
+#gradient-bg{
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
+   overflow: hidden;
+   z-index: -2000;
+   
+   top: 0;
+   left: 0;
+
+   #gradientContainer{
+      width: 100%;
+      height: 100%;
+   }
+   #graid1{
+      position: absolute;
+      background: radial-gradient(circle at center, rgba($color1, 0.8) 0,rgba($color1,0) 50%) no-repeat;
+      
+      //The line below changes the blending of the gradient from a soft blur to a starker blur effect.
+      mix-blend-mode: $blending;
+      width: $circleSize;
+      height: $circleSize;
+      
+      //The two line below places the circle in the very center of the page.
+      top: calc(50% - $circleSize / 2);
+      left: calc(80% - $circleSize / 2);
+
+      transform-origin: center center;
+      animation: verticalMove 30s ease infinite;
+
+      opacity: 1;
+   }
+   #graid2{
+      position: absolute;
+      background: radial-gradient(circle at center, rgba($color2, 0.8) 0,rgba($color2,0) 50%) no-repeat;
+      //The line below changes the blending of the gradient from a soft blur to a starker blur effect.
+      mix-blend-mode: $blending;
+      width: $circleSize;
+      height: $circleSize;
+      //The two line below places the circle in the very center of the page.
+      top: calc(50% - $circleSize / 2);
+      left: calc(60% - $circleSize / 2);
+
+      transform-origin: calc(50% - 400px);
+      animation: movingCircles 18s reverse infinite;
+
+      opacity: 1;
+   }
+   #graid3{
+      position: absolute;
+      background: radial-gradient(circle at center, rgba($color3, 0.8) 0,rgba($color3,0) 50%) no-repeat;
+      //The line below changes the blending of the gradient from a soft blur to a starker blur effect.
+      mix-blend-mode: $blending;
+      width: $circleSize;
+      height: $circleSize;
+      //The two line below places the circle in the very center of the page.
+      top: calc(50% - $circleSize / 2 + 200px);
+      left: calc(90% - $circleSize / 2 - 500px);
+
+      transform-origin: calc(50% - 400px);
+      animation: movingCircles 48s linear infinite;
+
+      opacity: 1;
+   }
+   #graid4{
+      position: absolute;
+      background: radial-gradient(circle at center, rgba($color4, 0.8) 0,rgba($color4,0) 50%) no-repeat;
+      //The line below changes the blending of the gradient from a soft blur to a starker blur effect.
+      mix-blend-mode: $blending;
+      width: $circleSize;
+      height: $circleSize;
+      //The two line below places the circle in the very center of the page.
+      top: calc(50% - $circleSize / 2);
+      left: calc(80% - $circleSize / 2);
+
+      transform-origin: calc(80% - 200px);
+      animation: horizontalMove 18s ease infinite;
+
+      opacity: 1;
+   }
+   #graid5{
+      position: absolute;
+      background: radial-gradient(circle at center, rgba($color5, 0.8) 0,rgba($color5,0) 50%) no-repeat;
+      //The line below changes the blending of the gradient from a soft blur to a starker blur effect.
+      mix-blend-mode: $blending;
+      width: $circleSize;
+      height: $circleSize;
+      //The two line below places the circle in the very center of the page.
+      top: calc(50% - $circleSize);
+      left: calc(50% - $circleSize);
+
+      transform-origin: calc(50% - 800px) calc(50% + 200px);
+      animation: movingCircles 25s ease infinite;
+
+      opacity: 1;
+   }
+  
+}
+
 body{
-    background-image: linear-gradient($primaryOne,$primaryTwo);
     color:$textColor;
-}
-h1, h2,h3,h4{
-   color: $headerColor;
-}
-#top{
-   background-image: linear-gradient($primaryOne,$primaryTwo);
-   background-repeat: no-repeat;
-   header{
+    background: linear-gradient(45deg, $primaryOne, $primaryTwo);
+    
+    header{
       #logo h1{
          color: $textColor;
       }
@@ -29,14 +169,29 @@ h1, h2,h3,h4{
          cursor: pointer;
       }
    }
-
 }
-#bottom{
-   background-image: linear-gradient($primaryTwo, $primaryOne);
-   background-repeat: no-repeat;
-
-   .projects button{
-      color: $textColor;
+#submit{
+   color: #FFF;
+   background: #EE7BD9;
+ }
+h1, h2,h3,h4{
+   color: $headerColor;
+}
+//gave the button element above the a tag the same color as the section it is in to give the appearace that it is transparent.
+@include u.breakpoint-up(large){
+   #project_1{
+      button{
+         background-color: #5f157a;
+      }
    }
+   #project_2{
+      button{
+          background-color: #7b1287;
+      }
+  }
+  #project_3{
+      button{
+          background-color: #8d0f8f;
+      }
+  }
 }
-
