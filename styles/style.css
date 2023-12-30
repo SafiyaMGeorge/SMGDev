@@ -22,10 +22,6 @@ using a 0.02 point difference avoids overlap issues
   box-sizing: border-box;
 }
 
-span {
-  display: none;
-}
-
 /*The line below stops the navbar animation when the window is being resized.*/
 .resize-animation-stopper * {
   transition: none !important;
@@ -47,7 +43,8 @@ span {
 
 header {
   height: 5rem;
-  padding: 1rem 0.5rem;
+  width: 100%;
+  padding: 1rem 1rem;
   /*nav*/
 }
 header #logo h1 {
@@ -91,21 +88,13 @@ header #nav_list {
   align-items: center;
 }
 
-#top {
-  width: 100%;
-}
-
 /*Intro Section*/
 #intro {
-  margin: 2rem 0;
+  margin: 5rem 0 15rem 0;
+  padding-bottom: 5rem;
 }
 
-#introHeader h1 {
-  font-size: 2.5em;
-  margin-bottom: 1rem;
-}
-#introHeader h2 {
-  font-size: 2em;
+#introHeader h1, #introHeader h2 {
   margin-bottom: 1rem;
 }
 #introHeader p {
@@ -121,7 +110,6 @@ header #nav_list {
 #introParagraph, .about_bio, #contact_info {
   padding: 1rem 1, 5rem;
   margin: 0.5rem 2rem;
-  text-align: justify;
 }
 
 /*About Section*/
@@ -135,57 +123,184 @@ header #nav_list {
 }
 
 .about_bio {
-  font-size: x-large;
   margin-bottom: 2rem;
   padding-left: 1.5rem;
 }
 
 /*Tech Section*/
-#tech h2 {
-  text-align: center;
-}
-
 #tech_list {
   margin-top: 1.5rem;
 }
 
 .tech_item i {
-  font-size: 3em;
   margin: 1rem 0;
-}
-
-.tech_item h4 {
-  font-size: 1em;
 }
 
 /*Works Section*/
 .projects {
   width: 90%;
-  align-items: center;
+  height: 100%;
+  margin: 2rem 0;
+  padding-bottom: 4rem;
 }
 .projects img {
   width: 100%;
 }
 
 .cta {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  padding: 1.5rem 1rem;
+  width: 100%;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  margin-left: -9rem;
 }
-.cta button {
-  border: 1.5px solid #EE7BD9;
-  border-radius: 50px;
-  padding: 0.5rem 1rem;
-  margin-top: 1.5rem;
-  background: none;
+@keyframes animate1A {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes animate2A {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes animate3A {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animate4A {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes animate1B {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animate2B {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes animate3B {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes animate4B {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+.cta .cta_btn {
+  position: absolute;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1em;
+  padding: 15px 30px;
+  box-shadow: 0 10px 60px rgba(225, 226, 236, 0.5);
+  overflow: hidden;
+}
+.cta .cta_btn ::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  background: rgba(147, 49, 204, 0.05);
+}
+.cta .cta_btn span:nth-child(1) {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #9331cc, #EE7BD9);
+  animation: animate1A 2s linear infinite;
+}
+.cta .cta_btn span:nth-child(2) {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #9331cc, #EE7BD9);
+  animation: animate2A 2s linear infinite;
+  animation-delay: 1s;
+}
+.cta .cta_btn span:nth-child(3) {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, #9331cc, #EE7BD9);
+  animation: animate3A 2s linear infinite;
+}
+.cta .cta_btn span:nth-child(4) {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, #9331cc, #EE7BD9);
+  animation: animate4A 2s linear infinite;
+  animation-delay: 1s;
+}
+.cta .live span:nth-child(1) {
+  background: linear-gradient(to right, #02198e, #1472ff);
+  animation: animate1B 2s linear infinite;
+}
+.cta .live span:nth-child(2) {
+  background: linear-gradient(to right, #02198e, #1271ff);
+  animation: animate2B 2s linear infinite;
+  animation-delay: 1s;
+}
+.cta .live span:nth-child(3) {
+  background: linear-gradient(to right, #02198e, #1271ff);
+  animation: animate3B 2s linear infinite;
+}
+.cta .live span:nth-child(4) {
+  background: linear-gradient(to right, #02198e, #1271ff);
+  animation: animate4B 2s linear infinite;
+  animation-delay: 1s;
 }
 .cta button:hover {
-  background-color: #EE7BD9;
-  color: #FFF;
   cursor: pointer;
 }
 
+/*Contact Form Section*/
 #contact_form {
   width: 22rem;
   height: 35rem;
@@ -193,9 +308,6 @@ header #nav_list {
   padding: 1.5rem 2.5rem;
   border: 2px solid #EE7BD9;
   border-radius: 15px;
-}
-#contact_form h1 {
-  font-size: 2em;
 }
 
 #collected_info {
@@ -237,10 +349,7 @@ header #nav_list {
 #submit {
   padding: 5px 25px;
   width: 10rem;
-  background: none;
-  color: #FFF;
-  background: #EE7BD9;
-  border: solid 2px none;
+  border: solid 1px none;
   border-radius: 20px;
 }
 
@@ -273,14 +382,6 @@ header #nav_list {
   #nav_list {
     height: 0.5rem;
     width: 100%;
-    flex-direction: row;
-    align-items: center;
-  }
-  .nav_item {
-    color: var(--primary-color);
-  }
-  .nav_item:hover {
-    color: var(--secondary-color);
   }
   #Intro {
     height: 30vh;
@@ -305,22 +406,14 @@ header #nav_list {
     margin-bottom: 5rem;
   }
   #tech #tech_list {
-    width: 55%;
-    flex-wrap: wrap;
+    width: 30%;
   }
   #tech #tech_list .list_items {
-    font-size: 1em;
-    margin: 0 4rem;
+    margin: 1rem 15.6rem;
     padding: 0 1rem;
-  }
-  #tech #tech_list .list_items .tech_item p {
-    font-size: 0.4em;
   }
   #work {
     margin-bottom: 10rem;
-  }
-  #work .projects {
-    margin: 2rem 0;
   }
   #work .projects img {
     width: 65%;
@@ -328,51 +421,171 @@ header #nav_list {
   }
   #work .projects .cta {
     width: 35%;
+    margin-top: 3rem;
+    margin-left: 0;
   }
   #work .projects .cta button {
-    padding: 0.8rem 3rem;
+    padding: 0.8rem 4rem;
+    border: none;
   }
   #contact_form {
     width: 27rem;
   }
 }
+@keyframes movingCircles {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes verticalMove {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: rtranslateY(-50%);
+  }
+}
+@keyframes horizontalMove {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) rtranslateY(10%);
+  }
+}
+#gradient-bg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  z-index: -2000;
+  top: 0;
+  left: 0;
+}
+#gradient-bg #gradientContainer {
+  width: 100%;
+  height: 100%;
+}
+#gradient-bg #graid1 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(18, 113, 255, 0.8) 0, rgba(18, 113, 255, 0) 50%) no-repeat;
+  mix-blend-mode: hard-light;
+  width: 80rem;
+  height: 80rem;
+  top: calc(50% - 40rem);
+  left: calc(80% - 40rem);
+  transform-origin: center center;
+  animation: verticalMove 30s ease infinite;
+  opacity: 1;
+}
+#gradient-bg #graid2 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(221, 74, 255, 0.8) 0, rgba(221, 74, 255, 0) 50%) no-repeat;
+  mix-blend-mode: hard-light;
+  width: 80rem;
+  height: 80rem;
+  top: calc(50% - 40rem);
+  left: calc(60% - 40rem);
+  transform-origin: calc(50% - 400px);
+  animation: movingCircles 18s reverse infinite;
+  opacity: 1;
+}
+#gradient-bg #graid3 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(100, 220, 255, 0.8) 0, rgba(100, 220, 255, 0) 50%) no-repeat;
+  mix-blend-mode: hard-light;
+  width: 80rem;
+  height: 80rem;
+  top: calc(50% - 40rem + 200px);
+  left: calc(90% - 40rem - 500px);
+  transform-origin: calc(50% - 400px);
+  animation: movingCircles 48s linear infinite;
+  opacity: 1;
+}
+#gradient-bg #graid4 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(200, 50, 50, 0.8) 0, rgba(200, 50, 50, 0) 50%) no-repeat;
+  mix-blend-mode: hard-light;
+  width: 80rem;
+  height: 80rem;
+  top: calc(50% - 40rem);
+  left: calc(80% - 40rem);
+  transform-origin: calc(80% - 200px);
+  animation: horizontalMove 18s ease infinite;
+  opacity: 1;
+}
+#gradient-bg #graid5 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(188, 180, 50, 0.8) 0, rgba(188, 180, 50, 0) 50%) no-repeat;
+  mix-blend-mode: hard-light;
+  width: 80rem;
+  height: 80rem;
+  top: calc(50% - 80rem);
+  left: calc(50% - 80rem);
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: movingCircles 25s ease infinite;
+  opacity: 1;
+}
+
 body {
-  background-image: linear-gradient(#5170FF, #FF66C4);
   color: #FFFFFF;
+  background: linear-gradient(45deg, #bc00a2, #001152);
+}
+body header #logo h1 {
+  color: #FFFFFF;
+}
+body header #nav_bar {
+  background: rgba(9, 31, 73, 0.4392156863);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+}
+body header .nav_item {
+  color: #FFF;
+}
+body header .nav_item:hover {
+  color: #EE7BD9;
+  cursor: pointer;
+}
+
+#submit {
+  color: #FFF;
+  background: #EE7BD9;
 }
 
 h1, h2, h3, h4 {
   color: #ffd900;
 }
 
-#top {
-  background-image: linear-gradient(#5170FF, #FF66C4);
-  background-repeat: no-repeat;
+/*This media query is generated everytime the mixin is used
+    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
+    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
+    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
+    mixin named $size which we will use as the second map-up function parameter 
+    When creating meida queries it is best to use ems.*/
+@media (min-width: 56.25em) {
+  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
+  #project_1 button {
+    background-color: #5f157a;
+  }
+  #project_2 button {
+    background-color: #7b1287;
+  }
+  #project_3 button {
+    background-color: #8d0f8f;
+  }
 }
-#top header #logo h1 {
-  color: #FFFFFF;
-}
-#top header #nav_bar {
-  background: rgba(9, 31, 73, 0.4392156863);
-  -webkit-backdrop-filter: blur(1rem);
-          backdrop-filter: blur(1rem);
-}
-#top header .nav_item {
-  color: #FFF;
-}
-#top header .nav_item:hover {
-  color: #EE7BD9;
-  cursor: pointer;
-}
-
-#bottom {
-  background-image: linear-gradient(#FF66C4, #5170FF);
-  background-repeat: no-repeat;
-}
-#bottom .projects button {
-  color: #FFFFFF;
-}
-
 body {
   font-family: sans-serif;
   line-height: 3em;
@@ -398,9 +611,44 @@ h3 {
   font-size: 1.5em;
 }
 
+#introParagraph, .about_bio, #contact_info {
+  text-align: justify;
+}
+
+#introHeader h1 {
+  font-size: 2.5em;
+}
+#introHeader h2 {
+  font-size: 2em;
+}
+
+.about_bio {
+  font-size: x-large;
+}
+
+#tech h2 {
+  text-align: center;
+}
+
 #tech_list {
   list-style: none;
   font-size: 1.5em;
+}
+#tech_list .list_items {
+  font-size: 1em;
+}
+#tech_list .list_items .tech_item i {
+  font-size: 3em;
+}
+#tech_list .list_items .tech_item p {
+  font-size: 0.4em;
+}
+#tech_list .list_items .tech_item h4 {
+  font-size: 1em;
+}
+
+#contact_form h1 {
+  font-size: 2em;
 }
 
 body {
@@ -434,7 +682,7 @@ header #nav_bar {
   align-items: center;
 }
 
-#bottom {
+#mainContent {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -467,6 +715,10 @@ header #nav_bar {
   text-align: center;
 }
 
+#contact_header {
+  justify-content: center;
+}
+
 /*This media query is generated everytime the mixin is used
     The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
     the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
@@ -484,6 +736,8 @@ header #nav_bar {
   #nav_list {
     display: flex;
     justify-content: end;
+    flex-direction: row;
+    align-items: center;
   }
   #Intro p {
     position: relative;
@@ -502,19 +756,31 @@ header #nav_bar {
   }
   #tech {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    width: 90%;
+    height: 100%;
   }
   #tech #tech_list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    width: 100%;
   }
   #tech #tech_list .tech_item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+  }
+  #tech #tech_list #html5, #tech #tech_list #css3 {
+    padding: 0.5rem 2rem;
+  }
+  #tech #tech_list #git {
+    padding: 0.5rem 3rem;
   }
   #about {
     width: 70%;
@@ -523,6 +789,11 @@ header #nav_bar {
   #work .projects {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  #work button {
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
   #contact_paragraph {
