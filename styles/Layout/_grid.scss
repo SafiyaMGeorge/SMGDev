@@ -33,7 +33,8 @@ header{
     flex-direction: column;
     align-items: center;
 }
-#bottom{
+// changed the styled section from bottom to maincontent as bottom no longer exists in the index.
+#mainContent{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,6 +61,10 @@ header{
     padding: 3rem 0 1rem 0;
     text-align: center;
 }
+//I centered the contact header
+#contact_header{
+    justify-content: center;
+}
 
 @include U.breakpoint-up(large){
     Header{
@@ -71,6 +76,8 @@ header{
     #nav_list{
         display: flex;
         justify-content: end;
+        flex-direction:row;
+        align-items:center;
     }
     #Intro{
     
@@ -92,19 +99,31 @@ header{
     }
     #tech{
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
+        width: 90%;
+        height: 100%;
     
         #tech_list{
             display: flex;
             justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
+            width: 100%;
     
             .tech_item{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                width: 100%;
+            }
+            #html5, #css3{
+                padding:.5rem 2rem ;
+            }
+            #git{
+                padding: .5rem 3rem;
             }
         }
     }
@@ -116,6 +135,12 @@ header{
         .projects{
             display: flex;
             flex-direction: column;
+            align-items: center;
+        }
+
+        button{
+            display: flex;
+            justify-content: center;
             align-items: center;
         }
     }
