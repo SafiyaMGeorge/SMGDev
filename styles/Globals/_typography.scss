@@ -17,7 +17,47 @@ h3{
 .nav_item{
     font-size: 1.5em;
 }
+#introParagraph, .about_bio, #contact_info{
+    text-align: justify;
+}
+#introHeader{
+
+
+    h1{
+        font-size: 2.5em;
+    }
+    h2{
+        font-size: 2em;
+    }
+}
+.about_bio{
+    font-size: x-large;
+
+}
+#tech h2{
+    text-align: center;
+}
 #tech_list{
     list-style: none;
     font-size: 1.5em;
+    .list_items {
+        font-size: 1em;
+        .tech_item{
+            i{
+                font-size: 3em;
+
+            }
+            p{
+               font-size: .4em;
+            }
+        }
+        .tech_item h4{
+            font-size: 1em;
+        }
+    }
+}
+#contact_form{
+    h1{
+        font-size: 2em;
+    }
 }
