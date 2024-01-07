@@ -1,9 +1,12 @@
+@use '../Utils/' as u;
+
 body{
     font-family: sans-serif;
     line-height: 3em; 
 }
 p{
     font-size: 1.8em;
+    word-spacing: 0em;
 }
 h1{
     font-size: 3em;
@@ -17,29 +20,38 @@ h3{
 .nav_item{
     font-size: 1.5em;
 }
-#introParagraph, .about_bio, #contact_info{
-    text-align: justify;
+
+#introParagraph, #contact_info{
+    font-size: small;
+}
+.about_bio{
+    font-size: large;
+
 }
 #introHeader{
 
 
     h1{
-        font-size: 2.5em;
+        font-size: x-large;
     }
     h2{
-        font-size: 2em;
+        font-size:large;
     }
 }
-.about_bio{
-    font-size: x-large;
 
+
+#about h2, #tech h2, .projects h3, #contact_form h1{
+    font-size: 1.7em;
+}
+#about h3{
+    font: 1em;
+    text-align: center;
 }
 #tech h2{
     text-align: center;
 }
 #tech_list{
     list-style: none;
-    font-size: 1.5em;
     .list_items {
         font-size: 1em;
         .tech_item{
@@ -56,8 +68,25 @@ h3{
         }
     }
 }
-#contact_form{
-    h1{
-        font-size: 2em;
+#tech_list, #contact_paragraph{
+    font-size: 1.5em;
+}
+@include u.breakpoint-up(large){
+    #introHeader{
+
+
+        h1{
+            font-size: 2.5em;
+        }
+        h2{
+            font-size: 2em;
+        }
+    }
+    #introParagraph,#contact_info,.about_bio{
+        text-align: justify;
+    }
+    .about_bio{
+        font-size: x-large;
+    
     }
 }

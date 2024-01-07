@@ -1,7 +1,6 @@
 @use '../Utils/' as U;
 
 body{
-    max-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,21 +49,26 @@ header{
 }
 .cta{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-between;
+
+    button, a{
+        margin: auto;
+    
+    }
 }
-#user_info{
-    justify-content: space-evenly;
+
+#contact_form{
+    flex-direction: column;
+    #user_info{
+        justify-content: space-evenly;
+    }
+    //I centered the contact header
+    #contact_header{
+        justify-content: center;
+    }
 }
-#contact_paragraph{
-    width: 70%;
-    margin:5.5rem 0 2rem 0;
-    padding: 3rem 0 1rem 0;
-    text-align: center;
-}
-//I centered the contact header
-#contact_header{
-    justify-content: center;
-}
+
 
 @include U.breakpoint-up(large){
     Header{
@@ -136,6 +140,12 @@ header{
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        .cta{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
         }
 
         button{

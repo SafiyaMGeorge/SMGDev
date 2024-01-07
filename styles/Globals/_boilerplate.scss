@@ -2,6 +2,9 @@
 $accent:#EE7BD9;
 $active:#FFF;
 
+//gradient circle rules
+$circleSize:80rem;
+
 *,
 ::before,
 ::after{
@@ -15,7 +18,9 @@ $active:#FFF;
     transition: none !important;
     animation: none !important;
 }
-
+body{
+    width: 100vw;
+}
 ul{
     list-style-type:none;
 }
@@ -41,7 +46,7 @@ header{
      /*nav*/
   #hamburger{
     position:fixed;
-    left:90%;
+    left:85%;
     top: 3%;
     height:1rem;
     z-index:9999;
@@ -100,6 +105,113 @@ header{
     padding: 1rem 1,5rem;
     margin: .5rem 2rem;
 }
+
+@keyframes movingCircles{
+    0%{
+       transform: rotate(0deg)
+    }
+    50%{
+       transform: rotate(180deg);
+    }
+    100%{
+       transform: rotate(360deg);
+    }
+}
+@keyframes verticalMove{
+    0%{
+       transform: translateY(-50%);
+    }
+    50%{
+       transform: translateY(50%);
+    }
+    100%{
+       transform: rtranslateY(-50%);
+    }
+}
+@keyframes horizontalMove{
+    0%{
+       transform: translateX(-50%) translateY(-10%);
+    }
+    50%{
+       transform: translateX(-50%) translateY(10%);
+    }
+    100%{
+       transform: translateX(-50%) rtranslateY(10%);
+    }
+}
+ 
+#gradient-bg{
+    width: 105%;
+    height: 125%;
+    position: absolute;
+    overflow: hidden;
+    z-index: -2000;
+    
+    top: 0;
+    left: 0;
+ 
+    #gradientContainer{
+       width: 100%;
+       height: 100%;
+    }
+    #graid1{
+       position: absolute;
+       width: $circleSize;
+       height: $circleSize;
+       
+       //The two line below places the circle in the very center of the page.
+       top: calc(50% - $circleSize / 2);
+       left: calc(80% - $circleSize / 2);
+ 
+       transform-origin: center center;
+       animation: verticalMove 30s ease infinite;
+    }
+    #graid2{
+       position: absolute;
+       width: $circleSize;
+       height: $circleSize;
+       //The two line below places the circle in the very center of the page.
+       top: calc(50% - $circleSize / 2);
+       left: calc(60% - $circleSize / 2);
+ 
+       transform-origin: calc(50% - 400px);
+       animation: movingCircles 18s reverse infinite;
+    }
+    #graid3{
+       position: absolute;
+       width: $circleSize;
+       height: $circleSize;
+       //The two line below places the circle in the very center of the page.
+       top: calc(50% - $circleSize / 2 + 200px);
+       left: calc(90% - $circleSize / 2 - 500px);
+ 
+       transform-origin: calc(50% - 400px);
+       animation: movingCircles 48s linear infinite;
+    }
+    #graid4{
+       position: absolute;
+       width: $circleSize;
+       height: $circleSize;
+       //The two line below places the circle in the very center of the page.
+       top: calc(50% - $circleSize / 2);
+       left: calc(80% - $circleSize / 2);
+ 
+       transform-origin: calc(80% - 200px);
+       animation: horizontalMove 18s ease infinite;
+    }
+    #graid5{
+       position: absolute;
+       width: $circleSize;
+       height: $circleSize;
+       //The two line below places the circle in the very center of the page.
+       top: calc(50% - $circleSize);
+       left: calc(50% - $circleSize);
+ 
+       transform-origin: calc(50% - 800px) calc(50% + 200px);
+       animation: movingCircles 25s ease infinite;
+    }
+   
+}
 /*About Section*/
 #about, #tech{
     margin: 2rem 0;
@@ -134,9 +246,11 @@ header{
 }
 .cta{
     width: 100%;
+    height: 9rem;
     padding: 1rem 0;
-    margin: 1rem 0;
-    margin-left: -9rem;
+    margin: auto;
+    margin-left: -5rem;
+
     
 
     @keyframes animate1A{
@@ -285,62 +399,104 @@ header{
         animation: animate4B 2s linear infinite;
         animation-delay: 1s;
     }
+    .live{
+        width: 10.3rem ;
+    }
 
+    .submit_btn span:nth-child(1){
+        background: linear-gradient(to right, #ffd900, #bcb432);
+        animation: animate1B 2s linear infinite;
+    }
+     .submit_btn span:nth-child(2){
+        background: linear-gradient(to right, #ffd900, #bcb432);
+        animation: animate2B 2s linear infinite;
+        animation-delay: 1s;
+    }
+     .submit_btn span:nth-child(3){
+        background: linear-gradient(to right, #ffd900, #bcb432);
+        animation: animate3B 2s linear infinite;
+    }
+     .submit_btn span:nth-child(4){
+        background: linear-gradient(to right, #ffd900, #bcb432);
+        animation: animate4B 2s linear infinite;
+        animation-delay: 1s;
+    }
     button:hover{
         cursor: pointer;
    }
 }
+//added a bit of margin and padding to center the button
 
 /*Contact Form Section*/
-#contact_form{
-    width: 22rem;
-    height:35rem;
-    margin: 3rem 0;
-    padding: 1.5rem 2.5rem;
-    border: 2px solid $accent;
-    border-radius: 15px;
-}
+#contact{
+    padding-bottom: 5rem;
 
-#collected_info{
-    height: 85%;
-    width: 100%;
-    margin-bottom: 1rem;
-    padding: .5rem 1rem;
-}
-#user_info{
-    height: 100%;
-    width:100%;
-}
-.user_data, #contact_message textarea{
-    border-radius: 20px;
-    border: solid 2px #EE7BD9;
-}
-.user_data{
-    width: 17rem;
-    height: 2.3rem;
-    padding: 6px;
+    #contact_paragraph{
+        width: 70%;
+        margin:3rem 0 2rem 0;
+        padding: 2rem 0 2rem 0;
+        text-align: center;
+    }
 
-}
-#contact_message{
-    width: 100%;
-    textarea{
-        width: 100%;
-        height: 100%;
-        padding:6px 0 0 6px ;
+    #contact_form{
+        width: 19rem;
+        height:35rem;
+        border: 2px solid $accent;
+        border-radius: 15px;
+    
+        #collected_info{
+            height: 70%;
+            width: 90%;
+            margin-bottom: 1rem;
+            padding: .5rem .3rem;
+        }
+        #user_info{
+            height: 100%;
+            width:100%;
+            input{
+                width: 100%;
+            }
+        }
+        .user_data, #contact_message textarea{
+            border-radius: 20px;
+            border: solid 2px #EE7BD9;
+        }
+        .user_data{
+            width: 17rem;
+            height: 2.3rem;
+            padding: 6px;
+        
+        }
+        #contact_message{
+            width: 100%;
+            textarea{
+                width: 100%;
+                height: 100%;
+                padding:6px 0 0 6px ;
+            }
+        }
+        #sub_btn{
+            height: 5%;
+            margin: auto;
+            padding: 10%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            .submit_btn{
+                padding: 7px 40px;
+                box-shadow: 0 10px 60px rgba(225, 226, 236, 0.5);
+                overflow: hidden;
+                border: none;
+                input{
+                    border: none;
+                }
+            }
+            
+        }
     }
 }
-#sub_btn{
-    text-align: center;
-  }
-  #submit{
-    padding: 5px 25px;
-    width:10rem;
-    border: solid 1px none;
-    border-radius: 20px;
-  }
-  #submit:hover{
-    cursor: pointer;
-  }
+
+
 @include u.breakpoint-up(large){
     main{
         margin: 0 2.5rem;
@@ -363,6 +519,10 @@ header{
         width:100%;
     }
 
+    #gradient-bg{
+        width: 100vw;
+        height: 100vh;
+    }    
     #Intro{
         height: 30vh;
     }
@@ -396,7 +556,7 @@ header{
         }
     }
     #work{
-        margin-bottom: 10rem;
+        margin-bottom: 3rem;
         .projects{
             
             img{
@@ -405,18 +565,32 @@ header{
             }
             .cta{
 
-                width: 35%;
-                margin-top: 3rem;
-                margin-left: 0;
+                width: 30%;
+                padding: 1rem 0;
+                margin-left: 35.5%;
 
-                 button{
+                button{
                     padding: .8rem 4rem;
                     border: none;
+                }
+
+                .live{
+                    width: auto;
                 }
             }
         }
     }
-    #contact_form{
-        width: 27rem;
+    #contact{
+        #contact_form{
+            width: 40%;
+            height:35rem;
+            padding-top: 1%;
+        
+            #collected_info{
+                height: 100%;
+                padding: .3rem .5rem;
+            }
+        }
     }
 }
+
