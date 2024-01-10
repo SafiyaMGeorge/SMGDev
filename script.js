@@ -1,6 +1,7 @@
 const mainNav = document.getElementById('nav_bar');
 const toggleNav = document.getElementById('hamburger');
 const mainSec = document.getElementById('mainContent');
+const projectLink = document.querySelectorAll('cta_btn');
 
 toggleNav.addEventListener('click', (e) =>{
   e.preventDefault();

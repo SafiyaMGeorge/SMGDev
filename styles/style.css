@@ -250,6 +250,10 @@ header #nav_list {
   margin: auto;
   margin-left: -5rem;
 }
+.cta button {
+  background: none;
+  border: none;
+}
 @keyframes animate1A {
   0% {
     transform: translateX(-100%);

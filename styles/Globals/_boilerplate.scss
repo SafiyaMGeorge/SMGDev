@@ -251,7 +251,11 @@ header{
     margin: auto;
     margin-left: -5rem;
 
-    
+    button{
+        //the rules in this code block removes the small round image the button element made on the page.
+        background: none;
+        border: none;
+    }
 
     @keyframes animate1A{
         0%{
