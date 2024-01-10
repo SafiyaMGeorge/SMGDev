@@ -256,6 +256,9 @@ header{
         background: none;
         border: none;
     }
+    button:hover{
+        cursor: pointer;
+   }
 
     @keyframes animate1A{
         0%{
@@ -425,9 +428,6 @@ header{
         animation: animate4B 2s linear infinite;
         animation-delay: 1s;
     }
-    button:hover{
-        cursor: pointer;
-   }
 }
 //added a bit of margin and padding to center the button
 
@@ -443,6 +443,7 @@ header{
     }
 
     #contact_form{
+        display: none;
         width: 19rem;
         height:35rem;
         border: 2px solid $accent;
