@@ -254,6 +254,9 @@ header #nav_list {
   background: none;
   border: none;
 }
+.cta button:hover {
+  cursor: pointer;
+}
 @keyframes animate1A {
   0% {
     transform: translateX(-100%);
@@ -418,9 +421,6 @@ header #nav_list {
   animation: animate4B 2s linear infinite;
   animation-delay: 1s;
 }
-.cta button:hover {
-  cursor: pointer;
-}
 
 /*Contact Form Section*/
 #contact {
@@ -433,6 +433,7 @@ header #nav_list {
   text-align: center;
 }
 #contact #contact_form {
+  display: none;
   width: 19rem;
   height: 35rem;
   border: 2px solid #EE7BD9;
@@ -803,6 +804,12 @@ header #nav_bar {
 }
 .cta button, .cta a {
   margin: auto;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contact_form {
