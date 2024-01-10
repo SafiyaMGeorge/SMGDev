@@ -16,7 +16,7 @@ toggleNav.addEventListener('click', (e) =>{
  
 });
 mainSec.addEventListener('click', (e) =>{
-  e.preventDefault();
+ 
   const visibility = mainNav.getAttribute('data-visible');
   if(visibility === 'true'){
     mainNav.setAttribute('data-visible', false);
