@@ -444,15 +444,6 @@ header{
     #contact_btn{
         margin:auto;
         color: $active;
-
-        input{
-            background: none;
-            border: none;
-            color: $active;
-        }
-        input:hover{
-            cursor: pointer;
-        }
     }
     #contact_form{
         width: 19rem;

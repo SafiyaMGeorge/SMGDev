@@ -436,14 +436,6 @@ header #nav_list {
   margin: auto;
   color: #FFF;
 }
-#contact #contact_btn input {
-  background: none;
-  border: none;
-  color: #FFF;
-}
-#contact #contact_btn input:hover {
-  cursor: pointer;
-}
 #contact #contact_form {
   width: 19rem;
   height: 35rem;
