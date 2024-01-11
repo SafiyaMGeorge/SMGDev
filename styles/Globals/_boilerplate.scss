@@ -450,6 +450,9 @@ header{
             border: none;
             color: $active;
         }
+        input:hover{
+            cursor: pointer;
+        }
     }
     #contact_form{
         display: none;

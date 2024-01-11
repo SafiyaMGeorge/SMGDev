@@ -441,6 +441,9 @@ header #nav_list {
   border: none;
   color: #FFF;
 }
+#contact #contact_btn input:hover {
+  cursor: pointer;
+}
 #contact #contact_form {
   display: none;
   width: 19rem;
