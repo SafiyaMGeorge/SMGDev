@@ -213,30 +213,35 @@
                                 <input type="submit" value="Submit" id="submit"/>
                         </button>
                     </section>
-                    <form id="contact_form">
-                        <header id="contact_header">
-                            <h1>Contact Me</h1>
-                        </header>
-                        <section id="collected_info">
-                            <section id="user_info">
-                                <input id="user_name" class="user_data" type="text" name="name" placeholder="Name"/>
-                                <input id="user_email" class="user_data" type="email" name="email" placeholder="Email"/>
-                                <input id="message_subject" class="user_data" type="text" name="subject" placeholder="Subject"/>
+                    <section id="form_container">
+                        <button id="close">
+                            <i class="fa-solid fa-xmark"></i>
+                          </button>
+                        <form id="contact_form">
+                            <header id="contact_header">
+                                <h1>Contact Me</h1>
+                            </header>
+                            <section id="collected_info">
+                                <section id="user_info">
+                                    <input id="user_name" class="user_data" type="text" name="name" placeholder="Name"/>
+                                    <input id="user_email" class="user_data" type="email" name="email" placeholder="Email"/>
+                                    <input id="message_subject" class="user_data" type="text" name="subject" placeholder="Subject"/>
+                                </section>
+                                <section id="contact_message">
+                                    <textarea cols="10" rows="10" name="message" form="contact_form" placeholder="Message"></textarea>
+                                </section>
                             </section>
-                            <section id="contact_message">
-                                <textarea cols="10" rows="10" name="message" form="contact_form" placeholder="Message"></textarea>
+                            <section id="sub_btn" class="cta">
+                                <button class="cta_btn submit_btn">
+                                        <span class="cta-side"></span>
+                                        <span class="cta-side"></span>
+                                        <span class="cta-side"></span>
+                                        <span class="cta-side"></span>
+                                        <input type="submit" value="Submit" id="submit"/>
+                                </button>
                             </section>
-                        </section>
-                        <section id="sub_btn" class="cta">
-                            <button class="cta_btn submit_btn">
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <input type="submit" value="Submit" id="submit"/>
-                            </button>
-                        </section>
-                    </form>
+                        </form>
+                    </section>
                     <ul id="socials">
                         <li class="list_item"></li>
                         <li class="list_item"></li>

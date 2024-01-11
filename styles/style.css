@@ -445,7 +445,6 @@ header #nav_list {
   cursor: pointer;
 }
 #contact #contact_form {
-  display: none;
   width: 19rem;
   height: 35rem;
   border: 2px solid #EE7BD9;
@@ -824,13 +823,20 @@ header #nav_bar {
   align-items: center;
 }
 
+#form_container {
+  display: none;
+}
+
 #contact_btn {
   justify-content: center;
   align-items: center;
 }
 
 #contact_form {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #contact_form #user_info {
   justify-content: space-evenly;

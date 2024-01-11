@@ -33,3 +33,14 @@ window.addEventListener("resize", () => {
     document.body.classList.remove("resize-animation-stopper");
   }, 400);
 });
+//Form section
+const contactMe = document.querySelector('.submit_btn');
+const contactForm = document.getElementById('form_container');
+const formStyle = ``
+contactMe.addEventListener('click',(e)=>{
+  contactForm.style.cssText=`
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    align-items:center;`;
+});
