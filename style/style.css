@@ -338,6 +338,9 @@ textarea{
 /*Media Queries*/
 
 @media(min-width:600px){
+  header{
+    padding: 1% 1.2%;
+  }
   #hamburger{
     display:none;
   }
@@ -362,6 +365,19 @@ textarea{
   }
   .nav_item:hover{
     color:var(--secondary-color);
+  }
+  #banner{
+    height:35vh;
+  }
+  #about{
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+  }
+  #about p{
+    width:60%;
   }
   img{
     width:80%;
