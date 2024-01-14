@@ -177,7 +177,8 @@ header{
 }
 
 /*service*/
-#services, #products{
+#service, #services, #products, #product{
+    display: flex;
   flex-direction:column;
   justify-content:space-evenly;
   align-items:center;
