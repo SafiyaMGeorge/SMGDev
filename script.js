@@ -34,13 +34,26 @@ window.addEventListener("resize", () => {
   }, 400);
 });
 //Form section
-const contactMe = document.querySelector('.submit_btn');
+const contactMe = document.getElementById('contact_btn');
 const contactForm = document.getElementById('form_container');
 const formStyle = ``
 contactMe.addEventListener('click',(e)=>{
+  contactMe.style.cssText=`
+    display:none;
+  `;
   contactForm.style.cssText=`
     display:flex;
     flex-direction:column;
+    justify-content:center;
     width:100%;
-    align-items:center;`;
+    align-items:center;
+    `
 });
+/*The block below controls the close button on the contact form.*/
+
+const close = document.getElementById('close');
+close.addEventListener('click', (e) =>{
+  contactForm.style.display = "none";
+
+  
+})

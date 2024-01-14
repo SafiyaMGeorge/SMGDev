@@ -66,10 +66,20 @@ header{
 #form_container{
     display: none;
 }
-#contact_btn{
+#contact_btn_section{
     justify-content: center;
     align-items: center;
 }
+#close{
+    position: relative;
+    top:30px;
+    left:167px;
+    background:none;
+    border: none;
+  }
+  #close:hover{
+    cursor: pointer;
+  }
 #contact_form{
     display: flex;
     flex-direction: column;
