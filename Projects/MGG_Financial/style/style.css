@@ -209,6 +209,10 @@ header{
   margin-top:1rem;
 }
 
+#service_one .service_img, #service_three .service_img{
+width:85%;
+}
+
 /*products*/
 #product{
   background-color:#EBF9FF;
@@ -362,5 +366,8 @@ textarea{
   display:flex;
   flex-direction:row;
   justify-content:space-evenly;
+}
+#product_two .product_img{
+    width: 101%;
 }
 }
