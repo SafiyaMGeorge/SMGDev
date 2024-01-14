@@ -19,6 +19,7 @@
 /*Over All styles (mobile first)*/
 
 body{
+    width: 100vw;
   color:var(--primary-color);
   background-color:var(--secondary-color);
   display:flex;
@@ -62,13 +63,17 @@ span{
 
 header{
   height:15%;
+  width: 100vw;
   padding:2% 1.5%;
   background-color:var(--primary-header-color);
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
-
+#homeTab{
+    position:relative;
+    top:2.5% ;
+}
 #homeTab h1{
   font-size:.9em;
 }
@@ -82,6 +87,11 @@ header{
   display:flex;
   justify-content:center;
   align-items:center;
+}
+#agent_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
 }
 
 /*nav*/
