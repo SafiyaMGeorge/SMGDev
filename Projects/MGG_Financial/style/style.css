@@ -125,12 +125,14 @@ header{
     inset:0 0 0 50%;
     background:#091f4970;
     backdrop-filter: blur(1rem);
+    /*The line below allows the the effect to be seen across different browsers that do not support the backdrop-filter effect. */
+    -webkit-backdrop-filter: blur(1rem);
     /* the min function will choose the smallest size parameter based on the screen dimension and apply that to the padding.*/
     padding: min(15vh, 5rem) 2rem;
     z-index:1000;
     transform: translateX(100%);
     transition: transform 350ms ease-out;
-  }
+}
 #nav_bar[data-visible="true"]{
   transform: translateX(0%);
 }
@@ -346,6 +348,7 @@ textarea{
     padding:0;
     background:none;
     backdrop-filter:none;
+    -webkit-backdrop-filter:none;
     transform: translateX(0%);
   }
   
