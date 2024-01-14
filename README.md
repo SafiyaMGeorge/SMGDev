@@ -1,1 +1,1 @@
-This branch hold the code and media for the version of the portfolio page that I am deploying .
+This branch hold the code and media for the client Marcia Gooden-George's agent page.

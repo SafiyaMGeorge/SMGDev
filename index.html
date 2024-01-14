@@ -1,255 +1,164 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles/style.css"/>
-        <script src="https://kit.fontawesome.com/d48263d273.js" crossorigin="anonymous"></script>
-        <title>Safiya George SMG.DEV</title>
-    </head>
-    <body>
-            <header>
-            <section id="logo">
-                <h1> < SMG > </h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMG Financials</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://kit.fontawesome.com/4bdddd1be1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <section id="homeTab">
+          <div id="agent_img">
+            <img src="https://scontent.ftpa1-2.fna.fbcdn.net/v/t39.30808-6/345585689_3401475696835747_4257927555579601834_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=NPN6O3lWqF0AX9__lVs&_nc_ht=scontent.ftpa1-2.fna&oh=00_AfAlPBYjbK3gIkWXl4jBMob4b7WvlVEdRFU3M7R06I9NXQ&oe=65A800E0" alt="image of agent Marcia Gooden-George"/>
+          </div>
+          <h1 id="logo">MMG</h1>
+        </section>
+          <nav>
+            <section>
+              <!--There was an onclick event on this button earlier but I removed it for an eventListener because there will be mutliple clicks on this button.-->
+              <button id="hamburger" aria-controls="nav_list" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <div aria-hidden = "true" class="hamburger_line"></div>
+                <div aria-hidden = "true" class="hamburger_line"></div>
+                <div aria-hidden = "true" class="hamburger_line"></div>
+              </button>
             </section>
-              <nav>
-                <section id="hamburger_menu">
-                  <!--There was an onclick event on this button earlier but I removed it for an eventListener because there will be mutliple clicks on this button.-->
-                  <button id="hamburger" aria-controls="nav_list" aria-expanded="false">
-                    <span class="sr-only">Menu</span>
-                    <div aria-hidden = "true" class="hamburger_line"></div>
-                    <div aria-hidden = "true" class="hamburger_line"></div>
-                    <div aria-hidden = "true" class="hamburger_line"></div>
-                  </button>
+            <section id="nav_bar" data-visible="false">
+              <ul id="nav_list">
+                <li id="Home">
+                  <a href="#" class="nav_item">Home</a>
+                </li>
+                <li id="About">
+                   <a href="#about" class="nav_item">About</a>
+                </li>
+                <li id="Services">
+                   <a href="#services" class="nav_item">Services</a>
+                </li>
+                <li id="Products">
+                   <a href="#products" class="nav_item">Products</a>
+                </li>
+              </ul>
+            </section>
+          </nav>
+      </header>
+      <main id="mainContent">
+        <section id="banner">
+            <section id="banner_text">
+          <h1>Plan for your future...</h1>
+          <h2>And theirs.</h2>
+        </section> 
+        </section>
+        <section id="about">
+              <h2>About</h2>
+          <p id="agent_info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum nisi quis eleifend quam adipiscing vitae proin. Amet consectetur adipiscing elit ut aliquam purus sit. Morbi tempus iaculis urna id volutpat lacus. Suspendisse in est ante in. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Imperdiet massa tincidunt nunc pulvinar. Et pharetra pharetra massa massa ultricies.
+       </p>
+        </section>
+        <section id="service">
+          <h2>Service</h2>
+          <div id="service_content">
+            <ul id="services">
+              <li id="service_one" class="service">
+              <img class="service_img" src="https://images.unsplash.com/photo-1573496267526-08a69e46a409?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80">
+              <h3 class="service_header">Insurance Planning</h3>
+            </li>
+              <li id="service_two" class="service">
+              <img class="service_img" src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1373&q=80">
+              <h3 class="service_header">Investment Planning</h3>
+            </li>
+              <li id="service_three" class="service">
+              <img class="service_img" src="https://images.unsplash.com/photo-1567067974934-75a3e4534c14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80">
+              <h3 class="service_header">Retirement Planning</h3>
+            </li>
+            </ul>
+            <button id="service_btn" class="btn">Make an appointment</button>
+          </div>
+      
+        </section>
+        <section id="product">
+          <h2>Products</h2>
+          <div id="product_content">
+             <ul id="products">
+            <li id="product_one" class="product">
+              <img class="product_img" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80">
+              <h3 class="product_header">Term Insurance Plans</h3>
+              <p class="product paragraph"></h2>
+            </li>
+            <li id="product_two" class="product">
+              <img class="product_img" src="https://images.unsplash.com/photo-1531983412531-1f49a365ffed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+              <h3 class="product_header">Whole Life Insurance Plans</h3>
+              <p class="product paragraph"></p>
+            </li>
+            <li id="product_three" class="product">
+              <img class="product_img" src="https://images.unsplash.com/photo-1642142783250-d1bef1dafbc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80">
+              <h3 class="product_header">Annuities</h3>
+              <p class="product paragraph"></h2>
+            </li>
+          </ul>
+            <button id="product_btn" class="btn">Make an appointment</button>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <section id="socials">
+          <ul id="socials_list">
+            <li id="Facebook" class="social_item">
+              <img src="https://cdn-icons-png.flaticon.com/512/747/747543.png">
+            </li>
+            <li id="LinkedIn" class="social_item">
+              <img src="https://cdn-icons-png.flaticon.com/512/1384/1384072.png">
+            </li>
+          </ul>
+        </section>
+        <section id="address">
+          <address>
+            <span>Address:</span> 4700 Millenia Blvd #360, Orlando, FL 32839<br>
+            <span>Phone:</span>862.290.4054
+          </address>
+        </section>
+        <section id="section_links">
+          <ul id="section_list">
+            <li class="section_item">Home</li>
+            <li class="section_item">About</li>
+            <li class="section_item">Services</li>
+            <li class="section_item">Products</li>
+          </ul>
+        </section>
+      </footer>
+          <div id="form_one" class="formContainter">
+            <button id="close">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <form id="contactForm">
+               <header>
+                  <h1>Contact Me</h1>
+                </header>
+               <section id="collectedInfo">
+                  <section id="userInfo">
+                    <input id="firstName" type="text" placeholder="First Name" name="fName" class="userData"/>
+                    <input id="phone" type="tel" placeholder="Phone Number" name="phoneNumber" pattern="[(][0-9]{3}[)][0-9]{3}-[0-9]{4}" class="userData"/>
+                    <input id="email" type="email" placeholder="Email" name="eAddress" class="userData"/>
+                    <select id="subject" class="userData">
+                      <option value="">Area of interest</option>
+                      <option value="retirement">Retirement</option>
+                      <option value="life_ins">Life Insurance</option>
+                      <option value="long_care">Long Term Care</option>
+                      <option value="buy_sell">Buy/Sell</option>
+                      <option value="annuities">Annuities</option>
+                    </select>
+                 </section>
+                 <section id="contactMessage">
+                  <textarea row="8" col="10" name="message" form="contactForm" placeholder="Message"></textarea>
+                 </section>
+               </section>
+                <section id="sub_btn">
+                  <button id="send">Submit</button>
                 </section>
-                <section id="nav_bar" data-visible="false">
-                  <ul id="nav_list">
-                    <li id="Home">
-                      <a href="#" class="nav_item">Home</a>
-                    </li>
-                    <li id="About">
-                       <a href="#about" class="nav_item">About</a>
-                    </li>
-                    <li id="Services">
-                       <a href="#services" class="nav_item">Services</a>
-                    </li>
-                    <li id="Products">
-                       <a href="#products" class="nav_item">Products</a>
-                    </li>
-                  </ul>
-                </section>
-              </nav>
-            </header>
-            <main id="mainContent">
-                <div id="gradient-bg">
-                    <section id="graidentContainer">
-                        <div id="graid1"></div>
-                        <div id="graid2"></div>
-                        <div id="graid3"></div>
-                        <div id="graid4"></div>
-                        <div id="graid5"></div>
-                        <div id="mouseInteractive"></div>
-                    </section>
-                </div>
-                <section id="intro">
-                    <section id="introHeader">
-                    <p>Hi, my name is . . .</p>
-                    <h1>Safiya George</h1>
-                    <h2>Title: Frontend Developer</h2>
-                    </section>
-                    <div id="portfolioImg">
-                    <img src="./Media/Portfolio-img4.png" alt="A picture of Safiya withe a beach landscape in the background">
-                    </div>
-                    <section id="introParagraph">
-                    <p>
-                        I am a FullSail graduate from the Web
-                        Design and development program.<br>
-                        I enjoy developing beautiful sites 
-                        and apps that make life easier.
-                    </p>
-                    </section>
-                </section>
-                <section id="about">
-                    <h2>About Me</h2>
-                    <p class="about_bio">
-                        I'm from the island of St.Thomas, located in the US Virgin Islands. I started my web development journey on the self-taught road.
-                        While on that journey I decided that I could learn more valuable and structured information from an institution such as Fullsail University.
-                    </p>
-
-                    <h3>Why front-end development?</h3>
-                    <p class="about_bio">
-                        Web development is something I am passionate about not only because it 
-                        has the potential of being a lucrative line of work but also because I enjoy the feeling of accomplishment when I build something that was just a concept into
-                        reality. I also love the feeling of exhilaration of solving an issue in the code. 
-                    </p>
-                </section>
-                <section id="tech">
-                    <h2>Technologies I have experience in:</h2>
-                    <ul id="tech_list">
-                        <li class="list_items">
-                            <div class="tech_item" id="html5">
-                                <i class="fa-brands fa-html5"></i>
-                                <h4>HTML</h4>
-                            </div>
-                        </li>
-                        <li class="list_items">
-                            <div class="tech_item" id="css3">
-                                <i class="fa-brands fa-css3-alt"></i>
-                                <h4>CSS</h4>
-                            </div>
-                        </li>
-                        <li class="list_items">
-                            <div class="tech_item" id="JS">
-                                <i class="fa-brands fa-js"></i>
-                                <h4>JavaScript</h4>
-                            </div>
-                        </li>
-                        <li class="list_items">
-                            <div class="tech_item" id="SaSS">
-                                <i class="fa-brands fa-sass"></i>
-                                <h4>Sass</h4>
-                            </div>
-                        </li>
-                        <li class="list_items" id="git">
-                            <div class="tech_item">
-                                <i class="fa-brands fa-git-alt"></i>
-                                <h4>Git</h4>
-                            </div>
-                        </li>
-                        <li class="list_items">
-                            <div class="tech_item" id="B">
-                                <i class="fa-brands fa-bootstrap"></i>
-                                <h4>Bootstrap</h4>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-                <section id="work">
-                    <div class="projects" id="project_1">
-                        <h3>SMG_Dev Rock Paper Scissors</h3>
-                        <img src="./Media/Screenshot 2023-12-04 at 12.54.32 PM.png" alt="image of a rainbow colored rock paper scissors game.">
-                        <section class="cta">
-                            <button>
-                                <a href="https://github.com/SafiyaMGeorge/SMGDev/tree/Rock_Paper_Scissors" target="_blank" class="cta_btn">
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    Go to Code
-                                </a>
-                            </button>
-                            <button>
-                                <a href="https://rps-smgdev.netlify.app/" target="_blank" class="cta_btn live">
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    Live Demo
-                                </a>
-                            </button>
-                        </section>
-                    </div>
-                    <div class="projects" id="project_2">
-                        <h3>MMG Financial</h3>
-                        <img src="./Media/MMG Financial img.png" alt="Image of MMG Financial web page.">
-                        <section class="cta">
-                            <button>
-                                <a href="https://github.com/SafiyaMGeorge/SMGDev/tree/Projects/Projects/MGG_Financial" target="_blank" class="cta_btn">
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    Go to Code
-                                </a>
-                            </button>
-                            <button>
-                                <a href="https://mmg-financial.netlify.app/" target="_blank" class="cta_btn live">
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    Live Demo
-                                </a>
-                            </button>
-                        </section>
-                    </div>
-                    <div class="projects" id="project_3">
-                        <h3>Project Title</h3>
-                        <img src="./Media/Screen Shot 2022-11-07 at 4.37.20 PM.png" alt="image of project">
-                        <section class="cta">
-                            <button>
-                                <a class="cta_btn">
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    Go to Code
-                                </a>
-                            </button>
-                            <button>
-                                <a class="cta_btn live">
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    Live Demo
-                                </a>
-                            </button>
-                        </section>
-                    </div>
-                </section>
-                <section id="contact">
-                    <p id="contact_paragraph">
-                        <strong>I</strong>am looking for any and all opportunities! Freelance, Contract work, or Job openings are welcomed. 
-                    </p>
-                    <section id="contact_btn_section" class="cta">
-                        <button class="cta_btn submit_btn" id="contact_btn">
-                                <span class="cta-side"></span>
-                                <span class="cta-side"></span>
-                                Contact Me
-                                <span class="cta-side"></span>
-                                <span class="cta-side"></span>
-                        </button>
-                    </section>
-                    <section id="form_container">
-                        <button id="close">
-                            <i class="fa-solid fa-xmark"></i>
-                          </button>
-                        <form id="contact_form">
-                            <header id="contact_header">
-                                <h1>Contact Me</h1>
-                            </header>
-                            <section id="collected_info">
-                                <section id="user_info">
-                                    <input id="user_name" class="user_data" type="text" name="name" placeholder="Name"/>
-                                    <input id="user_email" class="user_data" type="email" name="email" placeholder="Email"/>
-                                    <input id="message_subject" class="user_data" type="text" name="subject" placeholder="Subject"/>
-                                </section>
-                                <section id="contact_message">
-                                    <textarea cols="10" rows="10" name="message" form="contact_form" placeholder="Message"></textarea>
-                                </section>
-                            </section>
-                            <section id="sub_btn" class="cta">
-                                <button class="cta_btn submit_btn">
-                                        <span class="cta-side"></span>
-                                        <span class="cta-side"></span>
-                                        <span class="cta-side"></span>
-                                        <span class="cta-side"></span>
-                                        <input type="submit" value="Submit" id="submit"/>
-                                </button>
-                            </section>
-                        </form>
-                    </section>
-                    <ul id="socials">
-                        <li class="list_item"></li>
-                        <li class="list_item"></li>
-                        <li class="list_item"></li>
-                        <li class="list_item"></li>
-                    </ul>
-                </section>
-            </main>
-        <script src="./script.js"></script>
-    </body>
+              </form>
+            </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+</body>
 </html>
