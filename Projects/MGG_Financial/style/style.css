@@ -158,8 +158,8 @@ header{
 }
 #banner_text{
   position:relative;
-  top:50px;
-  left:10px;
+  top:30px;
+  left:5%;
   font-size:.7em;
   color:var(--primary-color);
 }
