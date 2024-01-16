@@ -318,7 +318,7 @@ textarea{
     width:100%;
     padding:6px 0 0 6px;
   }
-#submit_btn{
+#sub_btn{
     height: 15%;
     text-align: center;
   }
@@ -341,7 +341,7 @@ textarea{
   header{
     padding: 1% 1.2%;
   }
-  #hamburger{
+  #hamburger_menu{
     display:none;
   }
   

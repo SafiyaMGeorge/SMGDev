@@ -2,7 +2,7 @@
 //nav
 
 const mainNav = document.getElementById('nav_bar');
-const toggleNav = document.getElementById('hamburger');
+const toggleNav = document.getElementById('hamburger_menu');
 const mainSec = document.getElementById('mainContent');
 
 toggleNav.addEventListener('click', (e) =>{
