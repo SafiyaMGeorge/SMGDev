@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <section id="homeTab">
+        <section id="user_circle>
           <div id="agent_img">
             <img src="https://scontent.ftpa1-2.fna.fbcdn.net/v/t39.30808-6/345585689_3401475696835747_4257927555579601834_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=NPN6O3lWqF0AX9__lVs&_nc_ht=scontent.ftpa1-2.fna&oh=00_AfAlPBYjbK3gIkWXl4jBMob4b7WvlVEdRFU3M7R06I9NXQ&oe=65A800E0" alt="image of agent Marcia Gooden-George"/>
           </div>
@@ -18,11 +18,11 @@
           <nav>
             <section>
               <!--There was an onclick event on this button earlier but I removed it for an eventListener because there will be mutliple clicks on this button.-->
-              <button id="hamburger" aria-controls="nav_list" aria-expanded="false">
+              <button id="hamburger_menu" aria-controls="nav_list" aria-expanded="false">
                 <span class="sr-only">Menu</span>
-                <div aria-hidden = "true" class="hamburger_line"></div>
-                <div aria-hidden = "true" class="hamburger_line"></div>
-                <div aria-hidden = "true" class="hamburger_line"></div>
+                <div aria-hidden = "true" class="hamburger_menu_line"></div>
+                <div aria-hidden = "true" class="hamburger_menu_line"></div>
+                <div aria-hidden = "true" class="hamburger_menu_line"></div>
               </button>
             </section>
             <section id="nav_bar" data-visible="false">
@@ -73,7 +73,7 @@
               <h3 class="service_header">Retirement Planning</h3>
             </li>
             </ul>
-            <button id="service_btn" class="btn">Make an appointment</button>
+            <button id="service_appointment_btn" class="btn">Make an appointment</button>
           </div>
       
         </section>
@@ -97,7 +97,7 @@
               <p class="product paragraph"></h2>
             </li>
           </ul>
-            <button id="product_btn" class="btn">Make an appointment</button>
+            <button id="product_appointment_btn" class="btn">Make an appointment</button>
           </div>
         </section>
       </main>
@@ -153,7 +153,7 @@
                   <textarea row="8" col="10" name="message" form="contactForm" placeholder="Message"></textarea>
                  </section>
                </section>
-                <section id="sub_btn">
+                <section id="submit_btn">
                   <button id="send">Submit</button>
                 </section>
               </form>

@@ -69,11 +69,11 @@ header{
   justify-content:space-between;
   align-items:center;
 }
-#homeTab{
+#user_circle{
     position:relative;
     top:2.5% ;
 }
-#homeTab h1{
+#user_circle h1{
   font-size:.9em;
 }
 
@@ -94,7 +94,7 @@ header{
 }
 
 /*nav*/
-#hamburger{
+#hamburger_menu{
   position:fixed;
   top: 2.5%;
   left:89%;
@@ -105,14 +105,14 @@ header{
   background:none;
   border:none;
 }
-.hamburger_line{
+.hamburger_menu_line{
   width:1.5rem;
   height:.7em;
   display:flex;
   flex-direction:column;
   border-top:solid var(--secondary-color) 1.6px;
 }
-.hamburger_line:hover{
+.hamburger_menu_line:hover{
   cursor:pointer;
 }
 #nav_bar, #nav_list{
@@ -318,7 +318,7 @@ textarea{
     width:100%;
     padding:6px 0 0 6px;
   }
-#sub_btn{
+#submit_btn{
     height: 15%;
     text-align: center;
   }
