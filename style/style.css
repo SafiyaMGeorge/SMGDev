@@ -63,7 +63,7 @@ span{
 
 header{
   height:15%;
-  width: 100vw;
+  width: 100%;
   padding:2% 1.5%;
   background-color:var(--primary-header-color);
   display:flex;
