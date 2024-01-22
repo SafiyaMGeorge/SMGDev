@@ -321,16 +321,17 @@ textarea{
     width:100%;
     padding:6px 0 0 6px;
   }
-#sub_btn{
+#submit_btn{
     height: 15%;
     text-align: center;
   }
-#submit{
+#send{
     padding: 5px 25px;
     width:10rem;
     border:solid 1px;
+    border-radius: 25px;
   }
-#submit:hover{
+#send:hover{
     cursor: pointer;
   }
 #contactForm, .userData, textarea, #submit{
