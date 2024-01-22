@@ -271,17 +271,15 @@ footer img{
   display:none;
   justify-content:center;
   align-items:center;
-
 }
-#close{
-  position:absolute;
-  top:53px;
-  right:347px;
-  background:none;
-  border:none;
+#form_top{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-evenly;
 }
-#close:hover{
-  cursor: pointer;
+form header{
+  height: 80%;
 }
 form h1{
   width:100%;
@@ -291,11 +289,26 @@ form h1{
     background:#FFF;
     width:20rem;
     height:35rem;
-    padding-top: 2rem;
-    border:solid red 1px;
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
   }
+
+#close_btn{
+  width: 100%;
+  height: 3rem;
+}
+
+#close{
+  position: relative;
+  left: 90%;
+  background:none;
+  border:none;
+}
+#close:hover{
+  cursor: pointer;
+}
+
 #collectedInfo{
     height: 85%;
     display: flex;
@@ -398,5 +411,8 @@ textarea{
   }
 #product_two .product_img{
     width: 101%;
+}
+#close_btn{
+  top: 2%;
 }
 }
