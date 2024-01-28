@@ -317,6 +317,12 @@ form h1{
     margin-bottom: 1rem;
     padding:0 1.5rem;
 }
+input, select{
+  width: 100%;
+}
+small{
+  display: none;
+}
 .userData{
     padding:6px;
     border:solid 1px;
