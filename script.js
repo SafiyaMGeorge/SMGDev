@@ -40,11 +40,13 @@ window.addEventListener("resize", () => {
 
 /*The block below controls the the button events to open the contact forms. */
 const buttons = document.querySelectorAll('.btn');
-   const formOne = document.getElementById('form_one');
+const main_form = document.getElementById('main_form');
+
 for(let i = 0; i < buttons.length; i++){
   buttons[i].addEventListener('click', (e) =>{
 
-   formOne.style.display = "flex";
+   main_form.style.display = "flex";
+   main_form.style.flexDirection="column";
 });
 }
  
@@ -55,6 +57,10 @@ const close = document.getElementById('close');
 close.addEventListener('click', (e) =>{
   formOne.style.display = "none";
 })
+
+
+//
+
 
 //The code block below sends the data in the contact form to the client via email using email.js.
 let sendMail = document.getElementById('send');
@@ -70,7 +76,7 @@ sendMail.addEventListener('click', (e)=>{
         email_id: document.getElementById('email').value,
         phone_id: document.getElementById('phone').value,
         subject: mailSubject.options[mailSubject.selectedIndex].text,
-        message: document.getElementById('message').value
+        message: document.getElementById('contactMessage').value
     };
 
     let serviceID = "service_2twjo1r"; //This is the emailJS service ID.
