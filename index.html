@@ -141,9 +141,15 @@
               </div>
                <section id="collectedInfo">
                   <section id="userInfo">
-                    <input id="name" type="text" placeholder="Name" name="userName" class="userData"/>
-                    <input id="phone" type="tel" placeholder="Phone Number" name="phoneNumber" pattern="[(][0-9]{3}[)][0-9]{3}-[0-9]{4}" class="userData"/>
-                    <input id="email" type="email" placeholder="Email" name="eAddress" class="userData"/>
+                    <div class="inputControl">
+                      <input id="name" type="text" placeholder="Name" name="userName" class="userData"/>
+                    </div>
+                    <div class="inputControl">
+                      <input id="phone" type="tel" placeholder="Phone Number" name="phoneNumber" pattern="[(][0-9]{3}[)][0-9]{3}-[0-9]{4}" class="userData"/>
+                    </div>
+                    <div class="inputControl">
+                      <input id="email" type="email" placeholder="Email" name="eAddress" class="userData"/>
+                    </div>
                     <select id="subject" class="userData">
                       <option value="">Area of interest</option>
                       <option value="retirement">Retirement</option>
@@ -153,9 +159,11 @@
                       <option value="annuities">Annuities</option>
                     </select>
                  </section>
-                 <section id="contactMessage">
-                  <textarea row="8" col="10" name="message" form="contactForm" placeholder="Message"></textarea>
-                 </section>
+                 <div class="inputControl">
+                  <section id="contactMessage">
+                    <textarea row="8" col="10" name="message" form="contactForm" placeholder="Message"></textarea>
+                   </section>
+                 </div>
                </section>
                 <section id="submit_btn">
                   <button id="send">Submit</button>
