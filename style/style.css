@@ -323,6 +323,9 @@ input, select{
 small{
   display: none;
 }
+.error{
+  border: solid 1px red;
+}
 .userData{
     padding:6px;
     border:solid 1px;
