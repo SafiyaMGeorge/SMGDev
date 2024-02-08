@@ -59,14 +59,39 @@ close.addEventListener('click', (e) =>{
 })
 
 
-//
+//The block below make sure the data inputted in the form inputs are not back and in the correct format.
 
+function formValidation(){
+  //the lines below get the values
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const subject = mailSubject.options[mailSubject.selectedIndex];
+  const message = document.getElementById('contactMessage').value.trim();
+
+  //if else statements to check if input are empty
+  if(name === ""){
+    //call input error function and the error message
+    console.log('Error');
+    inputError(name, "Please enter your name.");
+  }else{
+    inputSuccess(name)
+  }
+}
+//The block below is triggered when the user leaves an input empty
+function inputErrors(input, message){
+  const inputControl = input.parentElement; //.inputControl in html
+  const smallMessage = inputControl.querySelector('small');
+ 
+  inputControl.classList = 'error';
+  smallMessage.innerText = message;
+}
 
 //The code block below sends the data in the contact form to the client via email using email.js.
 let sendMail = document.getElementById('send');
 let mailSubject = document.getElementById('subject');
-
-sendMail.addEventListener('click', (e)=>{
+//I need to pause the send button to test the error properly.
+/*sendMail.addEventListener('click', (e)=>{
     e.preventDefault();
     (function(){
         emailjs.init('vZMLDtvaSFfOmOU0L') //this is where the public key from emailjs goes.
@@ -88,7 +113,7 @@ sendMail.addEventListener('click', (e)=>{
     .catch(error => {
         alert("Error 400 email not sent!")
     });
-});
+});*/
 
 //banner section
 let hero1 = 'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1438&q=80';
