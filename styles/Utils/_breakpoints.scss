@@ -7,8 +7,8 @@ tablet = 900px
 desktop = 1440px
 */
 $breakpoint-sizeup:(
-    'medium': func.em(700),
-    'large': func.em(900),
+    'medium': func.em(600),
+    'large': func.em(700),
     'X-large': func.em(1440)
 );
 

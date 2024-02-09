@@ -88,20 +88,20 @@ header{
     margin: 5rem 0 15rem 0 ;
     padding-bottom: 5rem;
 }
-#introHeader{
-    h1,h2{
-        margin-bottom: 1rem;
-    }
-    p{
-        margin-bottom: 3rem;
-    }
+#introContent{
+    width: 60%;
+    margin-top:3rem;
 }
 #portfolioImg{
     width: 100%;
+    margin-top: 2rem;
     text-align: center;
-    margin-bottom: 1rem;
+    img{
+        width: 50%;
+        border-radius: 50%;
+    }
 }
-#introParagraph, .about_bio, #contact_info{
+ .about_bio, #contact_info{
     padding: 1rem 1,5rem;
     margin: .5rem 2rem;
 }
@@ -530,8 +530,13 @@ header{
         width: 100vw;
         height: 100vh;
     }    
-    #Intro{
-        height: 30vh;
+    #portfolioImg{
+        width: 100%;
+        text-align: center;
+        img{
+            width: 50%;
+            border-radius: 50%;
+        }
     }
     #intro_bio{
         height: 45vh;
@@ -552,15 +557,12 @@ header{
         height: 23rem;
         margin-bottom: 5rem;
     
-        #tech_list{
-            width: 30%;
-
+    
             .list_items {
-                margin: 1rem 15.6rem;
-                padding: 0 1rem;
+                margin: 1rem;
+                padding: 1rem;
             }
             
-        }
     }
     #work{
         margin-bottom: 3rem;

@@ -98,20 +98,22 @@ header #nav_list {
   padding-bottom: 5rem;
 }
 
-#introHeader h1, #introHeader h2 {
-  margin-bottom: 1rem;
-}
-#introHeader p {
-  margin-bottom: 3rem;
+#introContent {
+  width: 60%;
+  margin-top: 3rem;
 }
 
 #portfolioImg {
   width: 100%;
+  margin-top: 2rem;
   text-align: center;
-  margin-bottom: 1rem;
+}
+#portfolioImg img {
+  width: 50%;
+  border-radius: 50%;
 }
 
-#introParagraph, .about_bio, #contact_info {
+.about_bio, #contact_info {
   padding: 1rem 1, 5rem;
   margin: 0.5rem 2rem;
 }
@@ -496,7 +498,7 @@ header #nav_list {
     In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
     mixin named $size which we will use as the second map-up function parameter 
     When creating meida queries it is best to use ems.*/
-@media (min-width: 56.25em) {
+@media (min-width: 43.75em) {
   /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
   main {
     margin: 0 2.5rem;
@@ -520,8 +522,13 @@ header #nav_list {
     width: 100vw;
     height: 100vh;
   }
-  #Intro {
-    height: 30vh;
+  #portfolioImg {
+    width: 100%;
+    text-align: center;
+  }
+  #portfolioImg img {
+    width: 50%;
+    border-radius: 50%;
   }
   #intro_bio {
     height: 45vh;
@@ -542,12 +549,9 @@ header #nav_list {
     height: 23rem;
     margin-bottom: 5rem;
   }
-  #tech #tech_list {
-    width: 30%;
-  }
-  #tech #tech_list .list_items {
-    margin: 1rem 15.6rem;
-    padding: 0 1rem;
+  #tech .list_items {
+    margin: 1rem;
+    padding: 1rem;
   }
   #work {
     margin-bottom: 3rem;
@@ -646,7 +650,7 @@ h1, h2, h3, h4 {
     In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
     mixin named $size which we will use as the second map-up function parameter 
     When creating meida queries it is best to use ems.*/
-@media (min-width: 56.25em) {
+@media (min-width: 43.75em) {
   /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
   #project_1 button {
     background-color: #5f157a;
@@ -664,7 +668,7 @@ body {
 }
 
 p {
-  font-size: 1.8em;
+  font-size: 1.5em;
   word-spacing: 0em;
 }
 
@@ -692,11 +696,18 @@ h3 {
   font-size: large;
 }
 
-#introHeader h1 {
-  font-size: x-large;
+#introContent h1, #introContent h2, #introContent #introLine {
+  line-height: 2em;
 }
-#introHeader h2 {
+#introContent h1 {
   font-size: large;
+}
+#introContent h2 {
+  font-size: medium;
+}
+#introContent #introParagraph {
+  margin-top: 2em;
+  text-align: justify;
 }
 
 #about h2, #tech h2, .projects h3, #contact_form h1 {
@@ -719,13 +730,13 @@ h3 {
   font-size: 1em;
 }
 #tech_list .list_items .tech_item i {
-  font-size: 3em;
+  font-size: 1em;
 }
 #tech_list .list_items .tech_item p {
   font-size: 0.4em;
 }
 #tech_list .list_items .tech_item h4 {
-  font-size: 1em;
+  font-size: 0.6em;
 }
 
 #tech_list, #contact_paragraph {
@@ -738,7 +749,7 @@ h3 {
     In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
     mixin named $size which we will use as the second map-up function parameter 
     When creating meida queries it is best to use ems.*/
-@media (min-width: 56.25em) {
+@media (min-width: 43.75em) {
   /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
   #introHeader h1 {
     font-size: 2.5em;
@@ -781,6 +792,7 @@ header #nav_bar {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
 
 #mainContent {
@@ -855,7 +867,7 @@ header #nav_bar {
     In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
     mixin named $size which we will use as the second map-up function parameter 
     When creating meida queries it is best to use ems.*/
-@media (min-width: 56.25em) {
+@media (min-width: 43.75em) {
   /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
   Header {
     padding: 0 0.5rem;
@@ -869,32 +881,18 @@ header #nav_bar {
     flex-direction: row;
     align-items: center;
   }
-  #Intro p {
-    position: relative;
-    top: 15%;
-    left: 10%;
-  }
-  #Intro h1 {
-    position: relative;
-    top: 5%;
-    left: 20%;
-  }
-  #Intro h2 {
-    position: relative;
-    top: 0;
-    left: 30%;
+  #intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
   #tech {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
     width: 90%;
     height: 100%;
   }
   #tech #tech_list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
@@ -904,13 +902,6 @@ header #nav_bar {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-  }
-  #tech #tech_list #html5, #tech #tech_list #css3 {
-    padding: 0.5rem 2rem;
-  }
-  #tech #tech_list #git {
-    padding: 0.5rem 3rem;
   }
   #about {
     width: 70%;
