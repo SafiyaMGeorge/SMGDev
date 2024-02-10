@@ -80,9 +80,10 @@ h3{
     font-size: 1.5em;
 }
 @include u.breakpoint-up(large){
+    .nav_item_expanded{
+        font-size: 1em;
+    }
     #introHeader{
-
-
         h1{
             font-size: 2.5em;
         }

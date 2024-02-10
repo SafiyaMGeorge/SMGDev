@@ -56,6 +56,12 @@ header #logo h1 {
   position: fixed;
   top: 1%;
 }
+header nav {
+  width: 35%;
+}
+header #nav_list_expanded {
+  display: none;
+}
 header #hamburger {
   position: fixed;
   left: 85%;
@@ -503,6 +509,10 @@ header #nav_list {
   main {
     margin: 0 2.5rem;
   }
+  header #nav_bar_expanded {
+    margin-right: 1rem;
+    width: 100%;
+  }
   #hamburger {
     display: none;
   }
@@ -652,6 +662,10 @@ h1, h2, h3, h4 {
     When creating meida queries it is best to use ems.*/
 @media (min-width: 43.75em) {
   /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
+  .nav_item_expanded:hover {
+    color: #EE7BD9;
+    cursor: pointer;
+  }
   #project_1 button {
     background-color: #5f157a;
   }
@@ -751,6 +765,9 @@ h3 {
     When creating meida queries it is best to use ems.*/
 @media (min-width: 43.75em) {
   /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
+  .nav_item_expanded {
+    font-size: 1em;
+  }
   #introHeader h1 {
     font-size: 2.5em;
   }
@@ -869,11 +886,15 @@ header #nav_bar {
     When creating meida queries it is best to use ems.*/
 @media (min-width: 43.75em) {
   /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
-  Header {
+  header {
     padding: 0 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  header #nav_list_expanded {
+    display: flex;
+    justify-content: space-evenly;
   }
   #nav_list {
     display: flex;

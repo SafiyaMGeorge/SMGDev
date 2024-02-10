@@ -83,6 +83,10 @@ h1, h2,h3,h4{
   }
 //gave the button element above the a tag the same color as the section it is in to give the appearace that it is transparent.
 @include u.breakpoint-up(large){
+   .nav_item_expanded:hover{
+      color: $accentColor;
+      cursor: pointer;
+  }
    #project_1{
       button{
          background-color: #5f157a;

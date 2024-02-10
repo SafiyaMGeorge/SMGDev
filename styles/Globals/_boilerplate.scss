@@ -44,6 +44,12 @@ header{
     }
 
      /*nav*/
+     nav{
+        width: 35%;
+     }
+     #nav_list_expanded{
+        display: none;
+     }
   #hamburger{
     position:fixed;
     left:85%;
@@ -508,20 +514,25 @@ header{
     main{
         margin: 0 2.5rem;
     }
+    header{
 
+        #nav_bar_expanded{
+            margin-right: 1rem;
+            width: 100%;
+        }
+
+    }
     #hamburger{
         display:none;
-      }
-      
-      #nav_bar{
+    } 
+    #nav_bar{
         position:absolute;
         padding:0;
         background:none;
         backdrop-filter:none;
         transform: translateX(0%);
-      }
-      
-      #nav_list{
+    }
+    #nav_list{
         height:.5rem;
         width:100%;
     }

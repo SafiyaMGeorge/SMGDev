@@ -15,6 +15,19 @@
                 <h1> < SMG > </h1>
             </section>
               <nav>
+                <section id="nav_bar_expanded">
+                    <ul id="nav_list_expanded">
+                      <li>
+                         <a href="#about" class="nav_item_expanded">About</a>
+                      </li>
+                      <li>
+                         <a href="#work" class="nav_item_expanded">Work</a>
+                      </li>
+                      <li>
+                         <a href="#contact" class="nav_item_expanded">Contact</a>
+                      </li>
+                    </ul>
+                </section>
                 <section id="hamburger_menu">
                   <!--There was an onclick event on this button earlier but I removed it for an eventListener because there will be mutliple clicks on this button.-->
                   <button id="hamburger" aria-controls="nav_list" aria-expanded="false">
@@ -26,17 +39,14 @@
                 </section>
                 <section id="nav_bar" data-visible="false">
                   <ul id="nav_list">
-                    <li id="Home">
-                      <a href="#" class="nav_item">Home</a>
-                    </li>
-                    <li id="About">
+                    <li>
                        <a href="#about" class="nav_item">About</a>
                     </li>
-                    <li id="Services">
-                       <a href="#services" class="nav_item">Services</a>
+                    <li>
+                       <a href="#work" class="nav_item">Work</a>
                     </li>
-                    <li id="Products">
-                       <a href="#products" class="nav_item">Products</a>
+                    <li>
+                       <a href="#contact" class="nav_item">Contact</a>
                     </li>
                   </ul>
                 </section>

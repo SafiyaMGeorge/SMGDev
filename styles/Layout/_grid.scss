@@ -97,11 +97,16 @@ header{
 
 
 @include U.breakpoint-up(large){
-    Header{
+    header{
         padding: 0 .5rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+            #nav_list_expanded{
+                display: flex;
+                justify-content: space-evenly;
+            }
     }
     #nav_list{
         display: flex;
