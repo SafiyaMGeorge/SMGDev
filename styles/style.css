@@ -1,949 +1,359 @@
-/*This page will hold the functions used in the page.*/
-/*This function is similar to the one above but it converts px to em.*/
-/*This page will control the responsive sizing of the page.*/
-/*breakpoint sizes map
-mobile = 700px
-tablet = 900px
-desktop = 1440px
-*/
-/*breakpoint sizes map for max width
-small(699.98px)
-medium(899.89px)
-large(1439.98px)
-using a 0.02 point difference avoids overlap issues
-*/
-/*The block below is a mixin for width-min*/
-/*max-width mixin*/
+/*Most of the widths and heights are done in rem but there are a few that use percentage due the browser not reading the corresponding rem to the need percentage value.*/
+
 *,
 ::before,
-::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/*The line below stops the navbar animation when the window is being resized.*/
-.resize-animation-stopper * {
-  transition: none !important;
-  animation: none !important;
-}
-
-body {
-  width: 100vw;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: #FFF;
-}
-
-span {
-  display: none;
-}
-
-header {
-  height: 5rem;
-  width: 100%;
-  padding: 1rem 1rem;
-  /*nav*/
-}
-header #logo h1 {
-  font-size: 1.5rem;
-  position: fixed;
-  top: 1%;
-}
-header nav {
-  width: 35%;
-}
-header #nav_list_expanded {
-  display: none;
-}
-header #hamburger {
-  position: fixed;
-  left: 85%;
-  top: 3%;
-  height: 1rem;
-  z-index: 9999;
-  width: 1.8rem;
-  background: none;
-  border: none;
-}
-header .hamburger_line {
-  width: 1.5rem;
-  height: 0.6rem;
-  border-top: solid white 1.6px;
-}
-header .hamburger_line:hover {
-  cursor: pointer;
-}
-header #nav_bar {
-  /* the min function will choose the smallest size parameter based on the screen dimension and apply that to the padding.*/
-  padding: min(15vh, 5rem) 2rem;
-  z-index: 1000;
-  transform: translateX(100%);
-  transition: transform 350ms ease-out;
-}
-header #nav_bar[data-visible=true] {
-  transform: translateX(0%);
-}
-header #nav_list {
-  margin-top: 2.5em;
-  height: 45%;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-}
-
-/*Intro Section*/
-#intro {
-  margin: 5rem 0 2rem 0;
-  padding-bottom: 5rem;
-}
-
-#introContent {
-  width: 60%;
-  margin-top: 3rem;
-}
-
-#portfolioImg {
-  width: 100%;
-  margin-top: 2rem;
-  text-align: center;
-}
-#portfolioImg img {
-  width: 50%;
-  border-radius: 50%;
-}
-
-.about_bio, #contact_info {
-  padding: 1rem 1, 5rem;
-  margin: 0.5rem 2rem;
-}
-
-@keyframes movingCircles {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes verticalMove {
-  0% {
-    transform: translateY(-50%);
-  }
-  50% {
-    transform: translateY(50%);
-  }
-  100% {
-    transform: rtranslateY(-50%);
-  }
-}
-@keyframes horizontalMove {
-  0% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-  50% {
-    transform: translateX(-50%) translateY(10%);
-  }
-  100% {
-    transform: translateX(-50%) rtranslateY(10%);
-  }
-}
-#gradient-bg {
-  width: 105%;
-  height: 135%;
-  position: absolute;
-  overflow: hidden;
-  z-index: -2000;
-  top: 0;
-  left: 0;
-}
-#gradient-bg #gradientContainer {
-  width: 100%;
-  height: 100%;
-}
-#gradient-bg #graid1 {
-  position: absolute;
-  width: 80rem;
-  height: 80rem;
-  top: calc(50% - 40rem);
-  left: calc(80% - 40rem);
-  transform-origin: center center;
-  animation: verticalMove 30s ease infinite;
-}
-#gradient-bg #graid2 {
-  position: absolute;
-  width: 80rem;
-  height: 80rem;
-  top: calc(50% - 40rem);
-  left: calc(60% - 40rem);
-  transform-origin: calc(50% - 400px);
-  animation: movingCircles 18s reverse infinite;
-}
-#gradient-bg #graid3 {
-  position: absolute;
-  width: 80rem;
-  height: 80rem;
-  top: calc(50% - 40rem + 200px);
-  left: calc(90% - 40rem - 500px);
-  transform-origin: calc(50% - 400px);
-  animation: movingCircles 48s linear infinite;
-}
-#gradient-bg #graid4 {
-  position: absolute;
-  width: 80rem;
-  height: 80rem;
-  top: calc(50% - 40rem);
-  left: calc(80% - 40rem);
-  transform-origin: calc(80% - 200px);
-  animation: horizontalMove 18s ease infinite;
-}
-#gradient-bg #graid5 {
-  position: absolute;
-  width: 80rem;
-  height: 80rem;
-  top: calc(50% - 80rem);
-  left: calc(50% - 80rem);
-  transform-origin: calc(50% - 800px) calc(50% + 200px);
-  animation: movingCircles 25s ease infinite;
-}
-
-/*About Section*/
-#about, #tech {
-  margin: 2rem 0;
-  padding-bottom: 1rem;
-}
-
-#about h2, h3 {
-  margin: 2rem 0;
-}
-
-.about_bio {
-  margin-bottom: 2rem;
-  padding-left: 1.5rem;
-}
-
-/*Tech Section*/
-#tech_list {
-  margin-top: 1.5rem;
-}
-
-.tech_item i {
-  margin: 1rem 0;
-}
-
-/*Works Section*/
-.projects {
-  width: 90%;
-  height: 100%;
-  margin: 2rem 0;
-  padding-bottom: 4rem;
-}
-.projects img {
-  width: 100%;
-}
-
-.cta {
-  width: 100%;
-  height: 9rem;
-  padding: 1rem 0;
-  margin: auto;
-  margin-left: -5rem;
-}
-.cta button {
-  background: none;
-  border: none;
-}
-.cta button:hover {
-  cursor: pointer;
-}
-@keyframes animate1A {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-@keyframes animate2A {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
-}
-@keyframes animate3A {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes animate4A {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-@keyframes animate1B {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes animate2B {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-@keyframes animate3B {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-@keyframes animate4B {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
-}
-.cta .cta_btn {
-  position: absolute;
-  color: #FFF;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 1em;
-  padding: 15px 30px;
-  box-shadow: 0 10px 60px rgba(225, 226, 236, 0.5);
-  overflow: hidden;
-}
-.cta .cta_btn ::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  top: 2px;
-  left: 2px;
-  bottom: 2px;
-  background: rgba(147, 49, 204, 0.05);
-}
-.cta .cta_btn span:nth-child(1) {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, #9331cc, #EE7BD9);
-  animation: animate1A 2s linear infinite;
-}
-.cta .cta_btn span:nth-child(2) {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(to bottom, #9331cc, #EE7BD9);
-  animation: animate2A 2s linear infinite;
-  animation-delay: 1s;
-}
-.cta .cta_btn span:nth-child(3) {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to left, #9331cc, #EE7BD9);
-  animation: animate3A 2s linear infinite;
-}
-.cta .cta_btn span:nth-child(4) {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(to top, #9331cc, #EE7BD9);
-  animation: animate4A 2s linear infinite;
-  animation-delay: 1s;
-}
-.cta .live span:nth-child(1) {
-  background: linear-gradient(to right, #02198e, #1472ff);
-  animation: animate1B 2s linear infinite;
-}
-.cta .live span:nth-child(2) {
-  background: linear-gradient(to right, #02198e, #1271ff);
-  animation: animate2B 2s linear infinite;
-  animation-delay: 1s;
-}
-.cta .live span:nth-child(3) {
-  background: linear-gradient(to right, #02198e, #1271ff);
-  animation: animate3B 2s linear infinite;
-}
-.cta .live span:nth-child(4) {
-  background: linear-gradient(to right, #02198e, #1271ff);
-  animation: animate4B 2s linear infinite;
-  animation-delay: 1s;
-}
-.cta .live {
-  width: 10.3rem;
-}
-.cta .submit_btn span:nth-child(1) {
-  background: linear-gradient(to right, #ffd900, #bcb432);
-  animation: animate1B 2s linear infinite;
-}
-.cta .submit_btn span:nth-child(2) {
-  background: linear-gradient(to right, #ffd900, #bcb432);
-  animation: animate2B 2s linear infinite;
-  animation-delay: 1s;
-}
-.cta .submit_btn span:nth-child(3) {
-  background: linear-gradient(to right, #ffd900, #bcb432);
-  animation: animate3B 2s linear infinite;
-}
-.cta .submit_btn span:nth-child(4) {
-  background: linear-gradient(to right, #ffd900, #bcb432);
-  animation: animate4B 2s linear infinite;
-  animation-delay: 1s;
-}
-
-/*Contact Form Section*/
-#contact {
-  padding-bottom: 5rem;
-}
-#contact #contact_paragraph {
-  width: 70%;
-  margin: 3rem 0 2rem 0;
-  padding: 2rem 0 2rem 0;
-  text-align: center;
-}
-#contact #contact_btn_section {
-  margin: auto;
-  color: #FFF;
-}
-#contact #contact_form {
-  width: 19rem;
-  height: 35rem;
-  border: 2px solid #EE7BD9;
-  border-radius: 15px;
-}
-#contact #contact_form #collected_info {
-  height: 70%;
-  width: 90%;
-  margin-bottom: 1rem;
-  padding: 0.5rem 0.3rem;
-}
-#contact #contact_form #user_info {
-  height: 100%;
-  width: 100%;
-}
-#contact #contact_form #user_info input {
-  width: 100%;
-}
-#contact #contact_form .user_data, #contact #contact_form #contact_message textarea {
-  border-radius: 20px;
-  border: solid 2px #EE7BD9;
-}
-#contact #contact_form .user_data {
-  width: 17rem;
-  height: 2.3rem;
-  padding: 6px;
-}
-#contact #contact_form #contact_message {
-  width: 100%;
-}
-#contact #contact_form #contact_message textarea {
-  width: 100%;
-  height: 100%;
-  padding: 6px 0 0 6px;
-}
-#contact #contact_form #sub_btn {
-  height: 5%;
-  margin: auto;
-  padding: 10%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-#contact #contact_form #sub_btn .submit_btn {
-  padding: 7px 40px;
-  box-shadow: 0 10px 60px rgba(225, 226, 236, 0.5);
-  overflow: hidden;
-  border: none;
-}
-#contact #contact_form #sub_btn .submit_btn input {
-  border: none;
-}
-
-/*This media query is generated everytime the mixin is used
-    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
-    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
-    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
-    mixin named $size which we will use as the second map-up function parameter 
-    When creating meida queries it is best to use ems.*/
-@media (min-width: 43.75em) {
-  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
-  main {
-    margin: 0 2.5rem;
-  }
-  header #nav_bar_expanded {
-    margin-right: 1rem;
-    width: 100%;
-  }
-  #hamburger {
-    display: none;
-  }
-  #nav_bar {
-    position: absolute;
+::after{
     padding: 0;
-    background: none;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
-    transform: translateX(0%);
-  }
-  #nav_list {
-    height: 0.5rem;
-    width: 100%;
-  }
-  #gradient-bg {
-    width: 100vw;
-    height: 100vh;
-  }
-  #portfolioImg {
-    width: 100%;
-    text-align: center;
-  }
-  #portfolioImg img {
-    width: 50%;
-    border-radius: 50%;
-  }
-  #intro_bio {
-    height: 45vh;
-  }
-  #intro_bio #portfolio_img {
-    background-image: url("/Portfolio_sites/Version_2/Media/Portfolio6.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 30%;
-  }
-  #intro_bio img {
-    width: 35%;
-    position: relative;
-    top: 10%;
-    left: 30%;
-  }
-  #tech {
-    height: 23rem;
-    margin-bottom: 2rem;
-  }
-  #tech .list_items {
-    margin: 1rem;
-    padding: 1rem;
-  }
-  #work {
-    margin-bottom: 3rem;
-  }
-  #work .projects img {
-    width: 65%;
-    border-radius: 25px;
-  }
-  #work .projects .cta {
-    width: 30%;
-    padding: 1rem 0;
-    margin-left: 35.5%;
-  }
-  #work .projects .cta button {
-    padding: 0.8rem 4rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color:#587C93;
+    --second-primary:#EE8A5A;
+    
+    --secondary-color:#A8C7DC;
+    --second-secondary:#0B0C25;
+    --third-secondary:#E7ECF3;
+
+    --primary-text:#222222;
+    --secondary-text:rgba(87, 87, 87, 0.563);
+
+    --background-primary:#A8C7DC;
+    --background-secondary:#E7ECF3;
+
+    --primary-header: 'Abril Fatface', sans-serif;
+    --secondary-header: 'Roboto';
+}
+/* set the height and width to the size of the screen*/
+body, h3{
+    font-family: var(--primary-header);
+h2{
+    font-family: var(--secondary-text);
+    font-size: 1.7em;
+}
+h3{
+    font-size: .7em;
+    color: var(--secondary-text);
+}
+ul{
+  list-style:none;
+}
+a{
+  text-decoration:none;
+  color:white;
+}
+a:hover{
+  color:var(--second-primary);
+}
+span, #collapsedNavBar{display:none}
+ .cta, .book{
+    background-color:var(--second-primary);
+    color: var(--third-secondary);
+    padding: .5rem .6rem;
+    width:8rem;
     border: none;
-  }
-  #work .projects .cta .live {
-    width: auto;
-  }
-  #contact #contact_form {
-    width: 40%;
-    height: 35rem;
-    padding-top: 1%;
-  }
-  #contact #contact_form #collected_info {
-    height: 100%;
-    padding: 0.3rem 0.5rem;
-  }
-}
-#graid1 {
-  background: radial-gradient(circle at center, rgba(18, 113, 255, 0.8) 0, rgba(18, 113, 255, 0) 50%) no-repeat;
-  mix-blend-mode: hard-light;
-  opacity: 1;
-}
-
-#graid2 {
-  background: radial-gradient(circle at center, rgba(221, 74, 255, 0.8) 0, rgba(221, 74, 255, 0) 50%) no-repeat;
-  mix-blend-mode: hard-light;
-  opacity: 1;
-}
-
-#graid3 {
-  background: radial-gradient(circle at center, rgba(100, 220, 255, 0.8) 0, rgba(100, 220, 255, 0) 50%) no-repeat;
-  mix-blend-mode: hard-light;
-  opacity: 1;
-}
-
-#graid4 {
-  background: radial-gradient(circle at center, rgba(200, 50, 50, 0.8) 0, rgba(200, 50, 50, 0) 50%) no-repeat;
-  mix-blend-mode: hard-light;
-  opacity: 1;
-}
-
-#graid5 {
-  background: radial-gradient(circle at center, rgba(188, 180, 50, 0.8) 0, rgba(188, 180, 50, 0) 50%) no-repeat;
-  mix-blend-mode: hard-light;
-  opacity: 1;
-}
-
-body {
-  color: #FFFFFF;
-  background: linear-gradient(45deg, #bc00a2, #001152);
-}
-body header #logo h1 {
-  color: #FFFFFF;
-}
-body header #nav_bar {
-  background: rgba(9, 31, 73, 0.4392156863);
-  -webkit-backdrop-filter: blur(1rem);
-          backdrop-filter: blur(1rem);
-}
-body header .nav_item {
-  color: #FFF;
-}
-body header .nav_item:hover {
-  color: #EE7BD9;
-  cursor: pointer;
-}
-
-h1, h2, h3, h4 {
-  color: #ffd900;
-}
-
-#sub_btn button {
-  background-color: #a7099a;
-}
-#sub_btn button input {
-  background: none;
-  color: #FFFFFF;
-}
-
-/*This media query is generated everytime the mixin is used
-    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
-    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
-    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
-    mixin named $size which we will use as the second map-up function parameter 
-    When creating meida queries it is best to use ems.*/
-@media (min-width: 43.75em) {
-  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
-  .nav_item_expanded:hover {
-    color: #EE7BD9;
     cursor: pointer;
+}
+  .book:hover{
+    color: var(--primary-text);
+}
+
+  /*below are are the elements, ids and classes that uses the container display of flex.*/
+ header, #navBar, #expanded, main, #search, #trending, #tours, #planning, #tripPart, #suggestions, #gallery, .banner_text, .search_request, .tour, .tour_price,.part,footer, #social, #socialList, address, #linkList{
+    display:flex;
   }
-  #project_1 button {
-    background-color: #5f157a;
+  
+   /*below are are the elements, ids and classes that uses the container display of grid.*/
+  #images, #img_sec1, #img_sec2, #img_sec3{
+     display: grid;
   }
-  #project_2 button {
-    background-color: #7b1287;
-  }
-  #project_3 button {
-    background-color: #8d0f8f;
-  }
+  
+    /*below are are the elements, ids and classes that uses the css styles of flex-direction: column and align-items:center.*/
+main, #search, #trending, #tours, .tour, #planning, .part, #suggestions{
+    flex-direction: column;
+    align-items: center;
+  } 
+  
+   /*below are are the elements, ids and classes that have a width.*/
+#expandedNavBar, #expanded, #banner, .search_request, .search_request input, footer img{
+    width: 100%;
 }
-body {
-  font-family: sans-serif;
-  line-height: 3em;
+  
+ header{
+  height:5rem;
+  width:100vw;
+  padding:0.03rem 0.015rem;
+  background:var(--primary-color);
+  justify-content:space-between;
+  align-items:center;
 }
-
-p {
-  font-size: 1.5em;
-  word-spacing: 0em;
+.logo{
+  color:white;
+  padding-left:.8rem;
 }
-
-h1 {
-  font-size: 3em;
+#navBar{
+  width:50%;
 }
-
-h2 {
-  font-size: 2.5em;
+#expanded{
+  justify-content:space-evenly;
 }
-
-h3 {
-  font-size: 1.8em;
+#banner{
+    height: 45vh;
+    margin-bottom:1rem;
+    position: relative;
+    text-align: center;
 }
-
-.nav_item {
-  font-size: 1.5em;
+.banner_text{
+    position: absolute;
+    top: 35%;
+    left: 40px;
+    color: var(--third-secondary);
+    flex-direction: column;
+    align-items: flex-start;
 }
-
-#introParagraph, #contact_info {
-  font-size: small;
+#banner img, .tour_img img, .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
-.about_bio {
-  font-size: large;
-}
-
-#introContent h1, #introContent h2, #introContent #introLine {
-  line-height: 2em;
-}
-#introContent h1 {
-  font-size: large;
-}
-#introContent h2 {
-  font-size: medium;
-}
-#introContent #introParagraph {
-  margin-top: 2em;
-  text-align: justify;
+main{
+    height:60hv;
 }
 
-#about h2, #tech h2, .projects h3, #contact_form h1 {
-  font-size: 1.7em;
+/*search section*/
+#search{
+    background-color: var(--primary-color);
+    color: var(--third-secondary);
+    width: 30rem;
+    padding: 1.5rem 2rem;
+    justify-content: center;
 }
-
-#about h3 {
-  font: 1em;
-  text-align: center;
-}
-
-#tech h2 {
-  text-align: center;
-}
-
-#tech_list {
-  list-style: none;
-}
-#tech_list .list_items {
-  font-size: 1em;
-}
-#tech_list .list_items .tech_item i {
-  font-size: 1em;
-}
-#tech_list .list_items .tech_item p {
-  font-size: 0.4em;
-}
-#tech_list .list_items .tech_item h4 {
-  font-size: 0.6em;
-}
-
-#tech_list, #contact_paragraph {
-  font-size: 1.5em;
-}
-
-/*This media query is generated everytime the mixin is used
-    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
-    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
-    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
-    mixin named $size which we will use as the second map-up function parameter 
-    When creating meida queries it is best to use ems.*/
-@media (min-width: 43.75em) {
-  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
-  .nav_item_expanded {
+#search h2{
     font-size: 1em;
-  }
-  #introHeader h1 {
-    font-size: 2.5em;
-  }
-  #introHeader h2 {
-    font-size: 2em;
-  }
-  #introParagraph, #contact_info, .about_bio {
-    text-align: justify;
-  }
-  .about_bio {
-    font-size: x-large;
-  }
+    margin-bottom: 1rem;
 }
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.search_request input{
+    height: 2rem;
+    border: none;
+}
+.search_request input::placeholder{
+    padding-left: 1.5rem;
+    font-size: .8em;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/*trending section*/
+#trending{
+    margin: 2rem auto 1rem auto;
 }
-header .hamburger_line {
-  display: flex;
-  flex-direction: column;
+#tours{
+    margin-top: 1rem;
+    width: 75%;
 }
-header #nav_bar, header #nav_list {
-  display: flex;
-  justify-content: space-evenly;
+.tour{
+    border: .5px solid rgb(215, 215, 219);
+    box-shadow: 0px 4px 5px #CCC;
+    width: 70%;
+    margin: 1rem 0;
 }
-header #nav_bar {
-  position: fixed;
-  inset: 0 0 0 50%;
+.tour_data{
+    width: 80%;
 }
-
-#intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+.tour_info{
+    padding: .5rem 0 .3rem 0;
 }
-
-#mainContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.tour_info h5{
+    color: var(--secondary-text);
+    font-weight: 500;
 }
-
-#about, #tech, .tech_item, #work, .projects, #contact, #contact_form, #collected_info, #user_info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.tour_price{
+    padding: .3rem 0 1rem 0;
+    justify-content: space-between;
+    align: items center;
+}
+.tour_price p{
+    font-weight: 600;
+    padding-top:.3rem
 }
 
-.projects h3 {
-  text-align: center;
+/*planning section*/
+#tripPart{
+   width: 70%;
+   justify-content: space-around;
+   font-size: .6em;
+}
+.part img{
+    width: 45%;
+    margin: 1.5rem 0 .5rem 0;
+}
+  
+/*gallery section*/
+#gallery_text{
+    text-align: center;
+    margin: 2rem 0 .2rem 0;
+}
+#gallery{
+    justify-content: center;
+    margin: 1rem 0;
+}
+#images{
+    width: 60%;
+    justify-items: center;
+    grid-template-columns: 25% auto 35%;
+    gap: 12px;
+}
+#img_sec1{
+    grid-template-rows: 49% auto ;
+    gap: 10px;
+}
+#img_sec3{
+    grid-template-rows: auto;
+    gap: 10px;
 }
 
-.cta {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+/*footer section*/
+footer{
+    background-color: var(--primary-color);
+    color: var(--third-secondary);
+    font-size: .9em;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.cta button, .cta a {
-  margin: auto;
+footer h1{
+    margin-bottom: .5em;
 }
-
-#contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#social, #contactInfo, #links{
+    width: 33%;
+    height: 40%;
+    margin: 1rem 1.5rem 0 1.5rem;
 }
-
-#form_container {
-  display: none;
+#social, address, #linkList{
+        flex-direction: column;
+        justify-content: space-between;
 }
-
-#contact_btn_section {
-  justify-content: center;
-  align-items: center;
+#socials{
+        /*I decided to use pixels for the social icons to keep them a consistent size throughout the enire design no matter the screen size.*/
+        width:300px;
+        margin: 1rem 0 0 -.5rem;
 }
-
-#close {
-  position: relative;
-  top: 30px;
-  left: 167px;
-  background: none;
-  border: none;
-}
-
-#close:hover {
-  cursor: pointer;
-}
-
-#contact_form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#contact_form #user_info {
-  justify-content: space-evenly;
-}
-#contact_form #contact_header {
-  justify-content: center;
-}
-
-/*This media query is generated everytime the mixin is used
-    The map-get functions above allows the breakpint sizes set inthe sass map above to be used in this media query
-    the map-get function takes two parameters, the name of the sass map(in this case the breakpoint size) and the key in the map that we want to use
-    In this case we want the key parameter to stay open as the screen sizes will vary from medium, large and x-large so I will add a parameter to the 
-    mixin named $size which we will use as the second map-up function parameter 
-    When creating meida queries it is best to use ems.*/
-@media (min-width: 43.75em) {
-  /*The @content keyword allows the style rules to be loaded in the mixin when it is used*/
-  header {
-    padding: 0 0.5rem;
-    display: flex;
+#socialList{
     justify-content: space-between;
     align-items: center;
+    list-style: none;
+    width: 30%;
+}
+address p:nth-child(1){
+    margin-bottom: 1em;
+}
+#linkList{
+    height: 65%;
+}
+.link a{
+    color: var(--third-secondary);
+    text-decoration: none;
+}
+.link{
+    margin: .3em 0;
+}
+
+@media only screen and (max-width:700px) {
+    /*medium screen footer*/
+    footer{
+        flex-direction: column;
+        align-items: center;
+        font-size: .9em;
+        padding-top: 1rem;
+    }
+    #social, #contactInfo, #links{
+        height: 60%;
+        margin-top: 1.5em;
+    }
+    #socials{
+        margin-top: .5em;
+    }
+    address{
+        height: 60%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+  .book{
+    width:35%;
   }
-  header #nav_list_expanded {
-    display: flex;
-    justify-content: space-evenly;
+  .tour_price .book{
+    padding: .5rem .5rem;
+    width:8rem;
+}
+
+  /*Larger screen main*/
+  #search{
+    width:40rem;
   }
-  #nav_list {
-    display: flex;
-    justify-content: end;
-    flex-direction: row;
-    align-items: center;
+    #tripPart{
+        width: 70%;
+    }
+    #tours{
+        width: 100%;
+        flex-direction: row;
+        padding: 1rem 0;
+    }
+    .tour{
+        width: calc(90%/3);
+        margin: auto;
+    }
+  footer{
+    padding-left:10rem;
   }
-  #intro {
-    flex-direction: row;
+}
+  
+  @media(max-width: 900px){
+  #navBar{
+  justify-content:flex-end;
+  position:absolute;
+  top:1.4rem;
+  left:50%;
+}
+  #expandedNav{
+    display:none;
   }
-  #tech {
-    width: 90%;
-    height: 100%;
+  #menuBtn{
+    width:3rem;
+    padding:.5rem 2.5rem 1rem 0;
+    background:none;
+    border:none;
   }
-  #tech #tech_list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
+  #menuBtn:hover{
+    cursor:pointer;
   }
-  #tech #tech_list .tech_item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .fa-solid{
+    font-size:2em;
+    color:white;
   }
-  #about {
-    width: 70%;
-    text-align: center;
+  #collapsedNavBar{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
   }
-  #work .projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  #collapsedNav{
+    height:33rem;
+    width:14rem;
+    padding:1rem;
+    background:var(--primary-color);
+    opacity:.8;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    z-index:1000;
   }
-  #work .cta {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  #collapsed{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
   }
-  #work button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    #collapsed .cta{
+      background:var(--second-primary);
+    }
   }
-  #contact_paragraph {
-    margin: 0.5rem 0 2rem 0;
-    padding: 2rem 0 1rem 0;
-    text-align: center;
-  }
-}/*# sourceMappingURL=style.css.map */

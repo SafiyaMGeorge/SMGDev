@@ -7,275 +7,223 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/style.css"/>
         <script src="https://kit.fontawesome.com/d48263d273.js" crossorigin="anonymous"></script>
-        <title>Safiya George SMG.DEV</title>
+        <title>Ready Set Travel</title>
     </head>
     <body>
-            <header>
-            <section id="logo">
-                <h1> < SMG > </h1>
+        <header>
+            <section id="logoSection">
+              <h1 class="logo">ReadySet<strong>Travel</strong></h1>
             </section>
-              <nav>
-                <section id="nav_bar_expanded">
-                    <ul id="nav_list_expanded">
-                      <li>
-                         <a href="#about" class="nav_item_expanded">About</a>
+            <section id="navBar">
+              <section id="expandedNavBar">
+                  <nav id="expandedNav">
+                    <ul id="expanded">
+                      <li class="navItem">
+                        <a href="#about">About</a>
                       </li>
-                      <li>
-                         <a href="#work" class="nav_item_expanded">Work</a>
+                      <li class="navItem">
+                        <a href="#destination">Destination</a>
                       </li>
-                      <li>
-                         <a href="#contact" class="nav_item_expanded">Contact</a>
+                      <li class="navItem">
+                        <a href="#tours">Tours</a>
+                      </li>
+                      <li class="navItem">
+                        <a href="blog">Blog</a>
                       </li>
                     </ul>
+                  </nav>
                 </section>
-                <section id="hamburger_menu">
-                  <!--There was an onclick event on this button earlier but I removed it for an eventListener because there will be mutliple clicks on this button.-->
-                  <button id="hamburger" aria-controls="nav_list" aria-expanded="false">
-                    <span class="sr-only">Menu</span>
-                    <div aria-hidden = "true" class="hamburger_line"></div>
-                    <div aria-hidden = "true" class="hamburger_line"></div>
-                    <div aria-hidden = "true" class="hamburger_line"></div>
+              <section id="collapsedNavBar">
+                <button id="menuBtn" aria-controls="nav_list" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
                   </button>
-                </section>
-                <section id="nav_bar" data-visible="false">
-                  <ul id="nav_list">
-                    <li>
-                       <a href="#about" class="nav_item">About</a>
-                    </li>
-                    <li>
-                       <a href="#work" class="nav_item">Work</a>
-                    </li>
-                    <li>
-                       <a href="#contact" class="nav_item">Contact</a>
-                    </li>
-                  </ul>
-                </section>
-              </nav>
-            </header>
-            <main id="mainContent">
-                <div id="gradient-bg">
-                    <section id="graidentContainer">
-                        <div id="graid1"></div>
-                        <div id="graid2"></div>
-                        <div id="graid3"></div>
-                        <div id="graid4"></div>
-                        <div id="graid5"></div>
-                        <div id="mouseInteractive"></div>
-                    </section>
-                </div>
-                <section id="intro">
-                    <div id="introContent">
-                        <section id="introHeader">
-                            <p id="introLine">Hi, my name is . . .</p>
-                            <h1>Safiya George</h1>
-                            <h2>Title: Frontend Developer</h2>
-                            </section>
-                            <section id="introParagraph">
-                            <p>
-                                I have a passion for building beautiful UI site and helping people bring their web dreams to reality.
-                            </p>
-                        </section>
-                    </div>
-                    <div id="introImg">
-                        <div id="portfolioImg">
-                            <img src="./Media/business_img.jpeg" alt="A picture of Safiya withe a beach landscape in the background">
+                <nav id="collapsedNav">
+                  <ul id="collapsed">
+                      <li class="navItem">
+                        <a href="#about">About</a>
+                      </li>
+                      <li class="navItem">
+                        <a href="#destination">Destination</a>
+                      </li>
+                      <li class="navItem">
+                        <a href="#tours">Tours</a>
+                      </li>
+                      <li class="navItem">
+                        <a href="blog">Blog</a>
+                      </li>
+                    <button class="cta book">Book a trip</button>
+                    </ul>
+                </nav>
+              </section>
+            </section>
+        </header>
+        <main>
+            <section id="banner">
+                        <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80">
+                        <div class="banner_text">
+                            <h1>Book the trip of a lifetime</h1>
+                            <p>Get the best advice and tips for your dream trip</p>
                         </div>
-                    </div>
-                </section>
-                <section id="tech">
-                    <h2>My Skills:</h2>
-                    <ul id="tech_list">
-                        <li class="list_items">
-                            <div class="tech_item" id="html5">
-                                <i class="fa-brands fa-html5"></i>
-                                <h4>HTML</h4>
-                            </div>
-                        </li>
-                        <li class="list_items">
-                            <div class="tech_item" id="css3">
-                                <i class="fa-brands fa-css3-alt"></i>
-                                <h4>CSS</h4>
-                            </div>
-                        </li>
-                        <li class="list_items">
-                            <div class="tech_item" id="JS">
-                                <i class="fa-brands fa-js"></i>
-                                <h4>JavaScript</h4>
-                            </div>
-                        </li>
-                        <li class="list_items" id="git">
-                            <div class="tech_item">
-                                <i class="fa-brands fa-git-alt"></i>
-                                <h4>Git</h4>
-                            </div>
-                        </li>
-                        <li class="list_items">
-                            <div class="tech_item" id="SaSS">
-                                <i class="fa-brands fa-sass"></i>
-                                <h4>Sass</h4>
-                            </div>
-                        </li>
-                        <li class="list_items">
-                            <div class="tech_item" id="react">
-                                <i class="fa-brands fa-react"></i>
-                                <h4>React.js</h4>
-                            </div>
-                        </li>
-                        <li class="list_items">
-                            <div class="tech_item" id="B">
-                                <i class="fa-brands fa-bootstrap"></i>
-                                <h4>Bootstrap</h4>
-                            </div>
-                        </li>
-                        <li class="list_items">
-                            <div class="tech_item" id="node">
-                                <i class="fa-brands fa-node-js"></i>
-                                <h4>Node.js</h4>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-                <section id="about">
-                    <h2>Who am I?</h2>
-                    <p class="about_bio">
-                        I love creating website, pages or apps that are easy to use and visually appealing. Even as a little girl growning 
-                        up on the island of St.Thomas, in the US Virgin Islands I have alway a desire to help people. Front-end development 
-                        is a way that I create something beautiful that can not only helps the clients I make them for but for the people they service.
-                        I started my web development journey on the self-taught road. While on that journey I decided that I could learn more valuable 
-                        and structured information from an institution such as Fullsail University.
-                    </p>
-
-                    <h3>Why front-end development?</h3>
-                    <p class="about_bio">
-                        Web development is something I am passionate about not only because it 
-                        has the potential of being a lucrative line of work but also because I enjoy the feeling of accomplishment when I build something that was just a concept into
-                        reality. I also love the feeling of exhilaration of solving an issue in the code. 
-                    </p>
-                </section>
-                <section id="work">
-                    <div class="projects" id="project_1">
-                        <h3>SMG_Dev Rock Paper Scissors</h3>
-                        <img src="./Media/Screenshot 2023-12-04 at 12.54.32 PM.png" alt="image of a rainbow colored rock paper scissors game.">
-                        <section class="cta">
-                            <button>
-                                <a href="https://github.com/SafiyaMGeorge/SMGDev/tree/Rock_Paper_Scissors" target="_blank" class="cta_btn">
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    Go to Code
-                                </a>
-                            </button>
-                            <button>
-                                <a href="https://rps-smgdev.netlify.app/" target="_blank" class="cta_btn live">
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    Live Demo
-                                </a>
-                            </button>
-                        </section>
-                    </div>
-                    <div class="projects" id="project_2">
-                        <h3>MMG Financial</h3>
-                        <img src="./Media/MMG Financial img.png" alt="Image of MMG Financial web page.">
-                        <section class="cta">
-                            <button>
-                                <a href="https://github.com/SafiyaMGeorge/SMGDev/tree/Projects/Projects/MGG_Financial" target="_blank" class="cta_btn">
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    Go to Code
-                                </a>
-                            </button>
-                            <button>
-                                <a href="https://mmg-financial.netlify.app/" target="_blank" class="cta_btn live">
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    Live Demo
-                                </a>
-                            </button>
-                        </section>
-                    </div>
-                    <div class="projects" id="project_3">
-                        <h3>Project Title</h3>
-                        <img src="./Media/Screen Shot 2022-11-07 at 4.37.20 PM.png" alt="image of project">
-                        <section class="cta">
-                            <button>
-                                <a class="cta_btn">
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    Go to Code
-                                </a>
-                            </button>
-                            <button>
-                                <a class="cta_btn live">
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    <span class="cta-side"></span>
-                                    Live Demo
-                                </a>
-                            </button>
-                        </section>
-                    </div>
-                </section>
-                <section id="contact">
-                    <p id="contact_paragraph">
-                        <strong>I</strong>am looking for any and all opportunities! Freelance, Contract work, or Job openings are welcomed. 
-                    </p>
-                    <section id="contact_btn_section" class="cta">
-                        <button class="cta_btn submit_btn" id="contact_btn">
-                                <span class="cta-side"></span>
-                                <span class="cta-side"></span>
-                                Contact Me
-                                <span class="cta-side"></span>
-                                <span class="cta-side"></span>
-                        </button>
                     </section>
-                    <section id="form_container">
-                        <button id="close">
-                            <i class="fa-solid fa-xmark"></i>
-                          </button>
-                        <form id="contact_form">
-                            <header id="contact_header">
-                                <h1>Contact Me</h1>
-                            </header>
-                            <section id="collected_info">
-                                <section id="user_info">
-                                    <input id="user_name" class="user_data" type="text" name="name" placeholder="Name"/>
-                                    <input id="user_email" class="user_data" type="email" name="email" placeholder="Email"/>
-                                    <input id="message_subject" class="user_data" type="text" name="subject" placeholder="Subject"/>
-                                </section>
-                                <section id="contact_message">
-                                    <textarea cols="10" rows="10" name="message" form="contact_form" placeholder="Message"></textarea>
-                                </section>
-                            </section>
-                            <section id="sub_btn" class="cta">
-                                <button class="cta_btn submit_btn">
-                                        <span class="cta-side"></span>
-                                        <span class="cta-side"></span>
-                                        <span class="cta-side"></span>
-                                        <span class="cta-side"></span>
-                                        <input type="submit" value="Submit" id="submit"/>
-                                </button>
-                            </section>
-                        </form>
-                    </section>
-                    <ul id="socials">
-                        <li class="list_item"></li>
-                        <li class="list_item"></li>
-                        <li class="list_item"></li>
-                        <li class="list_item"></li>
-                    </ul>
-                </section>
-            </main>
+            <section id="search">
+                      <h2>Where do you want to go?</h2>
+                      <section class="search_request">
+                          <input type="text" name="travelSearch" placeholder="Enter a destination">
+                          <button class="cta">Search</button>
+                      </section>
+                  </section>
+            <section id="trending">
+                      <h2>Trending Tours</h2>
+                      <h3>Get out there and experience some adventure!</h3>
+                      <section id="tours">
+                      <!--Used articles as each of these items can stand alone. 
+                          They can be used on the site or an advertisement banner 
+                          on another site-->
+                          <article class="tour">
+                              <section class ="tour_img">
+                                  <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="image of person with red backpack hiking up a mountain trail on a sunny day." class="tourImg">
+                              </section>
+                              <section class="tour_data">
+                                  <section class="tour_info">
+                                      <h4>Alps Mountain Hiking Tour</h4>
+                                      <h5>4 days | 10 stops</h5>
+                                  </section>
+                                  <section class="tour_price">
+                                      <p>$1,500</p>
+                                      <button class="book">Book Now</button>
+                                  </section>
+                              </section>
+                          </article>
+                          <article class="tour">
+                              <section class ="tour_img">
+                                  <img src="https://images.unsplash.com/photo-1682687982502-1529b3b33f85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Image of a person swimming in crystal blue water with sun light streaming through and sand on the bottom." class="tourImg">
+                              </section>
+                              <section class="tour_data">
+                                  <section class="tour_info">
+                                      <h4>Snorkel the Barrier Reef Tour</h4>
+                                      <h5>2 days | 2 stops</h5>
+                                  </section>
+                                  <section class="tour_price">
+                                      <p>$1,000</p>
+                                      <button class="book">Book Now</button>
+                                  </section>
+                              </section>
+                          </article>
+                          <article class="tour">
+                              <section class ="tour_img">
+                                  <img src="https://images.unsplash.com/photo-1539768942893-daf53e448371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Image of a caravan of camels with people on top of them walking away from a pyramid and, the sun above another pyramid to the left." class="tourImg">
+                              </section>
+                              <section class="tour_data">
+                                  <section class="tour_info">
+                                      <h4>Tour the Pyramids on Camelback</h4>
+                                      <h5>2 days | 2 stops</h5>
+                                  </section>
+                                  <section class="tour_price">
+                                      <p>$2,000</p>
+                                      <button class="book">Book Now</button>
+                                  </section>
+                              </section>
+                          </article>
+                      </section>
+                  </section>
+            <section id="planning">
+              <h2>Plan the Perfect Trip</h2>
+              <h3>We take care of it all so you can get 
+                there and experience some adventure!
+              </h3>
+              <ul id="tripPart">
+                <li class="part">
+                  <img src="https://cdn-icons-png.flaticon.com/512/2200/2200326.png" alt="icon image of airplane flying around a globe.">
+                  <h4>Flights</h4>
+                </li>
+                <li class="part">
+                  <img src="https://cdn-icons-png.flaticon.com/512/2784/2784071.png" alt="Red double layer bus.">
+                  <h4>Transportation</h4>
+                </li>
+                <li class="part">
+                  <img src="https://cdn-icons-png.flaticon.com/512/5998/5998991.png" alt="Lady in blue shirt and yellow hat on top of head with a yellow flag in hand.">
+                  <h4>Guides</h4>
+                </li>
+              </ul>
+            </section>
+            <section id="suggestions">
+              <section id="gallery_text">
+                <h2>Top Notch Destinations</h2>
+                <h3>These places are on everyone's bucket list</h3>
+              </section>
+              <section id="gallery">
+          <!--For the gallery section I added a div container so that it may be centered in the  gallery section -->
+                  <div id="images">
+          <!--In this images container has three section for the three columns of the gallery grid. Each image in the grid is contained in a div container that the image can be sized to.-->
+                  <section id="img_sec1">
+                    <div class="image">
+                    <img src="https://images.unsplash.com/photo-1574700584428-17f6bcd3bd28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="image of sun lit mountain side with clouds coming from behind it." class="galleryImg" id="img_one">
+                    </div>
+                    <div class="image">
+                        <img src="https://images.unsplash.com/photo-1605701877331-645ad05dcb97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" alt="image of sea of buildings, eiffel tower and blue sky." class="galleryImg" id="img_two">
+                    </div>
+                  </section>
+                  <section id="img_sec2">
+                                  <div class="image">
+                                      <img src="https://images.unsplash.com/photo-1542820229-081e0c12af0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80" alt="image of side of building with statues of people looking down on the right foreground and city building with a few trees to the left background." class="galleryImg" id="img_three">
+                                  </div> 
+                              </section>
+                              <section id="img_sec3">
+                                  <div class="image">
+                                      <img src="https://images.unsplash.com/photo-1523501554165-c565e1629690?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="image of sydney harbor with bridge and buildings in the background." class="galleryImg" id="img_four">
+                                  </div>
+                                  <div class="image">
+                                      <img src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=926&q=80" alt="image of mountain sides meeting the ocean." class="galleryImg" id="img_five">
+                                  </div>
+                              </section>
+                          </div>
+                      </section>
+                  </section>
+        </main>
+        <footer>
+                  <section id="social">
+                      <section class="logo">
+                          <h1>ReadySet<strong>Travel</strong></h1>
+                      </section>
+                      <p>We can provide you with the best<br/>
+                      advice and tips for your dream trip.</p>
+                      <section id="socials">
+                          <ul id="socialList">
+                              <li class="socialItem" id="facebook"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1057/1057229.png" alt="facebook icon. lower case f in a bubble."></a></li>
+                              <li class="socialItem" id="instagram"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1057/1057248.png" alt="instagram icon. square camera in a bubble"></a></li>
+                              <li class="socialItem" id="twitter"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1177/1177491.png" alt="twitter icon. small bird in a bubble."></a></li>
+                          </ul>
+                      </section>
+                  </section>
+                  <section id="contactInfo">
+                      <h1>Contact Us</h1>
+                      <address>
+                          <p>
+                              1234 Address Street<br/>
+                              Winter Park, FL 32792
+                          </p>
+                          <p>123-456-7890</p>
+                      </address>
+                  </section>
+                  <section id="links">
+                      <h1>Links</h1>
+                      <ul id="linkList">
+                          <li class="link">
+                              <a href="#about">About</a>
+                          </li>
+                          <li class="link">
+                              <a href="#destination">Destination</a>
+                          </li>
+                          <li class="link">
+                              <a href="#discover">Discover</a>
+                          </li>
+                          <li class="link">
+                              <a href="#blog">Blog</a>
+                          </li>
+                      </ul>
+                  </section>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
         <script src="./script.js"></script>
     </body>
 </html>
