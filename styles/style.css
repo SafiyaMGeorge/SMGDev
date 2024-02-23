@@ -345,6 +345,9 @@ address p:nth-child(1){
     align-items:center;
     z-index:1000;
   }
+  #collapsedNav button{
+    background:red;
+  }
   #collapsed{
     width:100%;
     height:100%;
