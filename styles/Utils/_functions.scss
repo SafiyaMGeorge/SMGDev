@@ -1,0 +1,12 @@
+//This file holds the function to convert the given pixel into em.
+
+@use 'sass:math';
+
+@function em($pixel){
+    @if math.is-unitless($pixel){
+        @return math.div($pixel, 16) + em;
+    }
+    @else{
+        @error 'This em function only takes numbers. Please remove the size unit attached to the numbe. i.e.(pixel)'
+    }
+}
