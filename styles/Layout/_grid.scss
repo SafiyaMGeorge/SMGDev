@@ -1,0 +1,39 @@
+@use '../Utils/' as U;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    
+        section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        } 
+    }
+    #backgroundContainer{
+        position: absolute;
+    }
+}
+//tablet screens
+@include U.breakpoint-size(medium){
+    #mainSec{
+        flex-direction: row;
+    }
+}
+
+//laptop screens
+@include U.breakpoint-size(large){
+
+}
+
+//large laptop or desktop screens
+@include U.breakpoint-size(x-large){
+
+}
