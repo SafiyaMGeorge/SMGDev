@@ -1,1 +1,1 @@
-This branch hold the code and media for the version of the portfolio page that I am deploying .
+This websit is a personal portfolio for client. It is comprised of a home page, the home hub that introduces user to the different gaming streaming platforms the client is on as well as link to their music streaming platforms and the store that they sell their merch in.
