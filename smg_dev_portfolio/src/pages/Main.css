@@ -1,0 +1,124 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --accent1:#EE7BD9;
+    --accent2:#9331cc;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits:false;
+}
+body #main_Page{
+    background: linear-gradient(180deg, #000 0%, #21007D 50%, #4300FA 100%);
+    background-repeat: no-repeat;
+    height: max-content;
+
+        #main_Content{
+            display: flex;
+            flex-direction: column;
+            align-items:  center;
+            color: #FFF;
+            #intro, #tools{
+                margin: .8rem;
+            }
+            section{
+                width: 100vw;
+            }
+            #main_Work{
+                margin-bottom: 4rem;
+                .box{
+                    background: rgba(0, 0, 0, 0.5);
+                    position: relative;
+                    border-radius: 15px;
+                    width: 10rem;
+                    height: 10rem;
+                    margin: 5rem auto;
+                }
+                .box::before{
+                    content: '';
+                    position: absolute;
+                    border-radius: 15px;
+                    width: 100%;
+                    height: 100%;
+
+                }
+                .box:nth-child(1){
+                    background-image: conic-gradient(from var(--angle), transparent 70%,#FA00F2);
+                    animation: 4s glide linear infinite;
+                }
+                .box:nth-child(2){
+                    background-image: conic-gradient(from var(--angle), transparent 70%,#FA00F2);
+                    animation: 4s reverse_Glide linear infinite;
+                }
+                #dev, #design{
+                    position: absolute;
+                    background: rgb(0, 0, 0);
+                    border-radius: 15px;
+                    width: 94%;
+                    height: 94%;
+                    padding: 1.5rem;
+                    text-align: center;
+                    inset: 6px;
+                    z-index: 3;
+                }
+                #dev h2, #design h2{
+                    margin-bottom: 1.3rem;
+                }
+                img{
+                    height: 35%;
+                }
+            }
+            #tools{
+                width: 100vw;
+                ul{
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height:30rem ;
+                }
+                div.outer, #inner_Tools{
+                    height: 30%;
+                    margin: 0 3rem;
+                }
+                div.outer{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+                #inner_Tools{
+                    flex-direction:row ;
+                }
+                li{
+                    width: 10%;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+}
+@keyframes glide{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+@keyframes reverse_Glide{
+    from{
+        --angle: 360deg;
+    }
+    to{
+        --angle: 0deg;
+    }
+}
