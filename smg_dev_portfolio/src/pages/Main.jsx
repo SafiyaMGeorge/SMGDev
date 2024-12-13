@@ -49,7 +49,31 @@ export default function Main() {
           </section>
         </section>
         <section id='tools'>
-          <ul id='tools_icon'>
+          <ul id='tool_Sphere'>
+            <li className='tool_Img'>
+              <img src={cssIcon} alt='The icon for css3'/>
+            </li>
+            <li className='tool_Img'>
+              <img src='' alt=''/>
+            </li>
+            <li className='tool_Img'>
+              <img src='' alt=''/>
+            </li>
+          </ul>
+        </section>
+        <section id='projects'>
+          <section id='desing_Projects'></section>
+          <section id='dev_Projects'></section>
+        </section>
+        <section id='contact_Me'></section>
+      </main>
+      
+    </div>
+  )
+}
+/*
+previous code for the list of images
+
             <div className='outer'>
               <li> 
                <img src= {jquery} alt='jquery icon' />
@@ -85,15 +109,4 @@ export default function Main() {
                 </li>
 
               </div>
-          </ul>
-        </section>
-        <section id='projects'>
-          <section id='desing_Projects'></section>
-          <section id='dev_Projects'></section>
-        </section>
-        <section id='contact_Me'></section>
-      </main>
-      
-    </div>
-  )
-}
+              */
