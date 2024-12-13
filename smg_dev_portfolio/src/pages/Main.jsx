@@ -11,8 +11,8 @@ import jquery from '../images/jQuery.png'
 import js from '../images/js.svg'
 import ssss from '../images/sass.svg'
 import r_icon from '../images/r_icon.svg'
-import codeStu from '../images/code-solid.svg'
 import figma from '../images/figmaIcon.svg'
+import codevs from '../images/codeVs.png'
 
 
 
@@ -58,6 +58,24 @@ export default function Main() {
             </li>
             <li className='tool_Img' id='inner_Img_3'>
               <img src={js} alt='JavaScript icon'/>
+            </li>
+            <li className='tool_Img' id='inner_Img_4'>
+              <img src={figma} alt='Figma icon'/>
+            </li>
+            <li className='tool_Img' id='inner_Img_5'>
+              <img src={gitHub} alt='GitHub icon'/>
+            </li>
+            <li className='tool_Img' id='inner_Img_6'>
+              <img src={jquery} alt='jQuery icon'/>
+            </li>
+            <li className='tool_Img' id='inner_Img_7'>
+              <img src={r_icon} alt='React icon'/>
+            </li>
+            <li className='tool_Img' id='inner_Img_8'>
+              <img src={ssss} alt='Sass icon'/>
+            </li>
+            <li className='tool_Img' id='inner_Img_9'>
+              <img src={codevs} alt='VScode icon'/>
             </li>
           </ul>
         </section>
