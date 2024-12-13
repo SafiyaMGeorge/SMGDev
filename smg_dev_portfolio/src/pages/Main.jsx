@@ -50,14 +50,14 @@ export default function Main() {
         </section>
         <section id='tools'>
           <ul id='tool_Sphere'>
-            <li className='tool_Img'>
-              <img src={cssIcon} alt='The icon for css3'/>
+            <li className='tool_Img' id='inner_Img_1'>
+              <img src={cssIcon} alt='CSS3 icon'/>
             </li>
-            <li className='tool_Img'>
-              <img src='' alt=''/>
+            <li className='tool_Img' id='inner_Img_2'>
+              <img src={htmlIcon} alt='HTML5 icon'/>
             </li>
-            <li className='tool_Img'>
-              <img src='' alt=''/>
+            <li className='tool_Img' id='inner_Img_3'>
+              <img src={js} alt='JavaScript icon'/>
             </li>
           </ul>
         </section>
