@@ -1,0 +1,179 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --accent1:#EE7BD9;
+    --accent2:#9331cc;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+    background: linear-gradient(180deg, #000 0%, #7D0079 25%, #BB00B5 37.5%, #FA00F2 50%, #CC00F4 62.5%, #9E00F6 75%, #4300FA 100%);
+
+    #main_Component{
+        width: 100vw;
+        height: 100vh;
+        padding-top: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #portfolio_Img,
+        #intro,
+        #enter_Btn{
+            margin: 2rem 0;
+        }
+
+    }
+
+/*this section is the styling for the welcome page image.*/
+/*this is the parent element for the whole profile section. It dictates the size and the positon of the child elements*/
+    .box{
+        position: relative;
+        width:15rem;
+        height:15rem;
+        background: rgba(0,0,0,0.5);
+        border-radius:50%;
+        overflow: hidden;
+    }
+
+/*this section is the child of the box element. It contains the rotating colors as well as the animation that creates the rotating effect.*/
+    .box::before{
+        content: '';
+        position: absolute;
+        inset: -10px 90px;
+        background: linear-gradient(#4300FA,#FA00F2);
+        transition: .5s;
+        animation: animate 4s linear infinite;
+    }
+
+/*this section is another child element of the box element. it also contains the image element. This element allows for the space between the image and the box element so that the user can see the rotating colors.*/
+    .content{
+        position: absolute;
+        inset: 6px;
+        z-index: 3;
+        border-radius: 50%;
+    }
+    .content img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+/*this section is the styling for the welcome page text.*/
+    #intro{
+        color: #FFF;
+        text-align: center;
+    }
+
+/*this section is the styling for the welcome page button.*/
+    #enter_Btn{
+        width: 50%;
+        height: 5%;
+    }
+    #enter_Btn button{
+        width: 9rem;
+        padding: .5rem .3rem;
+        position: relative;
+        top: .2rem;
+        left: 2.3rem;
+        background:#eecc0a;
+        color:#8801ed;
+        border: none;
+
+    }
+}
+/*this is the animation that creates the rotating effect.*/
+@keyframes animate {
+    0%
+    {
+        transform:rotate(0deg);
+    }
+    100%
+    {
+        transform:rotate(360deg);
+    }
+    
+}
+
+@keyframes animate1A{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+@keyframes animate2A{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+@keyframes animate3A{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes animate4A{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+
+.cta_btn span:nth-child(1){
+  
+
+}
+.cta_btn span:nth-child(2){
+  
+}
+.cta_btn span:nth-child(3){
+
+}
+.cta_btn span:nth-child(4){
+
+    animation-delay: 1s;
+}
+#what_I_Do span::before{
+    content: '';
+    animation: textChanger 8s infinite;
+}
+@keyframes textChanger{
+    0%{
+        content: 'Jr UI Front-End Developer';
+    }
+    20%{
+        content: 'Book Lover';
+    }
+    40%{
+        content: 'Traveler';
+    }
+    60%{
+        content: 'Writer';
+    }
+    80%{
+        content:'Anime Lover';
+    }
+    100%{
+        content: 'Foodie';
+    }
+}

@@ -1,0 +1,22 @@
+/*This page will hold the functions used in the page.*/
+@use 'sass:math';
+
+@function rem($pixel){
+    /*The if else functions check to make sure that an error is thrown if size unit is entered into the function.*/
+    @if math.is-unitless($pixel){
+       @return math.div($pixel, 16) + rem;
+    }
+    @else{
+       @error 'rem function only takes numbers. Please remove the unit attached to the number.'
+    }
+ }
+
+ /*This function is similar to the one above but it converts px to em.*/
+ @function em($pixel){
+    @if math.is-unitless($pixel){
+       @return math.div($pixel, 16) + em;
+    }
+    @else{
+       @error 'em function only takes numbers. Please remove the unit attached to the number.'
+    }
+ }
