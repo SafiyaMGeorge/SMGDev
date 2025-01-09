@@ -1,3 +1,17 @@
-img{
-    width: 10%;
+#header_container{
+    width: 100vw;
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section{
+width: 10%;
+margin:1rem;
+}
+#logo img{
+    width: 1rem;
+}
+#navburger img{
+    width: 1.5rem;
 }
