@@ -4,12 +4,15 @@ import menu from '../media/menu.svg'
 import './Header.css'
 export default function Header() {
   return (
-    <div id='container'>
+    <div id='header_container'>
       <section id='logo'>
         <img src={logo} alt='logo' />
       </section>
       <section id='navburger'>
-        <img src={menu} alt="menu" />
+        <button>
+          <img src={menu} alt="menu" />
+        </button>
+
       </section>
     </div>
   )
