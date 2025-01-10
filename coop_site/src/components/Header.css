@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
 }
-section #logo, #navburger{
+section, #logo, #navburger{
 width: 10%;
 margin:1rem;
 }
