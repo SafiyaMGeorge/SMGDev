@@ -20,3 +20,20 @@
     height:100%;
     background:linear-gradient(#13361891,#82B688);
 }
+#about_img{
+    width: 100%;
+}
+#about_header{
+    color:#EBB959;
+    font-size: 1.85em;
+    margin-bottom:1rem;
+    text-align: center;
+}
+#about_text{
+    color:#FAFFF9;
+    line-height: 2rem;
+    text-align: justify;
+}
+#about_content{
+    margin: 0 1rem;
+}
