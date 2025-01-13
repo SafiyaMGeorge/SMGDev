@@ -12,7 +12,6 @@ export default function Header() {
         <button>
           <img src={menu} alt="menu" />
         </button>
-
       </section>
     </div>
   )
