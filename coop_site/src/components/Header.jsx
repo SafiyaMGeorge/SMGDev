@@ -8,11 +8,6 @@ export default function Header() {
       <section id='logo'>
         <img src={logo} alt='logo' />
       </section>
-      <section id='navburger'>
-        <button>
-          <img src={menu} alt="menu" />
-        </button>
-      </section>
     </div>
   )
 }
