@@ -7,7 +7,7 @@ export default function Welcome() {
       <div className='overlay'>
         <main className='welcomeMain'>
           <section className='sculpture_Img'>
-            <div className='imgContainer'>
+            <div className='welcomImgContainer'>
             </div>
           </section>
           <section className='title'>
