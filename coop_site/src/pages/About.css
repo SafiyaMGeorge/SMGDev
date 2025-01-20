@@ -10,7 +10,7 @@
     height: 200vh;
     background: url(../media/gilles-lambert-mSK5nNsAsLY-unsplash.jpg);
     background-repeat: no-repeat;
-    background-size:260vw 150vh;
+    background-size:260vw 250vh;
     background-position:100% 0% ;
     color: white;
     z-index: 1;
@@ -21,7 +21,7 @@
     background:linear-gradient(#13361891,#82B688);
 }
 #about_img{
-    width: 100%;
+    width: 18rem;
 }
 #about_header{
     color:#EBB959;
@@ -36,4 +36,8 @@
 }
 #about_content{
     margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
