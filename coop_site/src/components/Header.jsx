@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../media/Logo.png'
-import Menu from './site_Nav'
+import Menu from './Navigation'
 import './Header.css'
 export default function Header() {
   return (
