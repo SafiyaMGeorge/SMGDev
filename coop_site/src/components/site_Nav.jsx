@@ -1,12 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import menu from '../media/menu.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
 export default function site_Nav() {
   return (
     <div>
       <nav>
         <ul>
-          
           <li className='navItem'>
             <Link to="/about" style={{textDecoration:'none'}}>About</Link>
           </li>
@@ -20,6 +21,9 @@ export default function site_Nav() {
             <Link to="/contact" style={{textDecoration:'none'}}>Contact</Link>
           </li>
         </ul>
+        <div className="navIcon">
+        <FontAwesomeIcon icon={faBars} />
+        </div>
       </nav>
     </div>
   )
