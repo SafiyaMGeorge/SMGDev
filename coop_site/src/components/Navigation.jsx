@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import './Navigation.css'
 
-export default function site_Nav() {
+export default function Navigation() {
   return (
     <div>
       <nav>
-        <ul>
+        <ul id='navList'>
           <li className='navItem'>
             <Link to="/about" style={{textDecoration:'none'}}>About</Link>
           </li>
