@@ -1,0 +1,14 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-right:3rem ;
+}
+#navList{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    list-style: none;
+}
+#navList a{
+    color: #FFF;
+}
