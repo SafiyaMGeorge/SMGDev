@@ -17,6 +17,6 @@ button{
 #logo img{
     width: 1rem;
 }
-#navburger img{
-    width: 1.5rem;
+#navburger{
+    width: 30%;
 }
