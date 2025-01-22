@@ -22,7 +22,7 @@ export default function Navigation() {
             <Link to="/contact" style={{textDecoration:'none'}}>Contact</Link>
           </li>
         </ul>
-        <div className="navIcon">
+        <div id="navIcon">
         <FontAwesomeIcon icon={faBars} />
         </div>
       </nav>
