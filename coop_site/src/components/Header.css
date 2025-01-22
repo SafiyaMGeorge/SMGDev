@@ -6,7 +6,7 @@
     align-items: center;
 }
  #logo, #navburger{
-width: 10%;
+width: 50%;
 margin:1rem;
 }
 button{
@@ -16,7 +16,4 @@ button{
 }
 #logo img{
     width: 1rem;
-}
-#navburger{
-    width: 30%;
 }
