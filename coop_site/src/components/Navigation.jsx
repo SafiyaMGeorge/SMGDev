@@ -8,6 +8,9 @@ export default function Navigation() {
   return (
     <div>
       <nav>
+        <div id="navIcon">
+          <FontAwesomeIcon icon={faBars} />
+        </div>
         <ul id='navList'>
           <li className='navItem'>
             <Link to="/about" style={{textDecoration:'none'}}>About</Link>
@@ -22,9 +25,6 @@ export default function Navigation() {
             <Link to="/contact" style={{textDecoration:'none'}}>Contact</Link>
           </li>
         </ul>
-        <div id="navIcon">
-        <FontAwesomeIcon icon={faBars} />
-        </div>
       </nav>
     </div>
   )
