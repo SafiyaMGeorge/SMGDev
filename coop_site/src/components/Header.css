@@ -17,3 +17,12 @@ button{
 #logo img{
     width: 1rem;
 }
+@media(max-width:425px){
+    #navburger{
+        width: 110%;
+        height: 100vh;
+        position: relative;
+        left: -6.9rem;
+        top: 12rem;
+    }
+}

@@ -4,8 +4,8 @@ nav{
 }
 #navList{
     display: flex;
-    justify-content: space-between;
-    width: 90%;
+    justify-content: space-evenly;
+    width: 100%;
     list-style: none;
 }
 #navList a{
@@ -27,6 +27,9 @@ display: none;
         left: .5rem;
         font-size: 2em;
     }
+    #navIcon:hover{
+        cursor: pointer;
+    }
  
     #navList{
         background-color: rgba(86, 161, 73, 0.395);
@@ -37,7 +40,11 @@ display: none;
         width: 70%;
         padding-right: 1rem;
         position: relative;
-        top:12rem;
+        top:-30rem;
         left:7.4rem;
+
+    }
+    navList.active{
+        top: 12rem;
     }
 }
