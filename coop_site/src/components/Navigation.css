@@ -2,16 +2,16 @@ nav{
     display: flex;
     justify-content: space-between;
 }
-#navList{
+.navList{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     list-style: none;
 }
-#navList a{
+.navList a{
     color: #FFF;
 }
-#navList a:hover{
+.navList a:hover{
     color:#EBB959;
     cursor: pointer;
 }
@@ -37,7 +37,7 @@ display: none;
     #navIcon:hover{
         cursor: pointer;
     }
-    #navList{
+    .navList.active{
         background-color: rgba(57, 117, 47, 0.807);
         flex-direction: column;
         justify-content: space-evenly;
@@ -47,6 +47,10 @@ display: none;
         position: relative;
         top:-12rem;
 
+    }
+    .navList{
+        position: relative;
+        top: -49rem;
     }
 }
 @media(min-width:450px) and (max-width:768px){
@@ -60,16 +64,17 @@ display: none;
         left: -23rem;
     }
     #navIcon{
-        display: block;
+        display: inline-block;
         position: relative;
-        left: -.5rem;
+        top: 8.5rem;
+        left: -2rem;
         font-size: 2em;
     }
-    #navIcon:hover{
+    .navIcon:hover{
         cursor: pointer;
     }
  
-    #navList{
+    .navList.active{
         background-color: rgba(57, 117, 47, 0.807);;
         flex-direction: column;
         justify-content: space-evenly;
@@ -78,11 +83,12 @@ display: none;
         width: 34%;
         padding-right: 1rem;
         position: relative;
-        top:-21.6rem;
-        left:-.1rem;
+        top:-28.9rem;
+        left:-2rem;
 
     }
-    navList.active{
-        top: 12rem;
+    .navList{
+        position: relative;
+        top: -99rem;
     }
 }

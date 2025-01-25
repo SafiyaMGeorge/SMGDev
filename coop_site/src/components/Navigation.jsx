@@ -1,17 +1,22 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import './Navigation.css'
 
 export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleNav = () =>{
+    setIsOpen(!isOpen);
+  };
   return (
     <div>
       <nav>
-        <div id="navIcon">
+        <div id="navIcon" onClick={toggleNav}>
           <FontAwesomeIcon icon={faBars} />
         </div>
-        <ul id='navList'>
+        <ul className ={isOpen ? 'navList active' : 'navList'}>
           <li className='navItem'>
             <Link to="/about" style={{textDecoration:'none'}}>About</Link>
           </li>
