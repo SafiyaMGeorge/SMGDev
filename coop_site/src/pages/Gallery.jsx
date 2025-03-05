@@ -10,10 +10,10 @@ export default function Gallery() {
     <div id='container'>
       <div id="overlay">
         <Header />
-        <main id='gallery_section'>
+        <main id='gallery_Section'>
           <section id='prev_btn'>
             <button>
-            <FontAwesomeIcon icon={faCircleChevronLeft} style={{color: "#ffffff",}} />
+            <FontAwesomeIcon className='directional_btn' icon={faCircleChevronLeft} />
             </button>
           </section>
           <section id='gallery_content'>
@@ -21,7 +21,7 @@ export default function Gallery() {
           </section>
           <section id='next_btn'>
             <button>
-              <FontAwesomeIcon icon={faCircleChevronRight} style={{color: "#ffffff",}} />
+              <FontAwesomeIcon className='directional_btn' icon={faCircleChevronRight} />
             </button>
           </section>
         </main>
