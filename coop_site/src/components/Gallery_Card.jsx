@@ -49,8 +49,7 @@ export default function Gallery_Display() {
       name: "Nepenthes Villosa",
       pic: plantSix,
       description: "Image of Nepenthes Villosa sculpture. Nepenthes villosa is a tropical pitcher plant with distinctive pitchers and a highly developed peristome. It's native to the Kinabalu and Tambuyukon mountains in Borneo"
-    }
-    /*
+    },
     {
       id: 7,
       name: "Nepenthes Rafflesiana",
@@ -86,7 +85,7 @@ export default function Gallery_Display() {
       name:"Heliamphora Macdonaldae",
       pic: plantTwelve,
       description: "Image of Heliamphora Macdonaldae sculpture. Heliamphora macdonaldae is a carnivorous plant that grows in the Venezuelan rainforest. It has modified leaves that form a trap for insects."
-    }*/
+    }
   ])
   return (
     <div className='cardContainer'>
