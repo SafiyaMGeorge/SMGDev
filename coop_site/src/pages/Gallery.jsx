@@ -11,7 +11,7 @@ export default function Gallery() {
       <div id="overlay">
         <Header />
         <main id='gallery_Section'>
-          <section id='prev_btn'>
+          <section id='prev_btn' className='btn'>
             <button>
             <FontAwesomeIcon className='directional_btn' icon={faCircleChevronLeft} />
             </button>
@@ -19,7 +19,7 @@ export default function Gallery() {
           <section id='gallery_content'>
             <GalleryCard />
           </section>
-          <section id='next_btn'>
+          <section id='next_btn' className='btn'>
             <button>
               <FontAwesomeIcon className='directional_btn' icon={faCircleChevronRight} />
             </button>
